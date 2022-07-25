@@ -45,6 +45,8 @@
 @use '3_layout/header';
 @use '3_layout/welcome';
 @use '3_layout/program';
+@use '3_layout/speakers';
 
 @use '4_components/cards.scss';
 @use '4_components/buttons';
+@use '4_components/extras';

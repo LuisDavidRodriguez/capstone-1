@@ -10,10 +10,4 @@
       color: f.get-color('natural');
       font-weight: f.get-font-weight('normal');
     }
-
-    & hr {
-      display: inline-block;
-      border-color: f.get-color('accent');
-      width: 80px;
-    }
 }

@@ -24,3 +24,25 @@
   @extend .btn-style-1;
   margin: 10px 0px;
 }
+
+.btn-2 {
+  @extend .btn-style-1;
+  background-color: transparent;
+  border: 1px solid f.get-color('secundary');
+  display: block;
+  width: auto;
+  margin: 20px 20px;
+  color: f.get-color('primary');
+
+  & i {
+    margin-left: 5px;
+    color: f.get-color('accent');
+  }
+
+  &:hover {
+    color: f.get-color('natural');
+    & i {
+      color: f.get-color('natural');
+    }
+  }
+}
