@@ -198,13 +198,6 @@ header .low-bar {
     display: flex;
   }
 }
-/*
-* documentation for understand the animation
-* =====> https://ibritech.atlassian.net/wiki/external/231374901/ZDQxY2E1YzY3MjAzNDRjN2FiOWYzZTkyYmEwNDc0OTM?atlOrigin=eyJpIjoiZmUxNTVjY2NkMDM3NDBjZWFjNjViZTgxMDI5NGRhYWMiLCJwIjoiYyJ9
-*
-* a little complicated trying to match the timer only one star should shine at the time
-* =====> https://css-tricks.com/a-new-way-to-delay-keyframes-animations/
-*/
 .welcome-section {
   background: url("../../images/background/welcome_mobile.png") no-repeat;
   background-size: 100%;
