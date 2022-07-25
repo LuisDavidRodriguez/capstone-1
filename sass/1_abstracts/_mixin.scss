@@ -1,0 +1,14 @@
+/// -----------------------------------------------------------------------
+/// @author Luis David Rodriguez Valades 25/07/2022
+/// -----------------------------------------------------------------------
+@use 'functions' as f;
+
+@mixin desktop {
+    @media screen and (min-width: f.get-break-point('medium')) {
+      @content;
+    }
+  };
+
+@mixin transition-ease {
+  transition: all 0.5s ease-in;
+}

@@ -1,0 +1,128 @@
+/// -----------------------------------------------------------------
+/// @author Luis David Rodriguez Valades
+/// -----------------------------------------------------------------
+/*
+* documentation for understand the animation
+* =====> https://ibritech.atlassian.net/wiki/external/231374901/ZDQxY2E1YzY3MjAzNDRjN2FiOWYzZTkyYmEwNDc0OTM?atlOrigin=eyJpIjoiZmUxNTVjY2NkMDM3NDBjZWFjNjViZTgxMDI5NGRhYWMiLCJwIjoiYyJ9
+*
+* a little complicated trying to match the timer only one star should shine at the time
+* =====> https://css-tricks.com/a-new-way-to-delay-keyframes-animations/
+*/
+
+
+@use '../1_abstracts/functions' as f;
+@use '../1_abstracts/variables' as v;
+.welcome-section {
+  background: url('../../images/background/welcome_mobile.png') no-repeat;
+  background-size: 100%;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  & .stars-container {
+    position: relative;
+    height: 100%;
+
+    & .stars {
+      max-width: fit-content;
+      width: 10%;
+      height: auto;
+      filter: grayscale(100%);
+      animation: full-color 15s ease-in-out 2s infinite normal forwards;
+    }
+    @for $i from 1 through 5 {
+      & .star-#{$i} {
+        position: absolute;
+        top: 15%*$i;
+        @if $i==1 {
+          left: 60%;
+        }
+        @if $i==2 {
+          left: 15%;
+        }
+        @if $i==3 {
+          left: 80%;
+        }
+        @if $i==4 {
+          left: 5%;
+        }
+        @if $i==5 {
+          left: 70%;
+        }
+        animation-delay: $i*3s;
+      }
+    }
+  }
+
+  & article {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100px;
+    left: 5%;
+    min-width: 450px;
+    width: 90%;
+
+    & h1 {
+      font-size: f.get-font-size('small');
+      font-weight: f.get-font-weight('normal');
+      color: f.get-color('accent');
+      margin-bottom: 5px;
+    }
+
+    & h2 {
+      font-size: f.get-font-size('big');
+      font-weight: f.get-font-weight('bold');
+      text-transform: uppercase;
+      color: transparent;
+      background-size: 150%;
+      background-position: right top;
+      background-image: url('../../images/background/caribean.jpg');
+      background-clip: text;
+      -webkit-background-clip: text;
+      transition: background-position 5s ease-in;
+
+      &:hover {
+        background-position: left bottom;
+      }
+    }
+
+    & p:nth-of-type(1) {
+      font-family: v.$font-lato;
+      font-size: f.get-font-size('smaller');
+      font-weight: f.get-font-weight('bold');
+      line-height: 30px;
+      background-color: f.get-color('secundary');
+    }
+
+    & h3 {
+      font-family: v.$font-lato; 
+      font-weight: f.get-font-weight('super');
+    }
+
+    & p:nth-of-type(2) {
+      font-family: v.$font-lato;
+      color: f.get-color('accent');
+    }
+
+  }
+}
+
+
+@keyframes full-color {
+  
+  0% {
+    filter: grayscale(100%);
+  }
+
+  /* Finish changes by here */
+  10% {
+    filter: grayscale(0%);
+  }
+
+  20% {
+    filter: grayscale(100%);
+  }
+
+}

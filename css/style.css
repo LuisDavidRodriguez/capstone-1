@@ -1,0 +1,316 @@
+@font-face {
+  font-family: "cocogosse";
+  src: url("../../fonts/cocogoose/CocogoosePro-trial.ttf") format("truetype");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "cocogosse";
+  src: url("../../fonts/cocogoose/CocogooseProItalic-trial.ttf") format("truetype");
+  font-weight: 600;
+  font-style: italic;
+}
+@font-face {
+  font-family: "cocogosse";
+  src: url("../../fonts/cocogoose/CocogooseProLight-trial.ttf") format("truetype");
+  font-weight: 200;
+}
+@font-face {
+  font-family: "cocogosse";
+  src: url("../../fonts/cocogoose/CocogooseProLight-Italic-trial.ttf") format("truetype");
+  font-weight: 200;
+  font-style: italic;
+}
+@font-face {
+  font-family: "lato";
+  src: url("../../fonts/Lato/Lato-Black.ttf") format("truetype");
+  font-weight: 900;
+}
+@font-face {
+  font-family: "lato";
+  src: url("../../fonts/Lato/Lato-BlackItalic.ttf") format("truetype");
+  font-weight: 900;
+  font-style: italic;
+}
+@font-face {
+  font-family: "lato";
+  src: url("../../fonts/Lato/Lato-Bold.ttf") format("truetype");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "lato";
+  src: url("../../fonts/Lato/Lato-BoldItalic.ttf") format("truetype");
+  font-weight: 600;
+  font-style: italic;
+}
+@font-face {
+  font-family: "lato";
+  src: url("../../fonts/Lato/Lato-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "lato";
+  src: url("../../fonts/Lato/Lato-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: "lato";
+  src: url("../../fonts/Lato/Lato-Light.ttf") format("truetype");
+  font-weight: 200;
+}
+@font-face {
+  font-family: "lato";
+  src: url("../../fonts/Lato/Lato-LightItalic.ttf") format("truetype");
+  font-weight: 200;
+  font-style: italic;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: "cocogosse", sans-serif, Helvetica;
+  font-weight: 400;
+  font-size: 1.5em;
+}
+
+h1, h2, h3 {
+  font-weight: 400;
+}
+
+ul {
+  padding-inline-start: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+}
+
+header .upper-bar {
+  display: none;
+}
+
+header .menu-button {
+  position: absolute;
+  z-index: 100;
+  left: 10px;
+  top: 10px;
+  height: 20px;
+  width: 28px;
+  cursor: pointer;
+  transition: all 0.5s ease-in;
+}
+header .menu-button:hover {
+  transform: scale(1.1);
+}
+header .menu-button span {
+  position: absolute;
+  right: 0;
+  top: 0.5rem;
+  width: 100%;
+  height: 3px;
+  border-radius: 2px;
+  background-color: #272a31;
+  transition: all 0.5s ease-in;
+}
+header .menu-button span::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -8px;
+  width: 100%;
+  height: 3px;
+  border-radius: 2px;
+  background-color: #272a31;
+  transition: all 0.5s ease-in;
+}
+header .menu-button span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 80%;
+  height: 3px;
+  border-radius: 2px;
+  background-color: #272a31;
+  transition: all 0.5s ease-in;
+}
+header .menu-button span.open {
+  transform: rotate(720deg);
+  background: transparent;
+}
+header .menu-button span.open::before {
+  transform: rotate(45deg) translate(5px, 8px);
+}
+header .menu-button span.open::after {
+  transform: rotate(-45deg) translate(3px, -7px);
+  width: 100%;
+}
+
+header .low-bar {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  header .upper-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    height: 40px;
+    background-color: #272a31;
+  }
+  header .upper-bar ul {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+  }
+  header .upper-bar ul li {
+    display: inline-block;
+  }
+  header .upper-bar ul li a {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    padding: 0 10px;
+    color: white;
+    transition: all 0.5s ease-in;
+  }
+  header .upper-bar ul li a:hover {
+    background-color: #ec5242;
+  }
+  header .menu-button {
+    display: none;
+  }
+  header .low-bar {
+    display: flex;
+  }
+}
+/*
+* documentation for understand the animation
+* =====> https://ibritech.atlassian.net/wiki/external/231374901/ZDQxY2E1YzY3MjAzNDRjN2FiOWYzZTkyYmEwNDc0OTM?atlOrigin=eyJpIjoiZmUxNTVjY2NkMDM3NDBjZWFjNjViZTgxMDI5NGRhYWMiLCJwIjoiYyJ9
+*
+* a little complicated trying to match the timer only one star should shine at the time
+* =====> https://css-tricks.com/a-new-way-to-delay-keyframes-animations/
+*/
+.welcome-section {
+  background: url("../../images/background/welcome_mobile.png") no-repeat;
+  background-size: 100%;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.welcome-section .stars-container {
+  position: relative;
+  height: 100%;
+}
+.welcome-section .stars-container .stars {
+  max-width: fit-content;
+  width: 10%;
+  height: auto;
+  filter: grayscale(100%);
+  animation: full-color 15s ease-in-out 2s infinite normal forwards;
+}
+.welcome-section .stars-container .star-1 {
+  position: absolute;
+  top: 15%;
+  left: 60%;
+  animation-delay: 3s;
+}
+.welcome-section .stars-container .star-2 {
+  position: absolute;
+  top: 30%;
+  left: 15%;
+  animation-delay: 6s;
+}
+.welcome-section .stars-container .star-3 {
+  position: absolute;
+  top: 45%;
+  left: 80%;
+  animation-delay: 9s;
+}
+.welcome-section .stars-container .star-4 {
+  position: absolute;
+  top: 60%;
+  left: 5%;
+  animation-delay: 12s;
+}
+.welcome-section .stars-container .star-5 {
+  position: absolute;
+  top: 75%;
+  left: 70%;
+  animation-delay: 15s;
+}
+.welcome-section article {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 100px;
+  left: 5%;
+  min-width: 450px;
+  width: 90%;
+}
+.welcome-section article h1 {
+  font-size: 1.1em;
+  font-weight: 400;
+  color: #ec5242;
+  margin-bottom: 5px;
+}
+.welcome-section article h2 {
+  font-size: 2em;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: transparent;
+  background-size: 150%;
+  background-position: right top;
+  background-image: url("../../images/background/caribean.jpg");
+  background-clip: text;
+  -webkit-background-clip: text;
+  transition: background-position 5s ease-in;
+}
+.welcome-section article h2:hover {
+  background-position: left bottom;
+}
+.welcome-section article p:nth-of-type(1) {
+  font-family: "lato", Helvetica;
+  font-size: 0.7em;
+  font-weight: 600;
+  line-height: 30px;
+  background-color: #d3d3d3;
+}
+.welcome-section article h3 {
+  font-family: "lato", Helvetica;
+  font-weight: 900;
+}
+.welcome-section article p:nth-of-type(2) {
+  font-family: "lato", Helvetica;
+  color: #ec5242;
+}
+
+@keyframes full-color {
+  0% {
+    filter: grayscale(100%);
+  }
+  /* Finish changes by here */
+  10% {
+    filter: grayscale(0%);
+  }
+  20% {
+    filter: grayscale(100%);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

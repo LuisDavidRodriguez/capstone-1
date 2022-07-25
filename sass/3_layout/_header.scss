@@ -1,0 +1,135 @@
+/// -----------------------------------------------------------------------
+/// @author Luis David Rodriguez Valades 25/07/2022
+/// -----------------------------------------------------------------------
+
+@use '../1_abstracts/variables' as v;
+@use '../1_abstracts/functions' as f;
+@use '../1_abstracts/mixin';
+
+header {
+  display: flex;
+  flex-direction: column;  
+}
+
+header .upper-bar {
+  display: none;
+}
+
+header .menu-button {
+  position: absolute;
+  z-index: f.get-z-index('navigation');
+  left: 10px;
+  top: 10px;
+  height: 20px;
+  width: 28px;
+  cursor: pointer;
+  @include mixin.transition-ease;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  span {
+    position: absolute;
+    right: 0;
+    top: 0.5rem;
+    width: 100%;
+    height: 3px;
+    border-radius: 2px;
+    background-color: f.get-color('primary');
+    @include mixin.transition-ease;
+
+    //create the other little bars!
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: -8px;
+      width: 100%;
+      height: 3px;
+      border-radius: 2px;
+      background-color: f.get-color('primary');
+      @include mixin.transition-ease;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 8px;
+      width: 80%;
+      height: 3px;
+      border-radius: 2px;
+      background-color: f.get-color('primary');
+      @include mixin.transition-ease;
+    }
+
+    //in java script when the open class is assigned i want to hidde the middle bar and rotate the other two to form a cross
+    &.open {
+      transform: rotate(720deg);
+      background: transparent;
+
+      &::before {
+        transform: rotate(45deg) translate(5px, 8px);
+      }
+
+      &::after {
+        transform: rotate(-45deg) translate(3px, -7px);
+        width: 100%;
+      }
+    }
+  }
+}
+
+header .low-bar {
+  display: none;
+}
+
+@include mixin.desktop {
+
+  header .upper-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    height: v.$upper-bar-height;
+    background-color: f.get-color('primary');
+    
+    ul {
+      display: flex;
+      flex-direction: row;
+      height: 100%;
+  
+      li{
+        display: inline-block;
+        
+        a{
+          display: flex;
+          align-items: center;
+          height: 100%;
+          width: 100%;
+          padding: 0 10px;
+          color: white;
+          @include mixin.transition-ease;
+  
+          &:hover {
+            background-color: f.get-color('accent');
+          }
+        }
+      }
+    }
+  
+  }
+
+  header .menu-button {
+    display: none;
+  }
+  
+  header .low-bar {
+    display: flex;
+  }
+  
+
+}
+
+

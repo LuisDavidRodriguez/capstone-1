@@ -1,0 +1,93 @@
+/// -----------------------------------------------------------------------
+/// Created by Luis David Rodriguez Valades 25/07/2022
+/// Principal Typography
+/// load costums fonts https://www.youtube.com/watch?v=AAU25Fo4bFY&t=378s
+/// -----------------------------------------------------------------------
+@use '../1_abstracts/variables' as v;
+@use '../1_abstracts/functions' as f;
+
+@font-face {
+    font-family: 'cocogosse';
+    src: url('../../fonts/cocogoose/CocogoosePro-trial.ttf') format('truetype');
+    font-weight: f.get-font-weight('bold');
+}
+
+@font-face {
+  font-family: 'cocogosse';
+  src: url('../../fonts/cocogoose/CocogooseProItalic-trial.ttf') format('truetype');
+  font-weight: f.get-font-weight('bold');
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'cocogosse';
+  src: url('../../fonts/cocogoose/CocogooseProLight-trial.ttf') format('truetype');
+  font-weight: f.get-font-weight('light');
+}
+
+@font-face {
+  font-family: 'cocogosse';
+  src: url('../../fonts/cocogoose/CocogooseProLight-Italic-trial.ttf') format('truetype');
+  font-weight: f.get-font-weight('light');
+  font-style: italic;
+}
+
+//super bold
+@font-face {
+    font-family: 'lato';
+    src: url('../../fonts/Lato/Lato-Black.ttf') format('truetype');
+    font-weight: f.get-font-weight('super');
+}
+
+//super italic
+@font-face {
+  font-family: 'lato';
+  src: url('../../fonts/Lato/Lato-BlackItalic.ttf') format('truetype');
+  font-weight: f.get-font-weight('super');
+  font-style: italic;
+}
+
+//bold
+@font-face {
+  font-family: 'lato';
+  src: url('../../fonts/Lato/Lato-Bold.ttf') format('truetype');
+  font-weight: f.get-font-weight('bold');
+}
+
+//bold italic
+@font-face {
+  font-family: 'lato';
+  src: url('../../fonts/Lato/Lato-BoldItalic.ttf') format('truetype');
+  font-weight: f.get-font-weight('bold');
+  font-style: italic;
+}
+
+//normal
+@font-face {
+  font-family: 'lato';
+  src: url('../../fonts/Lato/Lato-Regular.ttf') format('truetype');
+  font-weight: f.get-font-weight('normal');
+}
+
+//normal italic
+@font-face {
+font-family: 'lato';
+src: url('../../fonts/Lato/Lato-Italic.ttf') format('truetype');
+font-weight: f.get-font-weight('normal');
+font-style: italic;
+}
+
+//light
+@font-face {
+  font-family: 'lato';
+  src: url('../../fonts/Lato/Lato-Light.ttf') format('truetype');
+  font-weight: f.get-font-weight('light');
+}
+
+//light italic
+@font-face {
+font-family: 'lato';
+src: url('../../fonts/Lato/Lato-LightItalic.ttf') format('truetype');
+font-weight: f.get-font-weight('light');
+font-style: italic;
+}

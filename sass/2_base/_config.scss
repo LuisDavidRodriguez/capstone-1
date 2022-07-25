@@ -1,0 +1,35 @@
+/// -----------------------------------------------------------------------
+/// Created by Luis David Rodriguez Valades 25/07/2022
+/// General resets and configs
+/// -----------------------------------------------------------------------
+@use '../1_abstracts/variables' as v;
+@use '../1_abstracts/functions' as f;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: v.$font-cocogosse;
+  font-weight: f.get-font-weight('normal');
+  font-size: f.get-font-size('normal');
+}
+
+h1, h2, h3 {
+  font-weight: f.get-font-weight('normal');
+}
+
+//yeah I get ride of that hideous padding once and for all for all my ul!!
+ul {
+  padding-inline-start: 0;
+}
+
+a {
+  text-decoration: none;
+}

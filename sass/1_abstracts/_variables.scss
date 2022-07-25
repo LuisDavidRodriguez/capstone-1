@@ -1,0 +1,41 @@
+/// -----------------------------------------------------------------------
+/// @author Luis David Rodriguez Valades 25/07/2022
+/// -----------------------------------------------------------------------
+
+$brand-colors: (
+  'primary':   #272a31,
+  'secundary': #d3d3d3,
+  'accent':    #ec5242,
+);
+
+$font-sizes: (
+  'smaller':  0.7em,
+  'small':    1.1em,
+  'normal':   1.5em,
+  'big':      2em,
+  'subtitle': 3em,
+  'title':    4em,
+);
+
+$font-weights: (
+  'thin':   100,
+  'light':  200,
+  'normal': 400,
+  'bold':   600,
+  'super':  900,
+);
+
+$break-points: (
+  'medium': 768px,
+);
+
+$z-index: (
+  'modal':       200,
+  'navigation':  100,
+);
+
+/// @type list to save time and write in one time the fallBack
+$font-cocogosse: 'cocogosse', sans-serif, Helvetica;
+$font-lato: 'lato', Helvetica;
+
+$upper-bar-height: 40px;
