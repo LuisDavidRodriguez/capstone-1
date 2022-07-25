@@ -1,0 +1,19 @@
+@use '../1_abstracts/functions' as f;
+.main-program {
+    background-color: f.get-color('primary');
+    background-image: url('../../images/background/pattern.png');
+    height: fit-content;
+    text-align: center;
+    padding: 20px 0;
+
+    & h2:first-child {
+      color: f.get-color('natural');
+      font-weight: f.get-font-weight('normal');
+    }
+
+    & hr {
+      display: inline-block;
+      border-color: f.get-color('accent');
+      width: 80px;
+    }
+}

@@ -1,0 +1,39 @@
+@use '../1_abstracts/mixin';
+@use '../1_abstracts/variables' as v;
+@use '../1_abstracts/functions' as f;
+.card-program {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-family: v.$font-lato;
+  background-color: f.get-color('trans-primary');
+  margin: 10px;
+  height: 150px;
+  padding: 0 1%;
+
+  & img {
+    max-width: fit-content;
+    min-width: fit-content;
+    padding: 0 1%;
+    width: 20%;
+  }
+
+  & h3 {
+    width: 30%;
+    padding-left: 2%;
+    color: f.get-color('accent');
+    font-weight: f.get-font-weight('super');
+    font-size: f.get-font-size('smaller');
+  }
+
+  & p {
+    width: 50%;
+    font-size: f.get-font-size('smaller');
+    color: f.get-color('natural');
+    text-align: start;
+  }
+
+  @include mixin.desktop {
+      flex-direction: column;
+  }
+}

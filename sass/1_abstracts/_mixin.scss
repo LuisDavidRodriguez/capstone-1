@@ -3,11 +3,35 @@
 /// -----------------------------------------------------------------------
 @use 'functions' as f;
 
+@mixin xs {
+  @media screen and (min-width: f.get-break-point('xs')) {
+    @content;
+  }
+};
+
+@mixin sm {
+  @media screen and (min-width: f.get-break-point('sm')) {
+    @content;
+  }
+};
+
 @mixin desktop {
     @media screen and (min-width: f.get-break-point('medium')) {
       @content;
     }
   };
+
+@mixin lg {
+  @media screen and (min-width: f.get-break-point('lg')) {
+    @content;
+  }
+};
+
+@mixin xl {
+  @media screen and (min-width: f.get-break-point('xl')) {
+    @content;
+  }
+};
 
 @mixin transition-ease {
   transition: all 0.5s ease-in;

@@ -59,9 +59,10 @@
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 100px;
+    top: 30px;
     left: 5%;
     min-width: 450px;
+    max-width: 1000px;
     width: 90%;
 
     & h1 {
@@ -76,12 +77,12 @@
       font-weight: f.get-font-weight('bold');
       text-transform: uppercase;
       color: transparent;
-      background-size: 150%;
+      background-size: 200%;
       background-position: right top;
-      background-image: url('../../images/background/caribean.jpg');
+      background-image: url('../../images/background/firered.jpg');
       background-clip: text;
       -webkit-background-clip: text;
-      transition: background-position 5s ease-in;
+      transition: background-position 5s ease-out;
 
       &:hover {
         background-position: left bottom;
@@ -93,17 +94,25 @@
       font-size: f.get-font-size('smaller');
       font-weight: f.get-font-weight('bold');
       line-height: 30px;
-      background-color: f.get-color('secundary');
+      background-color: f.get-color('natural');
+      border: 1px solid f.get-color('secundary');
+      box-shadow: 5px 5px 10px 5px f.get-color('secundary'), -1px -1px 5px 2px f.get-color('secundary'),;
+      margin: 30px 0;
+      padding: 20px;
     }
 
     & h3 {
       font-family: v.$font-lato; 
       font-weight: f.get-font-weight('super');
+      color: f.get-color('primary');
+      margin: 20px 10px;
     }
 
     & p:nth-of-type(2) {
       font-family: v.$font-lato;
-      color: f.get-color('accent');
+      font-size: f.get-font-size('smaller');
+      font-weight: f.get-font-weight('bold');
+      color: f.get-color('primary');
     }
 
   }

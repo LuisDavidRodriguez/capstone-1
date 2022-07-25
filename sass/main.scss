@@ -33,11 +33,18 @@
 /// to convert the burger icon into a cross
 /// https://www.youtube.com/watch?v=_a5j7KoflTs&t=3615s 
 /// 
+/// Create a grid sistem 
+/// ===> https://www.youtube.com/watch?v=GA65QBSec-Y&list=PL4cUxeGkcC9jxJX7vojNVK-o8ubDZEcNb&index=16
 /// -----------------------------------------------------------------------
 
 @use '2_base/typography';
 @use '2_base/config';
 @use '2_base/helpers';
+@use '2_base/grid-system';
 
 @use '3_layout/header';
 @use '3_layout/welcome';
+@use '3_layout/program';
+
+@use '4_components/cards.scss';
+@use '4_components/buttons';

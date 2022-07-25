@@ -4,6 +4,7 @@
 /// -----------------------------------------------------------------------
 @use '../1_abstracts/variables' as v;
 @use '../1_abstracts/functions' as f;
+@use '../1_abstracts/mixin';
 
 * {
   margin: 0;
@@ -12,7 +13,19 @@
 }
 
 html {
-  font-size: 16px;
+  font-size: 10px;
+
+  @include mixin.xs {
+    font-size: 12px;
+  }
+
+  @include mixin.sm {
+    font-size: 14px;
+  }
+
+  @include mixin.desktop {
+    font-size: 18px;
+  }
 }
 
 body {

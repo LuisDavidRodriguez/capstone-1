@@ -71,7 +71,22 @@
 }
 
 html {
-  font-size: 16px;
+  font-size: 10px;
+}
+@media screen and (min-width: 0px) {
+  html {
+    font-size: 12px;
+  }
+}
+@media screen and (min-width: 480px) {
+  html {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 18px;
+  }
 }
 
 body {
@@ -92,6 +107,168 @@ a {
   text-decoration: none;
 }
 
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.row {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+@media screen and (min-width: 0px) {
+  .col-1-xs {
+    flex-grow: 0;
+    width: 8.3333333333%;
+  }
+  .col-2-xs {
+    flex-grow: 0;
+    width: 16.6666666667%;
+  }
+  .col-3-xs {
+    flex-grow: 0;
+    width: 25%;
+  }
+  .col-4-xs {
+    flex-grow: 0;
+    width: 33.3333333333%;
+  }
+  .col-5-xs {
+    flex-grow: 0;
+    width: 41.6666666667%;
+  }
+  .col-6-xs {
+    flex-grow: 0;
+    width: 50%;
+  }
+  .col-7-xs {
+    flex-grow: 0;
+    width: 58.3333333333%;
+  }
+  .col-8-xs {
+    flex-grow: 0;
+    width: 66.6666666667%;
+  }
+  .col-9-xs {
+    flex-grow: 0;
+    width: 75%;
+  }
+  .col-10-xs {
+    flex-grow: 0;
+    width: 83.3333333333%;
+  }
+  .col-11-xs {
+    flex-grow: 0;
+    width: 91.6666666667%;
+  }
+  .col-12-xs {
+    flex-grow: 0;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 480px) {
+  .col-1-sm {
+    flex-grow: 0;
+    width: 8.3333333333%;
+  }
+  .col-2-sm {
+    flex-grow: 0;
+    width: 16.6666666667%;
+  }
+  .col-3-sm {
+    flex-grow: 0;
+    width: 25%;
+  }
+  .col-4-sm {
+    flex-grow: 0;
+    width: 33.3333333333%;
+  }
+  .col-5-sm {
+    flex-grow: 0;
+    width: 41.6666666667%;
+  }
+  .col-6-sm {
+    flex-grow: 0;
+    width: 50%;
+  }
+  .col-7-sm {
+    flex-grow: 0;
+    width: 58.3333333333%;
+  }
+  .col-8-sm {
+    flex-grow: 0;
+    width: 66.6666666667%;
+  }
+  .col-9-sm {
+    flex-grow: 0;
+    width: 75%;
+  }
+  .col-10-sm {
+    flex-grow: 0;
+    width: 83.3333333333%;
+  }
+  .col-11-sm {
+    flex-grow: 0;
+    width: 91.6666666667%;
+  }
+  .col-12-sm {
+    flex-grow: 0;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .col-1-desktop {
+    flex-grow: 0;
+    width: 8.3333333333%;
+  }
+  .col-2-desktop {
+    flex-grow: 0;
+    width: 16.6666666667%;
+  }
+  .col-3-desktop {
+    flex-grow: 0;
+    width: 25%;
+  }
+  .col-4-desktop {
+    flex-grow: 0;
+    width: 33.3333333333%;
+  }
+  .col-5-desktop {
+    flex-grow: 0;
+    width: 41.6666666667%;
+  }
+  .col-6-desktop {
+    flex-grow: 0;
+    width: 50%;
+  }
+  .col-7-desktop {
+    flex-grow: 0;
+    width: 58.3333333333%;
+  }
+  .col-8-desktop {
+    flex-grow: 0;
+    width: 66.6666666667%;
+  }
+  .col-9-desktop {
+    flex-grow: 0;
+    width: 75%;
+  }
+  .col-10-desktop {
+    flex-grow: 0;
+    width: 83.3333333333%;
+  }
+  .col-11-desktop {
+    flex-grow: 0;
+    width: 91.6666666667%;
+  }
+  .col-12-desktop {
+    flex-grow: 0;
+    width: 100%;
+  }
+}
 header {
   display: flex;
   flex-direction: column;
@@ -189,7 +366,7 @@ header .low-bar {
     transition: all 0.5s ease-in;
   }
   header .upper-bar ul li a:hover {
-    background-color: #ec5242;
+    background-color: hsl(9deg, 82%, 59%);
   }
   header .menu-button {
     display: none;
@@ -251,15 +428,16 @@ header .low-bar {
   display: flex;
   flex-direction: column;
   position: absolute;
-  top: 100px;
+  top: 30px;
   left: 5%;
   min-width: 450px;
+  max-width: 1000px;
   width: 90%;
 }
 .welcome-section article h1 {
-  font-size: 1.1em;
+  font-size: 1.2em;
   font-weight: 400;
-  color: #ec5242;
+  color: hsl(9deg, 82%, 59%);
   margin-bottom: 5px;
 }
 .welcome-section article h2 {
@@ -267,30 +445,38 @@ header .low-bar {
   font-weight: 600;
   text-transform: uppercase;
   color: transparent;
-  background-size: 150%;
+  background-size: 200%;
   background-position: right top;
-  background-image: url("../../images/background/caribean.jpg");
+  background-image: url("../../images/background/firered.jpg");
   background-clip: text;
   -webkit-background-clip: text;
-  transition: background-position 5s ease-in;
+  transition: background-position 5s ease-out;
 }
 .welcome-section article h2:hover {
   background-position: left bottom;
 }
 .welcome-section article p:nth-of-type(1) {
   font-family: "lato", Helvetica;
-  font-size: 0.7em;
+  font-size: 1em;
   font-weight: 600;
   line-height: 30px;
-  background-color: #d3d3d3;
+  background-color: rgb(226, 225, 225);
+  border: 1px solid #d3d3d3;
+  box-shadow: 5px 5px 10px 5px #d3d3d3, -1px -1px 5px 2px #d3d3d3;
+  margin: 30px 0;
+  padding: 20px;
 }
 .welcome-section article h3 {
   font-family: "lato", Helvetica;
   font-weight: 900;
+  color: #272a31;
+  margin: 20px 10px;
 }
 .welcome-section article p:nth-of-type(2) {
   font-family: "lato", Helvetica;
-  color: #ec5242;
+  font-size: 1em;
+  font-weight: 600;
+  color: #272a31;
 }
 
 @keyframes full-color {
@@ -304,6 +490,75 @@ header .low-bar {
   20% {
     filter: grayscale(100%);
   }
+}
+.main-program {
+  background-color: #272a31;
+  background-image: url("../../images/background/pattern.png");
+  height: fit-content;
+  text-align: center;
+  padding: 20px 0;
+}
+.main-program h2:first-child {
+  color: rgb(226, 225, 225);
+  font-weight: 400;
+}
+.main-program hr {
+  display: inline-block;
+  border-color: hsl(9deg, 82%, 59%);
+  width: 80px;
+}
+
+.card-program {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-family: "lato", Helvetica;
+  background-color: rgba(55, 57, 63, 0.39);
+  margin: 10px;
+  height: 150px;
+  padding: 0 1%;
+}
+.card-program img {
+  max-width: fit-content;
+  min-width: fit-content;
+  padding: 0 1%;
+  width: 20%;
+}
+.card-program h3 {
+  width: 30%;
+  padding-left: 2%;
+  color: hsl(9deg, 82%, 59%);
+  font-weight: 900;
+  font-size: 1em;
+}
+.card-program p {
+  width: 50%;
+  font-size: 1em;
+  color: rgb(226, 225, 225);
+  text-align: start;
+}
+@media screen and (min-width: 768px) {
+  .card-program {
+    flex-direction: column;
+  }
+}
+
+.btn-style-1, .btn-1 {
+  background-color: hsl(9deg, 82%, 59%);
+  font-family: "lato", Helvetica;
+  color: rgb(226, 225, 225);
+  font-weight: 600;
+  padding: 20px;
+  width: fit-content;
+  display: inline-block;
+  transition: all 0.5s linear;
+}
+.btn-style-1:hover, .btn-1:hover {
+  background-color: hsl(6deg, 82%, 45%);
+}
+
+.btn-1 {
+  margin: 10px 0px;
 }
 
 /*# sourceMappingURL=style.css.map */

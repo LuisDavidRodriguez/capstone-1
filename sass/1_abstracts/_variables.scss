@@ -3,14 +3,17 @@
 /// -----------------------------------------------------------------------
 
 $brand-colors: (
-  'primary':   #272a31,
-  'secundary': #d3d3d3,
-  'accent':    #ec5242,
+  'primary':          #272a31,
+  'secundary':        #d3d3d3,
+  'accent':           hsl(9, 82%, 59%),
+  'accent-secundary': hsl(6, 82%, 45%),
+  'natural':          rgb(226, 225, 225),
+  'trans-primary':    rgba(55, 57, 63, 0.39),
 );
 
 $font-sizes: (
-  'smaller':  0.7em,
-  'small':    1.1em,
+  'smaller':  1em,
+  'small':    1.2em,
   'normal':   1.5em,
   'big':      2em,
   'subtitle': 3em,
@@ -26,7 +29,11 @@ $font-weights: (
 );
 
 $break-points: (
+  'xs':     0px,
+  'sm':     480px,
   'medium': 768px,
+  'lg':     960px,
+  'xl':     1200px,
 );
 
 $z-index: (
