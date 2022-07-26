@@ -26,13 +26,13 @@
         </div>
 
         <div class="low-bar">
-            <img class="logo-responsive" src="#" alt="logo">
+            <img class="logo-responsive" src="images/logo.png" alt="logo">
             <nav class="nav">
-                <ul class="nav-list">
+                <ul>
                     <li><a href="#">About</a></li>
-                    <li><a href="#">Program</a></li>
+                    <li><a href="#mainProgram">Program</a></li>
                     <li><a href="#">Join</a></li>
-                    <li><a href="#">Sponsor</a></li>
+                    <li><a href="#sponsor">Sponsor</a></li>
                     <li><a href="#">News</a></li>
                     <li><a href="#">CC Campaign</a></li>
                 </ul>
@@ -56,42 +56,42 @@
                     A joyful celebration believieng in the value of otenness and sharing, creating a positive
                     change with people from over 80 countries is taking place in Ocpober, in Korea.
                 </p>
-                <h3>2015.10.15(THU) ~ 10(FRI)</h3>
+                <p>2015.10.15(THU) ~ 10(FRI)</p>
                 <p>@ National Museum of Korea, Art Center Nabi and more</p>
             </article>
         </section>
 
         <!--I wanna use my grid sistem here-->
-        <section class="main-program">
+        <section class="main-program" id="mainProgram">
             <h2>Main Program</h2>
             <hr class="hr-1">
             <article class="row">
                 <!--Dinamic content here-->
-                <div class="col-12-xs col-2-desktop card-program">
+                <div class="col-12-base col-5-desktop col-3-large col-2-xlarge card-program">
                     <img src="images/icons/icon_presenter.png" alt="" class="icon">
                     <h3>Lecture</h3>
                     <p>Listen to speakers from varius countries about messeges of sharing and opening.</p>
                 </div>
 
-                <div class="col-12-xs col-3-desktop card-program">
+                <div class="col-12-base col-5-desktop col-3-large col-2-xlarge card-program">
                     <img src="images/icons/icon_program.png" alt="" class="icon">
                     <h3>CC Exhibition</h3>
                     <p>Appreciate various creations applying CC license of artists, organized from Art Center Nabi</p>
                 </div>
 
-                <div class="col-12-xs col-3-desktop card-program">
+                <div class="col-12-base col-5-desktop col-3-large col-2-xlarge card-program">
                     <img src="images/icons/icon_messages.png" alt="" class="icon">
                     <h3>Forum</h3>
                     <p>Have the time to share your thoughts and opinions with experts for each topic.</p>
                 </div>
 
-                <div class="col-12-xs col-3-desktop card-program">
+                <div class="col-12-base col-5-desktop col-3-large col-2-xlarge card-program">
                     <img src="images/icons/icon_board.png" alt="" class="icon">
                     <h3>Workshop</h3>
                     <p>Try creating your own work using open source license rather than just watching.</p>
                 </div>
 
-                <div class="col-12-xs col-3-desktop card-program">
+                <div class="col-12-base col-5-desktop col-3-large col-2-xlarge card-program">
                     <img src="images/icons/icon_wheel.png" alt="" class="icon">
                     <h3>CC Ignite</h3>
                     <p>Get opportunities to network with CC affiliates around the world, also after the summit.</p>
@@ -106,7 +106,7 @@
 
             <article class="row">
                 <!--Dinamic content here-->
-                <div class="card-speakers col-12-xs col-5-desktop">
+                <div class="card-speakers col-12-base col-12-desktop col-5-xlarge">
                     <img src="images/presenters/speaker_01.png" alt="Speaker number 1">
                     <div>
                         <h3>Yoachi Benkeler</h3>
@@ -116,7 +116,7 @@
                     </div>
                 </div>
 
-                <div class="card-speakers col-12-xs col-5-desktop">
+                <div class="card-speakers col-12-base col-12-desktop col-5-xlarge">
                     <img src="images/presenters/speaker_01.png" alt="Speaker number 1">
                     <div>
                         <h3>Yoachi Benkeler</h3>
@@ -126,7 +126,7 @@
                     </div>
                 </div>
 
-                <div class="card-speakers col-12-xs col-5-desktop">
+                <div class="card-speakers col-12-base col-12-desktop col-5-xlarge">
                     <img src="images/presenters/speaker_01.png" alt="Speaker number 1">
                     <div>
                         <h3>Yoachi Benkeler</h3>
@@ -136,7 +136,7 @@
                     </div>
                 </div>
 
-                <div class="card-speakers col-12-xs col-5-desktop">
+                <div class="card-speakers col-12-base col-12-desktop col-5-xlarge">
                     <img src="images/presenters/speaker_01.png" alt="Speaker number 1">
                     <div>
                         <h3>Yoachi Benkeler</h3>
@@ -151,11 +151,36 @@
         </section>
     </main>
 
-    <footer>
-
+    <footer id="sponsor">
+        <article>
+            <h2>Partner</h2>
+            <hr class="hr-1">
+            <div>
+                <img src="images/partners/disney.png" alt="Disney is a partner">
+                <img src="images/partners/mozilla.png" alt="Mozila is a partner">
+                <img src="images/partners/google.png" alt="Google is a partner">
+            </div>
+        </article>
+        <article>
+            <img src="images/partners/google.png" alt="Made by company">
+            <div>
+                <p>2015 Creative Commons Korea. Some Rights Reserved.</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi exercitationem aliquid voluptatum delectus temporibus error! Id praesentium recusandae, quibusdam omnis magnam cum eos. Quae sit assumenda accusamus hic itaque dolorem.</p>
+            </div>
+        </article>
 
     </footer>
 
+    <div class="menu-modal" id="menuModal">
+        <ul class="menu-modal-list" id="menuModalList">
+            <li class="item"><a href="#">About</a></li>
+            <li class="item"><a href="#mainProgram">Program</a></li>
+            <li class="item"><a href="#">Join</a></li>
+            <li class="item"><a href="#sponsor">Sponsor</a></li>
+            <li class="item"><a href="#">News</a></li>
+            <li class="item"><a href="#">CC Campaign</a></li>
+        </ul>
+    </div>
 
     <script src="https://kit.fontawesome.com/4e5bc16f7d.js" crossorigin="anonymous"></script>
     <script type="module" src="js/main.js"></script>

@@ -12,10 +12,14 @@
 
 @use '../1_abstracts/functions' as f;
 @use '../1_abstracts/variables' as v;
+@use '../1_abstracts/mixin';
+
+$top-mobil: 70px;
+
 .welcome-section {
   background: url('../../images/background/welcome_mobile.png') no-repeat;
   background-size: 100%;
-  height: 80vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -59,7 +63,7 @@
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 30px;
+    top: $top-mobil;
     left: 5%;
     min-width: 450px;
     max-width: 1000px;
@@ -73,7 +77,7 @@
     }
 
     & h2 {
-      font-size: f.get-font-size('big');
+      font-size: f.get-font-size('title');
       font-weight: f.get-font-weight('bold');
       text-transform: uppercase;
       color: transparent;
@@ -82,7 +86,7 @@
       background-image: url('../../images/background/firered.jpg');
       background-clip: text;
       -webkit-background-clip: text;
-      transition: background-position 5s ease-out;
+      transition: background-position 15s ease-out;
 
       &:hover {
         background-position: left bottom;
@@ -94,27 +98,38 @@
       font-size: f.get-font-size('smaller');
       font-weight: f.get-font-weight('bold');
       line-height: 30px;
-      background-color: f.get-color('natural');
+      background-color: transparentize($color: f.get-color('natural'), $amount: 0.1%) ;
       border: 1px solid f.get-color('secundary');
       box-shadow: 5px 5px 10px 5px f.get-color('secundary'), -1px -1px 5px 2px f.get-color('secundary'),;
       margin: 30px 0;
       padding: 20px;
     }
 
-    & h3 {
+    & p:nth-of-type(2) {
       font-family: v.$font-lato; 
+      font-size: f.get-font-size('big');
       font-weight: f.get-font-weight('super');
       color: f.get-color('primary');
       margin: 20px 10px;
     }
 
-    & p:nth-of-type(2) {
+    & p:nth-of-type(3) {
       font-family: v.$font-lato;
       font-size: f.get-font-size('smaller');
       font-weight: f.get-font-weight('bold');
       color: f.get-color('primary');
     }
 
+  }
+
+  @include mixin.desktop {
+    & {
+      scroll-margin-top: v.$upper-bar-height + v.$low-bar-height;
+    }
+
+    & article {
+      top: $top-mobil + v.$upper-bar-height + v.$low-bar-height;
+    }
   }
 }
 

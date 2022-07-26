@@ -1,0 +1,73 @@
+@use '../1_abstracts/functions' as f;
+@use '../1_abstracts/variables' as v;
+@use '../1_abstracts/mixin';
+
+$options-total: 6;
+
+.menu-modal {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: -150%;
+  left: 0;
+  padding-top: 100px;
+  text-align: center;
+  background-color: transparentize($color: f.get-color('secundary'), $amount: 0.05%);
+  z-index: f.get-z-index('modal');
+  transition: top 0.5s linear;
+
+  & .menu-modal-list {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    & .item {
+      width: 100%;
+      transform: translateX(100vw);
+      transition: all 0.5s linear;
+    }
+
+    & .item > a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 50px;
+      width: 100%;
+      color: f.get-color('primary');
+      font-weight: f.get-font-weight('bold');
+      font-size: f.get-font-size('small');
+      transition: all 0.3s linear;
+
+      &:hover {
+        background-color: f.get-color('accent');
+      }
+
+      &.active {
+        color: f.get-color('accent');
+      }
+
+    }
+  }
+
+  &.open {
+
+      &{
+          display: block;
+          top: 0;
+      }
+      
+      @for $i from 1 through $options-total {
+        & {
+          .menu-modal-list > :nth-child(#{$i}) {
+            transition-delay: ($i * 0.2s) + 0.15s;
+            transform: translateX(0);
+          }
+        }
+      }
+  }
+
+  
+}

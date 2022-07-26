@@ -3,14 +3,14 @@
 /// -----------------------------------------------------------------------
 @use 'functions' as f;
 
-@mixin xs {
-  @media screen and (min-width: f.get-break-point('xs')) {
+@mixin base {
+  @media screen and (min-width: f.get-break-point('base')) {
     @content;
   }
 };
 
-@mixin sm {
-  @media screen and (min-width: f.get-break-point('sm')) {
+@mixin small {
+  @media screen and (min-width: f.get-break-point('small')) {
     @content;
   }
 };
@@ -21,14 +21,14 @@
     }
   };
 
-@mixin lg {
-  @media screen and (min-width: f.get-break-point('lg')) {
+@mixin large {
+  @media screen and (min-width: f.get-break-point('large')) {
     @content;
   }
 };
 
-@mixin xl {
-  @media screen and (min-width: f.get-break-point('xl')) {
+@mixin xlarge {
+  @media screen and (min-width: f.get-break-point('xlarge')) {
     @content;
   }
 };

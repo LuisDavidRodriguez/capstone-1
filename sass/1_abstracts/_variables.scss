@@ -7,18 +7,18 @@ $brand-colors: (
   'secundary':        #d3d3d3,
   'accent':           hsl(9, 82%, 59%),
   'accent-secundary': hsl(6, 82%, 45%),
-  'natural':          rgb(226, 225, 225),
-  'trans-primary':    rgba(55, 57, 63, 0.39),
+  'natural':          rgb(240, 240, 240),
+  'trans-primary':    rgba(92, 93, 97, 0.39),
 );
 
 $font-sizes: (
   'tiny':     0.6em,
-  'smaller':  0.9em,
+  'smaller':  0.8em,
   'small':    1.2em,
   'normal':   1.5em,
   'big':      2em,
-  'subtitle': 3em,
-  'title':    4em,
+  'subtitle': 2.5em,
+  'title':    2.9em,
 );
 
 $font-weights: (
@@ -30,14 +30,15 @@ $font-weights: (
 );
 
 $break-points: (
-  'xs':     0px,
-  'sm':     480px,
-  'medium': 768px,
-  'lg':     960px,
-  'xl':     1200px,
+  'base':      0,
+  'small':     480px,
+  'medium':    768px,
+  'large':     960px,
+  'xlarge':    1200px,
 );
 
 $z-index: (
+  'over':        300,
   'modal':       200,
   'navigation':  100,
 );
@@ -47,3 +48,4 @@ $font-cocogosse: 'cocogosse', sans-serif, Helvetica;
 $font-lato: 'lato', Helvetica;
 
 $upper-bar-height: 40px;
+$low-bar-height: 60px;

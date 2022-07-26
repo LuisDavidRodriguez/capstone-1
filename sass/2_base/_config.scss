@@ -14,18 +14,24 @@
 
 html {
   font-size: 10px;
+  scroll-behavior: smooth;
 
-  @include mixin.xs {
+  @include mixin.base {
     font-size: 12px;
   }
 
-  @include mixin.sm {
+  @include mixin.small {
     font-size: 14px;
   }
 
   @include mixin.desktop {
+    font-size: 16px;
+  }
+
+  @include mixin.large {
     font-size: 18px;
   }
+
 }
 
 body {
@@ -41,8 +47,20 @@ h1, h2, h3 {
 //yeah I get ride of that hideous padding once and for all for all my ul!!
 ul {
   padding-inline-start: 0;
+  list-style: none;
+  margin-block-start: 0;
+  margin-block-end: 0;
 }
 
 a {
   text-decoration: none;
+  font-family: v.$font-lato;
+}
+
+::before {
+  box-sizing: border-box;
+}
+
+::after {
+  box-sizing: border-box;
 }

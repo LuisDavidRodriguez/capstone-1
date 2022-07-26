@@ -7,9 +7,11 @@
   align-items: center;
   font-family: v.$font-lato;
   background-color: f.get-color('trans-primary');
-  margin: 10px;
   height: 150px;
-  padding: 0 1%;
+  padding: 1% 1%;
+  margin: 10px;
+  transition: all 0.3s linear;
+  border: 2px solid transparent;
 
   & img {
     max-width: fit-content;
@@ -31,11 +33,39 @@
     font-size: f.get-font-size('smaller');
     color: f.get-color('natural');
     text-align: start;
+    overflow: hidden;
   }
 
-  @include mixin.desktop {
-      flex-direction: column;
+
+  &:hover {
+    border: 2px solid f.get-color('secundary');
+    transform: scale(1.02);
   }
+
+
+  @include mixin.desktop {
+    & {
+      flex-direction: column;
+      height: 300px;
+      
+      & img {
+        max-width: fit-content;
+        min-width: fit-content;
+      }
+    
+      & h3 {
+        width: 100%;
+        padding: 0;
+      }
+    
+      & p {
+        margin-top: 5px;
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+
 }
 
 .card-speakers {
@@ -50,6 +80,8 @@
   overflow: hidden;
   padding: 2% 1%;
   text-align: start;
+  transition: all 0.3s linear;
+  border: 2px solid transparent;
 
   & img {
     max-width: fit-content;
@@ -68,6 +100,7 @@
   
     & p:nth-of-type(1){
       color: f.get-color('accent');
+      font-size: f.get-font-size('smaller');
       font-weight: f.get-font-weight('bold');
       font-style: italic;
     }
@@ -78,6 +111,11 @@
       font-weight: f.get-font-weight('bold');
       line-height: 20px;
     }
+  }
+
+  &:hover {
+    transform: scale(1.02);
+    border: 1px solid f.get-color('secundary');
   }
   
 }
