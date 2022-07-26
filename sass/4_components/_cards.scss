@@ -13,14 +13,14 @@
   transition: all 0.3s linear;
   border: 2px solid transparent;
 
-  & img {
+  & .card-img {
     max-width: fit-content;
     min-width: fit-content;
     padding: 0 1%;
     width: 20%;
   }
 
-  & h3 {
+  & .card-title {
     width: 30%;
     padding-left: 2%;
     color: f.get-color('accent');
@@ -28,7 +28,7 @@
     font-size: f.get-font-size('smaller');
   }
 
-  & p {
+  & .card-text-1 {
     width: 50%;
     font-size: f.get-font-size('smaller');
     color: f.get-color('natural');
@@ -46,19 +46,14 @@
   @include mixin.desktop {
     & {
       flex-direction: column;
-      height: 300px;
-      
-      & img {
-        max-width: fit-content;
-        min-width: fit-content;
-      }
+      height: 270px;
     
-      & h3 {
+      & .card-title {
         width: 100%;
         padding: 0;
       }
     
-      & p {
+      & .card-text-1 {
         margin-top: 5px;
         width: 100%;
         text-align: center;
@@ -83,29 +78,29 @@
   transition: all 0.3s linear;
   border: 2px solid transparent;
 
-  & img {
-    max-width: fit-content;
+  & .card-img {
     padding: 0 1%;
     width: 30%;
+    max-width: fit-content;
   }
 
-  & div {
+  & .card-body {
     margin-left: 3%;
     width: 70%;
 
-    & h3 {
+    & .card-title {
       font-weight: f.get-font-weight('super');
       margin-bottom: 5px;
     }
   
-    & p:nth-of-type(1){
+    & .card-text-1 {
       color: f.get-color('accent');
       font-size: f.get-font-size('smaller');
       font-weight: f.get-font-weight('bold');
       font-style: italic;
     }
   
-    & p:nth-of-type(2){
+    & .card-text-2 {
       color: f.get-color('primary');
       font-size: f.get-font-size('tiny');
       font-weight: f.get-font-weight('bold');
@@ -124,7 +119,7 @@
   max-width: 600px;
   margin: 20px;
 
-  & img {
+  & .card-img {
     width: 100%;
   }
 }

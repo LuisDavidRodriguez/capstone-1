@@ -828,20 +828,20 @@ footer article:nth-of-type(2) div p:nth-of-type(2) {
   transition: all 0.3s linear;
   border: 2px solid transparent;
 }
-.card-program img {
+.card-program .card-img {
   max-width: fit-content;
   min-width: fit-content;
   padding: 0 1%;
   width: 20%;
 }
-.card-program h3 {
+.card-program .card-title {
   width: 30%;
   padding-left: 2%;
   color: hsl(9deg, 82%, 59%);
   font-weight: 900;
   font-size: 0.8em;
 }
-.card-program p {
+.card-program .card-text-1 {
   width: 50%;
   font-size: 0.8em;
   color: rgb(240, 240, 240);
@@ -855,17 +855,13 @@ footer article:nth-of-type(2) div p:nth-of-type(2) {
 @media screen and (min-width: 768px) {
   .card-program {
     flex-direction: column;
-    height: 300px;
+    height: 270px;
   }
-  .card-program img {
-    max-width: fit-content;
-    min-width: fit-content;
-  }
-  .card-program h3 {
+  .card-program .card-title {
     width: 100%;
     padding: 0;
   }
-  .card-program p {
+  .card-program .card-text-1 {
     margin-top: 5px;
     width: 100%;
     text-align: center;
@@ -887,26 +883,26 @@ footer article:nth-of-type(2) div p:nth-of-type(2) {
   transition: all 0.3s linear;
   border: 2px solid transparent;
 }
-.card-speakers img {
-  max-width: fit-content;
+.card-speakers .card-img {
   padding: 0 1%;
   width: 30%;
+  max-width: fit-content;
 }
-.card-speakers div {
+.card-speakers .card-body {
   margin-left: 3%;
   width: 70%;
 }
-.card-speakers div h3 {
+.card-speakers .card-body .card-title {
   font-weight: 900;
   margin-bottom: 5px;
 }
-.card-speakers div p:nth-of-type(1) {
+.card-speakers .card-body .card-text-1 {
   color: hsl(9deg, 82%, 59%);
   font-size: 0.8em;
   font-weight: 600;
   font-style: italic;
 }
-.card-speakers div p:nth-of-type(2) {
+.card-speakers .card-body .card-text-2 {
   color: #272a31;
   font-size: 0.6em;
   font-weight: 600;
@@ -921,7 +917,7 @@ footer article:nth-of-type(2) div p:nth-of-type(2) {
   max-width: 600px;
   margin: 20px;
 }
-.card-events img {
+.card-events .card-img {
   width: 100%;
 }
 
@@ -967,11 +963,13 @@ hr {
 }
 hr.hr-1 {
   border-color: hsl(9deg, 82%, 59%);
+  background-color: hsl(9deg, 82%, 59%);
   width: 80px;
   margin: 10px 0;
 }
 hr.hr-2 {
   border-color: #d3d3d3;
+  background-color: #d3d3d3;
   width: 40px;
   margin: 20px 0;
 }
