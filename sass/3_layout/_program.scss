@@ -3,7 +3,7 @@
 @use '../1_abstracts/mixin';
 .main-program {
     background-color: f.get-color('primary');
-    background-image: url('../../images/background/pattern.png');
+    background-image: url('#{v.$path-images}/background/pattern.png');
     height: fit-content;
     text-align: center;
     padding: 20px 0;

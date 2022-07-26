@@ -45,7 +45,10 @@ $z-index: (
 
 /// @type list to save time and write in one time the fallBack
 $font-cocogosse: 'cocogosse', sans-serif, Helvetica;
-$font-lato: 'lato', Helvetica;
+$font-lato: 'lato', sans-serif, Helvetica;
+
+$path-images: '../images';
+$path-fonts:  '../fonts';
 
 $upper-bar-height: 40px;
 $low-bar-height: 80px;

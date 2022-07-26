@@ -1,66 +1,66 @@
 @font-face {
   font-family: "cocogosse";
-  src: url("/fonts/cocogoose/CocogoosePro-trial.ttf") format("truetype");
+  src: url("../fonts/cocogoose/CocogoosePro-trial.ttf") format("truetype");
   font-weight: 600;
 }
 @font-face {
   font-family: "cocogosse";
-  src: url("/fonts/cocogoose/CocogooseProItalic-trial.ttf") format("truetype");
+  src: url("../fonts/cocogoose/CocogooseProItalic-trial.ttf") format("truetype");
   font-weight: 600;
   font-style: italic;
 }
 @font-face {
   font-family: "cocogosse";
-  src: url("/fonts/cocogoose/CocogooseProLight-trial.ttf") format("truetype");
+  src: url("../fonts/cocogoose/CocogooseProLight-trial.ttf") format("truetype");
   font-weight: 200;
 }
 @font-face {
   font-family: "cocogosse";
-  src: url("/fonts/cocogoose/CocogooseProLight-Italic-trial.ttf") format("truetype");
+  src: url("../fonts/cocogoose/CocogooseProLight-Italic-trial.ttf") format("truetype");
   font-weight: 200;
   font-style: italic;
 }
 @font-face {
   font-family: "lato";
-  src: url("/fonts/Lato/Lato-Black.ttf") format("truetype");
+  src: url("../fonts/Lato/Lato-Black.ttf") format("truetype");
   font-weight: 900;
 }
 @font-face {
   font-family: "lato";
-  src: url("/fonts/Lato/Lato-BlackItalic.ttf") format("truetype");
+  src: url("../fonts/Lato/Lato-BlackItalic.ttf") format("truetype");
   font-weight: 900;
   font-style: italic;
 }
 @font-face {
   font-family: "lato";
-  src: url("/fonts/Lato/Lato-Bold.ttf") format("truetype");
+  src: url("../fonts/Lato/Lato-Bold.ttf") format("truetype");
   font-weight: 600;
 }
 @font-face {
   font-family: "lato";
-  src: url("/fonts/Lato/Lato-BoldItalic.ttf") format("truetype");
+  src: url("../fonts/Lato/Lato-BoldItalic.ttf") format("truetype");
   font-weight: 600;
   font-style: italic;
 }
 @font-face {
   font-family: "lato";
-  src: url("/fonts/Lato/Lato-Regular.ttf") format("truetype");
+  src: url("../fonts/Lato/Lato-Regular.ttf") format("truetype");
   font-weight: 400;
 }
 @font-face {
   font-family: "lato";
-  src: url("/fonts/Lato/Lato-Italic.ttf") format("truetype");
+  src: url("../fonts/Lato/Lato-Italic.ttf") format("truetype");
   font-weight: 400;
   font-style: italic;
 }
 @font-face {
   font-family: "lato";
-  src: url("/fonts/Lato/Lato-Light.ttf") format("truetype");
+  src: url("../fonts/Lato/Lato-Light.ttf") format("truetype");
   font-weight: 200;
 }
 @font-face {
   font-family: "lato";
-  src: url("/fonts/Lato/Lato-LightItalic.ttf") format("truetype");
+  src: url("../fonts/Lato/Lato-LightItalic.ttf") format("truetype");
   font-weight: 200;
   font-style: italic;
 }
@@ -114,7 +114,7 @@ ul {
 
 a {
   text-decoration: none;
-  font-family: "lato", Helvetica;
+  font-family: "lato", sans-serif, Helvetica;
 }
 
 ::before {
@@ -546,7 +546,7 @@ header .low-bar {
   }
 }
 .welcome-section {
-  background: url("/images/background/welcome_mobile.png") no-repeat;
+  background: url("../images/background/welcome_mobile.png") no-repeat;
   background-size: 100%;
   height: 100vh;
   display: flex;
@@ -569,7 +569,7 @@ header .low-bar {
   margin-bottom: 5px;
 }
 .welcome-section article h2 {
-  font-family: "lato", Helvetica;
+  font-family: "lato", sans-serif, Helvetica;
   font-size: 2.9em;
   font-weight: 900;
   text-transform: uppercase;
@@ -585,7 +585,7 @@ header .low-bar {
   background-position: left bottom;
 }
 .welcome-section article p:nth-of-type(1) {
-  font-family: "lato", Helvetica;
+  font-family: "lato", sans-serif, Helvetica;
   font-size: 0.8em;
   font-weight: 600;
   line-height: 30px;
@@ -596,14 +596,14 @@ header .low-bar {
   padding: 20px;
 }
 .welcome-section article p:nth-of-type(2) {
-  font-family: "lato", Helvetica;
+  font-family: "lato", sans-serif, Helvetica;
   font-size: 2em;
   font-weight: 900;
   color: #272a31;
   margin: 20px 10px;
 }
 .welcome-section article p:nth-of-type(3) {
-  font-family: "lato", Helvetica;
+  font-family: "lato", sans-serif, Helvetica;
   font-size: 0.8em;
   font-weight: 600;
   color: #272a31;
@@ -619,7 +619,7 @@ header .low-bar {
 
 .main-program {
   background-color: #272a31;
-  background-image: url("../../images/background/pattern.png");
+  background-image: url("../images/background/pattern.png");
   height: fit-content;
   text-align: center;
   padding: 20px 0;
@@ -687,13 +687,13 @@ footer article:nth-of-type(2) div {
 }
 footer article:nth-of-type(2) div p:nth-of-type(1) {
   margin-bottom: 10px;
-  font-family: "lato", Helvetica;
+  font-family: "lato", sans-serif, Helvetica;
   font-size: 0.8em;
   font-weight: 600;
   max-width: 400px;
 }
 footer article:nth-of-type(2) div p:nth-of-type(2) {
-  font-family: "lato", Helvetica;
+  font-family: "lato", sans-serif, Helvetica;
   font-size: 0.6em;
   font-weight: 200;
   max-width: 400px;
@@ -705,7 +705,7 @@ footer article:nth-of-type(2) div p:nth-of-type(2) {
 }
 
 .about-welcome-section {
-  background: url("/images/background/welcome_mobile.png") no-repeat;
+  background: url("../images/background/welcome_mobile.png") no-repeat;
   background-size: 100%;
   height: 100vh;
   display: flex;
@@ -730,14 +730,14 @@ footer article:nth-of-type(2) div p:nth-of-type(2) {
   margin-bottom: 5px;
 }
 .about-welcome-section article h2 {
-  font-family: "lato", Helvetica;
+  font-family: "lato", sans-serif, Helvetica;
   font-size: 2.9em;
   font-weight: 900;
   text-transform: uppercase;
   color: hsl(9deg, 82%, 59%);
 }
 .about-welcome-section article p:nth-of-type(1) {
-  font-family: "lato", Helvetica;
+  font-family: "lato", sans-serif, Helvetica;
   font-size: 0.8em;
   font-weight: 600;
   line-height: 30px;
@@ -748,7 +748,7 @@ footer article:nth-of-type(2) div p:nth-of-type(2) {
   padding: 20px;
 }
 .about-welcome-section article p:nth-of-type(2) {
-  font-family: "lato", Helvetica;
+  font-family: "lato", sans-serif, Helvetica;
   font-size: 1.2em;
   font-weight: 400;
   color: #272a31;
@@ -782,7 +782,7 @@ footer article:nth-of-type(2) div p:nth-of-type(2) {
   border-bottom: 1px solid #d3d3d3;
 }
 .about-logo-section div {
-  font-family: "lato", Helvetica;
+  font-family: "lato", sans-serif, Helvetica;
   text-align: center;
   max-width: 500px;
 }
@@ -805,7 +805,7 @@ footer article:nth-of-type(2) div p:nth-of-type(2) {
   text-align: center;
   padding: 50px 0;
   height: 100%;
-  font-family: "lato", Helvetica;
+  font-family: "lato", sans-serif, Helvetica;
 }
 .about-events-section .title {
   padding: 0 10px;
@@ -820,7 +820,7 @@ footer article:nth-of-type(2) div p:nth-of-type(2) {
   display: flex;
   flex-direction: row;
   align-items: center;
-  font-family: "lato", Helvetica;
+  font-family: "lato", sans-serif, Helvetica;
   background-color: rgba(92, 93, 97, 0.39);
   height: 150px;
   padding: 1% 1%;
@@ -876,7 +876,7 @@ footer article:nth-of-type(2) div p:nth-of-type(2) {
   display: flex;
   flex-direction: row;
   align-items: center;
-  font-family: "lato", Helvetica;
+  font-family: "lato", sans-serif, Helvetica;
   margin: 10px;
   height: fit-content;
   min-height: 200px;
@@ -927,7 +927,7 @@ footer article:nth-of-type(2) div p:nth-of-type(2) {
 
 .btn-style-1, .btn-2, .btn-1 {
   background-color: hsl(9deg, 82%, 59%);
-  font-family: "lato", Helvetica;
+  font-family: "lato", sans-serif, Helvetica;
   color: rgb(240, 240, 240);
   font-weight: 600;
   padding: 20px;
