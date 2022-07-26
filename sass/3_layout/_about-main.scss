@@ -1,0 +1,55 @@
+@use '../1_abstracts/functions' as f;
+@use '../1_abstracts/variables' as v;
+@use '../1_abstracts/mixin';
+
+.about-logo-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 20px;
+  border-bottom: 1px solid f.get-color('secundary');
+
+  & div {
+    font-family: v.$font-lato;
+    text-align: center;
+    max-width: 500px;
+
+    & .title {
+      font-size: f.get-font-size('small');
+    }
+  
+    & p {
+      font-size: f.get-font-size('smaller');
+      color: lighten($color: f.get-color('primary'), $amount: 10%);
+    }
+  }
+
+  & img {
+    display: block;
+    width: 100%;
+    margin-top: 30px;
+    max-width: fit-content;
+    border: 1px solid f.get-color('secundary');
+  }
+
+
+}
+
+.about-events-section {
+  text-align: center;
+  padding: 50px 0;
+  height: 100%;
+  font-family: v.$font-lato;
+
+  & .title {
+    padding: 0 10px;
+  }
+
+  & p {
+    font-size: f.get-font-size('smaller');
+    padding: 0 10px;
+    margin-bottom: 50px;
+  }
+
+}

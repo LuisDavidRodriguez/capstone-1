@@ -76,7 +76,7 @@ html {
 }
 @media screen and (min-width: 0) {
   html {
-    font-size: 12px;
+    font-size: 10px;
   }
 }
 @media screen and (min-width: 480px) {
@@ -553,54 +553,12 @@ header .low-bar {
   flex-direction: column;
   position: relative;
 }
-.welcome-section .stars-container {
-  position: relative;
-  height: 100%;
-}
-.welcome-section .stars-container .stars {
-  max-width: fit-content;
-  width: 10%;
-  height: auto;
-  filter: grayscale(100%);
-  animation: full-color 15s ease-in-out 2s infinite normal forwards;
-}
-.welcome-section .stars-container .star-1 {
-  position: absolute;
-  top: 15%;
-  left: 60%;
-  animation-delay: 3s;
-}
-.welcome-section .stars-container .star-2 {
-  position: absolute;
-  top: 30%;
-  left: 15%;
-  animation-delay: 6s;
-}
-.welcome-section .stars-container .star-3 {
-  position: absolute;
-  top: 45%;
-  left: 80%;
-  animation-delay: 9s;
-}
-.welcome-section .stars-container .star-4 {
-  position: absolute;
-  top: 60%;
-  left: 5%;
-  animation-delay: 12s;
-}
-.welcome-section .stars-container .star-5 {
-  position: absolute;
-  top: 75%;
-  left: 70%;
-  animation-delay: 15s;
-}
 .welcome-section article {
   display: flex;
   flex-direction: column;
   position: absolute;
   top: 70px;
   left: 5%;
-  min-width: 450px;
   max-width: 1000px;
   width: 90%;
 }
@@ -611,8 +569,9 @@ header .low-bar {
   margin-bottom: 5px;
 }
 .welcome-section article h2 {
+  font-family: "lato", Helvetica;
   font-size: 2.9em;
-  font-weight: 600;
+  font-weight: 900;
   text-transform: uppercase;
   color: transparent;
   background-size: 200%;
@@ -658,18 +617,6 @@ header .low-bar {
   }
 }
 
-@keyframes full-color {
-  0% {
-    filter: grayscale(100%);
-  }
-  /* Finish changes by here */
-  10% {
-    filter: grayscale(0%);
-  }
-  20% {
-    filter: grayscale(100%);
-  }
-}
 .main-program {
   background-color: #272a31;
   background-image: url("../../images/background/pattern.png");
@@ -755,6 +702,118 @@ footer article:nth-of-type(2) div p:nth-of-type(2) {
   footer {
     scroll-margin-top: 100px;
   }
+}
+
+.about-welcome-section {
+  background: url("../../images/background/welcome_mobile.png") no-repeat;
+  background-size: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.about-welcome-section article {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  align-items: center;
+  align-self: center;
+  top: 70px;
+  max-width: 1000px;
+  width: 95%;
+  text-align: center;
+}
+.about-welcome-section article h1 {
+  font-size: 1.2em;
+  font-weight: 400;
+  color: hsl(9deg, 82%, 59%);
+  margin-bottom: 5px;
+}
+.about-welcome-section article h2 {
+  font-family: "lato", Helvetica;
+  font-size: 2.9em;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: hsl(9deg, 82%, 59%);
+}
+.about-welcome-section article p:nth-of-type(1) {
+  font-family: "lato", Helvetica;
+  font-size: 0.8em;
+  font-weight: 600;
+  line-height: 30px;
+  background-color: rgba(240, 240, 240, 0.9);
+  border: 1px solid #d3d3d3;
+  box-shadow: 5px 5px 10px 5px #d3d3d3, -1px -1px 5px 2px #d3d3d3;
+  margin: 30px 0;
+  padding: 20px;
+}
+.about-welcome-section article p:nth-of-type(2) {
+  font-family: "lato", Helvetica;
+  font-size: 1.2em;
+  font-weight: 400;
+  color: #272a31;
+  margin: 20px 10px;
+}
+.about-welcome-section article a {
+  color: #272a31;
+  font-weight: 600;
+  text-decoration: underline;
+  transition: all 0.3s linear;
+}
+.about-welcome-section article a:hover {
+  color: hsl(9deg, 82%, 59%);
+  transform: scale(1.01);
+}
+@media screen and (min-width: 768px) {
+  .about-welcome-section {
+    scroll-margin-top: 100px;
+  }
+  .about-welcome-section article {
+    top: 170px;
+  }
+}
+
+.about-logo-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 20px;
+  border-bottom: 1px solid #d3d3d3;
+}
+.about-logo-section div {
+  font-family: "lato", Helvetica;
+  text-align: center;
+  max-width: 500px;
+}
+.about-logo-section div .title {
+  font-size: 1.2em;
+}
+.about-logo-section div p {
+  font-size: 0.8em;
+  color: #3e424d;
+}
+.about-logo-section img {
+  display: block;
+  width: 100%;
+  margin-top: 30px;
+  max-width: fit-content;
+  border: 1px solid #d3d3d3;
+}
+
+.about-events-section {
+  text-align: center;
+  padding: 50px 0;
+  height: 100%;
+  font-family: "lato", Helvetica;
+}
+.about-events-section .title {
+  padding: 0 10px;
+}
+.about-events-section p {
+  font-size: 0.8em;
+  padding: 0 10px;
+  margin-bottom: 50px;
 }
 
 .card-program {
@@ -856,6 +915,14 @@ footer article:nth-of-type(2) div p:nth-of-type(2) {
 .card-speakers:hover {
   transform: scale(1.02);
   border: 1px solid #d3d3d3;
+}
+
+.card-events {
+  max-width: 600px;
+  margin: 20px;
+}
+.card-events img {
+  width: 100%;
 }
 
 .btn-style-1, .btn-2, .btn-1 {
@@ -978,6 +1045,61 @@ hr.hr-2 {
 .menu-modal.open .menu-modal-list > :nth-child(6) {
   transition-delay: 1.35s;
   transform: translateX(0);
+}
+
+.stars-container {
+  position: relative;
+  height: 100%;
+}
+.stars-container .stars {
+  max-width: fit-content;
+  width: 10%;
+  height: auto;
+  filter: grayscale(100%);
+  animation: full-color 15s ease-in-out 2s infinite normal forwards;
+}
+.stars-container .star-1 {
+  position: absolute;
+  top: 15%;
+  left: 60%;
+  animation-delay: 3s;
+}
+.stars-container .star-2 {
+  position: absolute;
+  top: 30%;
+  left: 15%;
+  animation-delay: 6s;
+}
+.stars-container .star-3 {
+  position: absolute;
+  top: 45%;
+  left: 80%;
+  animation-delay: 9s;
+}
+.stars-container .star-4 {
+  position: absolute;
+  top: 60%;
+  left: 5%;
+  animation-delay: 12s;
+}
+.stars-container .star-5 {
+  position: absolute;
+  top: 75%;
+  left: 70%;
+  animation-delay: 15s;
+}
+
+@keyframes full-color {
+  0% {
+    filter: grayscale(100%);
+  }
+  /* Finish changes by here */
+  10% {
+    filter: grayscale(0%);
+  }
+  20% {
+    filter: grayscale(100%);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

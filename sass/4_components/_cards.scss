@@ -119,3 +119,12 @@
   }
   
 }
+
+.card-events {
+  max-width: 600px;
+  margin: 20px;
+
+  & img {
+    width: 100%;
+  }
+}

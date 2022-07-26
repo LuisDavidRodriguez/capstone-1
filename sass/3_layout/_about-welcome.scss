@@ -1,22 +1,10 @@
-/// -----------------------------------------------------------------
-/// @author Luis David Rodriguez Valades
-/// -----------------------------------------------------------------
-///
-/// documentation for understand the animation
-/// =====> https://ibritech.atlassian.net/wiki/external/231374901/ZDQxY2E1YzY3MjAzNDRjN2FiOWYzZTkyYmEwNDc0OTM?atlOrigin=eyJpIjoiZmUxNTVjY2NkMDM3NDBjZWFjNjViZTgxMDI5NGRhYWMiLCJwIjoiYyJ9
-///
-/// a little complicated trying to match the timer only one star should shine at the time
-/// =====> https://css-tricks.com/a-new-way-to-delay-keyframes-animations/
-///
-
-
 @use '../1_abstracts/functions' as f;
 @use '../1_abstracts/variables' as v;
 @use '../1_abstracts/mixin';
 
 $top-mobil: 70px;
 
-.welcome-section {
+.about-welcome-section {
   background: url('../../images/background/welcome_mobile.png') no-repeat;
   background-size: 100%;
   height: 100vh;
@@ -28,10 +16,12 @@ $top-mobil: 70px;
     display: flex;
     flex-direction: column;
     position: absolute;
+    align-items: center;
+    align-self: center;
     top: $top-mobil;
-    left: 5%;
     max-width: 1000px;
-    width: 90%;
+    width: 95%;
+    text-align: center;
 
     & h1 {
       font-size: f.get-font-size('small');
@@ -45,17 +35,7 @@ $top-mobil: 70px;
       font-size: f.get-font-size('title');
       font-weight: f.get-font-weight('super');
       text-transform: uppercase;
-      color: transparent;
-      background-size: 200%;
-      background-position: right top;
-      background-image: url('../../images/background/firered.jpg');
-      background-clip: text;
-      -webkit-background-clip: text;
-      transition: background-position 15s ease-out;
-
-      &:hover {
-        background-position: left bottom;
-      }
+      color: f.get-color('accent');
     }
 
     & p:nth-of-type(1) {
@@ -72,17 +52,22 @@ $top-mobil: 70px;
 
     & p:nth-of-type(2) {
       font-family: v.$font-lato; 
-      font-size: f.get-font-size('big');
-      font-weight: f.get-font-weight('super');
+      font-size: f.get-font-size('small');
+      font-weight: f.get-font-weight('normal');
       color: f.get-color('primary');
       margin: 20px 10px;
     }
 
-    & p:nth-of-type(3) {
-      font-family: v.$font-lato;
-      font-size: f.get-font-size('smaller');
-      font-weight: f.get-font-weight('bold');
+    & a {
       color: f.get-color('primary');
+      font-weight: f.get-font-weight('bold');
+      text-decoration: underline;
+      transition: all 0.3s linear;
+
+      &:hover {
+        color: f.get-color('accent');
+        transform: scale(1.01);
+      }
     }
 
   }
