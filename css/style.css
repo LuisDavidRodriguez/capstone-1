@@ -574,7 +574,7 @@ header .low-bar {
   font-weight: 900;
   text-transform: uppercase;
   color: transparent;
-  background-image: url("/images/background/firered.jpg");
+  background-image: url("../images/background/firered.jpg");
   background-size: 200%;
   background-position: right top;
   background-clip: text;
