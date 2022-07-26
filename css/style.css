@@ -1,66 +1,66 @@
 @font-face {
   font-family: "cocogosse";
-  src: url("../../fonts/cocogoose/CocogoosePro-trial.ttf") format("truetype");
+  src: url("/fonts/cocogoose/CocogoosePro-trial.ttf") format("truetype");
   font-weight: 600;
 }
 @font-face {
   font-family: "cocogosse";
-  src: url("../../fonts/cocogoose/CocogooseProItalic-trial.ttf") format("truetype");
+  src: url("/fonts/cocogoose/CocogooseProItalic-trial.ttf") format("truetype");
   font-weight: 600;
   font-style: italic;
 }
 @font-face {
   font-family: "cocogosse";
-  src: url("../../fonts/cocogoose/CocogooseProLight-trial.ttf") format("truetype");
+  src: url("/fonts/cocogoose/CocogooseProLight-trial.ttf") format("truetype");
   font-weight: 200;
 }
 @font-face {
   font-family: "cocogosse";
-  src: url("../../fonts/cocogoose/CocogooseProLight-Italic-trial.ttf") format("truetype");
+  src: url("/fonts/cocogoose/CocogooseProLight-Italic-trial.ttf") format("truetype");
   font-weight: 200;
   font-style: italic;
 }
 @font-face {
   font-family: "lato";
-  src: url("../../fonts/Lato/Lato-Black.ttf") format("truetype");
+  src: url("/fonts/Lato/Lato-Black.ttf") format("truetype");
   font-weight: 900;
 }
 @font-face {
   font-family: "lato";
-  src: url("../../fonts/Lato/Lato-BlackItalic.ttf") format("truetype");
+  src: url("/fonts/Lato/Lato-BlackItalic.ttf") format("truetype");
   font-weight: 900;
   font-style: italic;
 }
 @font-face {
   font-family: "lato";
-  src: url("../../fonts/Lato/Lato-Bold.ttf") format("truetype");
+  src: url("/fonts/Lato/Lato-Bold.ttf") format("truetype");
   font-weight: 600;
 }
 @font-face {
   font-family: "lato";
-  src: url("../../fonts/Lato/Lato-BoldItalic.ttf") format("truetype");
+  src: url("/fonts/Lato/Lato-BoldItalic.ttf") format("truetype");
   font-weight: 600;
   font-style: italic;
 }
 @font-face {
   font-family: "lato";
-  src: url("../../fonts/Lato/Lato-Regular.ttf") format("truetype");
+  src: url("/fonts/Lato/Lato-Regular.ttf") format("truetype");
   font-weight: 400;
 }
 @font-face {
   font-family: "lato";
-  src: url("../../fonts/Lato/Lato-Italic.ttf") format("truetype");
+  src: url("/fonts/Lato/Lato-Italic.ttf") format("truetype");
   font-weight: 400;
   font-style: italic;
 }
 @font-face {
   font-family: "lato";
-  src: url("../../fonts/Lato/Lato-Light.ttf") format("truetype");
+  src: url("/fonts/Lato/Lato-Light.ttf") format("truetype");
   font-weight: 200;
 }
 @font-face {
   font-family: "lato";
-  src: url("../../fonts/Lato/Lato-LightItalic.ttf") format("truetype");
+  src: url("/fonts/Lato/Lato-LightItalic.ttf") format("truetype");
   font-weight: 200;
   font-style: italic;
 }
@@ -506,14 +506,14 @@ header .low-bar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 60px;
+    height: 80px;
     transition: all 0.3s linear;
     background-color: rgb(240, 240, 240);
   }
   header .low-bar img {
     display: block;
     width: auto;
-    height: 57px;
+    height: 77px;
     margin-left: 20px;
     border-radius: 2px;
     transition: all 0.5s linear;
@@ -546,7 +546,7 @@ header .low-bar {
   }
 }
 .welcome-section {
-  background: url("../../images/background/welcome_mobile.png") no-repeat;
+  background: url("/images/background/welcome_mobile.png") no-repeat;
   background-size: 100%;
   height: 100vh;
   display: flex;
@@ -574,9 +574,9 @@ header .low-bar {
   font-weight: 900;
   text-transform: uppercase;
   color: transparent;
+  background-image: url("/images/background/firered.jpg");
   background-size: 200%;
   background-position: right top;
-  background-image: url("../../images/background/firered.jpg");
   background-clip: text;
   -webkit-background-clip: text;
   transition: background-position 15s ease-out;
@@ -610,10 +610,10 @@ header .low-bar {
 }
 @media screen and (min-width: 768px) {
   .welcome-section {
-    scroll-margin-top: 100px;
+    scroll-margin-top: 120px;
   }
   .welcome-section article {
-    top: 170px;
+    top: 190px;
   }
 }
 
@@ -630,7 +630,7 @@ header .low-bar {
 }
 @media screen and (min-width: 768px) {
   .main-program {
-    scroll-margin-top: 100px;
+    scroll-margin-top: 120px;
   }
 }
 
@@ -640,7 +640,7 @@ header .low-bar {
 }
 @media screen and (min-width: 768px) {
   .speakers-section {
-    scroll-margin-top: 100px;
+    scroll-margin-top: 120px;
   }
   .speakers-section a {
     display: none;
@@ -700,12 +700,12 @@ footer article:nth-of-type(2) div p:nth-of-type(2) {
 }
 @media screen and (min-width: 768px) {
   footer {
-    scroll-margin-top: 100px;
+    scroll-margin-top: 120px;
   }
 }
 
 .about-welcome-section {
-  background: url("../../images/background/welcome_mobile.png") no-repeat;
+  background: url("/images/background/welcome_mobile.png") no-repeat;
   background-size: 100%;
   height: 100vh;
   display: flex;
@@ -766,10 +766,10 @@ footer article:nth-of-type(2) div p:nth-of-type(2) {
 }
 @media screen and (min-width: 768px) {
   .about-welcome-section {
-    scroll-margin-top: 100px;
+    scroll-margin-top: 120px;
   }
   .about-welcome-section article {
-    top: 170px;
+    top: 190px;
   }
 }
 
