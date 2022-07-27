@@ -555,7 +555,7 @@ header .low-bar {
   flex-direction: column;
   position: relative;
 }
-.welcome-section article {
+.welcome-section .container {
   display: flex;
   flex-direction: column;
   position: absolute;
@@ -564,13 +564,13 @@ header .low-bar {
   max-width: 1000px;
   width: 90%;
 }
-.welcome-section article h1 {
+.welcome-section .container .title {
   font-size: 1.2em;
   font-weight: 400;
   color: hsl(9deg, 82%, 59%);
   margin-bottom: 5px;
 }
-.welcome-section article h2 {
+.welcome-section .container .subtitle {
   font-family: "lato", sans-serif, helvetica;
   font-size: 2.9em;
   font-weight: 900;
@@ -584,10 +584,10 @@ header .low-bar {
   -webkit-background-clip: text;
   transition: background-position 15s ease-out;
 }
-.welcome-section article h2:hover {
+.welcome-section .container .subtitle:hover {
   background-position: left bottom;
 }
-.welcome-section article p:nth-of-type(1) {
+.welcome-section .container .text-1 {
   font-family: "lato", sans-serif, helvetica;
   font-size: 0.8em;
   font-weight: 600;
@@ -598,14 +598,14 @@ header .low-bar {
   margin: 30px 0;
   padding: 20px;
 }
-.welcome-section article p:nth-of-type(2) {
+.welcome-section .container .text-2 {
   font-family: "lato", sans-serif, helvetica;
   font-size: 2em;
   font-weight: 900;
   color: #272a31;
   margin: 20px 10px;
 }
-.welcome-section article p:nth-of-type(3) {
+.welcome-section .container .text-3 {
   font-family: "lato", sans-serif, helvetica;
   font-size: 0.8em;
   font-weight: 600;
@@ -615,7 +615,7 @@ header .low-bar {
   .welcome-section {
     scroll-margin-top: 120px;
   }
-  .welcome-section article {
+  .welcome-section .container {
     top: 190px;
   }
 }
@@ -626,7 +626,7 @@ header .low-bar {
   text-align: center;
   padding: 20px 0;
 }
-.main-program h2:first-child {
+.main-program .title {
   color: rgb(240, 240, 240);
   font-weight: 400;
 }
@@ -649,52 +649,52 @@ header .low-bar {
   }
 }
 
-footer article:nth-of-type(1) {
+footer .sponsors-container {
   text-align: center;
   padding: 50px 0;
   background-color: #272a31;
   height: 50vh;
 }
-footer article:nth-of-type(1) h2 {
+footer .sponsors-container .title {
   color: #d3d3d3;
 }
-footer article:nth-of-type(1) div {
+footer .sponsors-container .img-container {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
   flex-basis: 100px;
 }
-footer article:nth-of-type(1) div img {
+footer .sponsors-container .img-container img {
   padding: 10px;
   display: block;
   width: 33%;
   min-width: 150px;
   max-width: 300px;
 }
-footer article:nth-of-type(2) {
+footer .rights-container {
   display: flex;
   padding: 20px;
   height: 30vh;
   justify-content: center;
   align-items: center;
 }
-footer article:nth-of-type(2) img {
+footer .rights-container img {
   display: block;
   width: 30%;
   max-width: 300px;
 }
-footer article:nth-of-type(2) div {
+footer .rights-container .info-container {
   padding: 50px;
 }
-footer article:nth-of-type(2) div p:nth-of-type(1) {
+footer .rights-container .info-container .text-1 {
   margin-bottom: 10px;
   font-family: "lato", sans-serif, helvetica;
   font-size: 0.8em;
   font-weight: 600;
   max-width: 400px;
 }
-footer article:nth-of-type(2) div p:nth-of-type(2) {
+footer .rights-container .info-container .text-2 {
   font-family: "lato", sans-serif, helvetica;
   font-size: 0.6em;
   font-weight: 200;
@@ -714,7 +714,7 @@ footer article:nth-of-type(2) div p:nth-of-type(2) {
   flex-direction: column;
   position: relative;
 }
-.about-welcome-section article {
+.about-welcome-section .about-welcome-container {
   display: flex;
   flex-direction: column;
   position: absolute;
@@ -725,20 +725,20 @@ footer article:nth-of-type(2) div p:nth-of-type(2) {
   width: 95%;
   text-align: center;
 }
-.about-welcome-section article h1 {
+.about-welcome-section .about-welcome-container .title {
   font-size: 1.2em;
   font-weight: 400;
   color: hsl(9deg, 82%, 59%);
   margin-bottom: 5px;
 }
-.about-welcome-section article h2 {
+.about-welcome-section .about-welcome-container .subtitle {
   font-family: "lato", sans-serif, helvetica;
   font-size: 2.9em;
   font-weight: 900;
   text-transform: uppercase;
   color: hsl(9deg, 82%, 59%);
 }
-.about-welcome-section article p:nth-of-type(1) {
+.about-welcome-section .about-welcome-container .text-1 {
   font-family: "lato", sans-serif, helvetica;
   font-size: 0.8em;
   font-weight: 600;
@@ -749,20 +749,20 @@ footer article:nth-of-type(2) div p:nth-of-type(2) {
   margin: 30px 0;
   padding: 20px;
 }
-.about-welcome-section article p:nth-of-type(2) {
+.about-welcome-section .about-welcome-container .text-2 {
   font-family: "lato", sans-serif, helvetica;
   font-size: 1.2em;
   font-weight: 400;
   color: #272a31;
   margin: 20px 10px;
 }
-.about-welcome-section article a {
+.about-welcome-section .about-welcome-container a {
   color: #272a31;
   font-weight: 600;
   text-decoration: underline;
   transition: all 0.3s linear;
 }
-.about-welcome-section article a:hover {
+.about-welcome-section .about-welcome-container a:hover {
   color: hsl(9deg, 82%, 59%);
   transform: scale(1.01);
 }
@@ -770,7 +770,7 @@ footer article:nth-of-type(2) div p:nth-of-type(2) {
   .about-welcome-section {
     scroll-margin-top: 120px;
   }
-  .about-welcome-section article {
+  .about-welcome-section .about-welcome-container {
     top: 190px;
   }
 }
@@ -783,15 +783,15 @@ footer article:nth-of-type(2) div p:nth-of-type(2) {
   padding: 50px 20px;
   border-bottom: 1px solid #d3d3d3;
 }
-.about-logo-section div {
+.about-logo-section .info-container {
   font-family: "lato", sans-serif, helvetica;
   text-align: center;
   max-width: 500px;
 }
-.about-logo-section div .title {
+.about-logo-section .info-container .title {
   font-size: 1.2em;
 }
-.about-logo-section div p {
+.about-logo-section .info-container .text-1 {
   font-size: 0.8em;
   color: #3e424d;
 }
@@ -812,7 +812,7 @@ footer article:nth-of-type(2) div p:nth-of-type(2) {
 .about-events-section .title {
   padding: 0 10px;
 }
-.about-events-section p {
+.about-events-section .text-1 {
   font-size: 0.8em;
   padding: 0 10px;
   margin-bottom: 50px;
@@ -963,6 +963,11 @@ footer article:nth-of-type(2) div p:nth-of-type(2) {
   color: rgb(240, 240, 240);
 }
 
+.btn-1.invisible,
+.btn-2.invisible {
+  display: none;
+}
+
 hr {
   display: inline-block;
 }
@@ -1055,39 +1060,35 @@ hr.hr-2 {
   height: 100%;
 }
 .stars-container .stars {
-  max-width: 100px;
-  min-width: 50px;
+  position: absolute;
+  max-width: 150px;
+  min-width: 100px;
   width: 10%;
   height: auto;
-  filter: grayscale(100%);
+  filter: grayscale(100%) opacity(30%);
   animation: full-color 15s ease-in-out 2s infinite normal forwards;
 }
 .stars-container .star-1 {
-  position: absolute;
   top: 15%;
   left: 60%;
   animation-delay: 3s;
 }
 .stars-container .star-2 {
-  position: absolute;
   top: 30%;
   left: 15%;
   animation-delay: 6s;
 }
 .stars-container .star-3 {
-  position: absolute;
   top: 45%;
   left: 80%;
   animation-delay: 9s;
 }
 .stars-container .star-4 {
-  position: absolute;
   top: 60%;
   left: 5%;
   animation-delay: 12s;
 }
 .stars-container .star-5 {
-  position: absolute;
   top: 75%;
   left: 70%;
   animation-delay: 15s;
@@ -1095,14 +1096,14 @@ hr.hr-2 {
 
 @keyframes full-color {
   0% {
-    filter: grayscale(100%);
+    filter: grayscale(100%) opacity(30%);
   }
   /* Finish changes by here */
   10% {
-    filter: grayscale(0%);
+    filter: grayscale(0%) opacity(100%);
   }
   20% {
-    filter: grayscale(100%);
+    filter: grayscale(100%) opacity(30%);
   }
 }
 /* stylelint-disable */

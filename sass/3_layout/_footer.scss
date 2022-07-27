@@ -3,17 +3,17 @@
 @use '../1_abstracts/mixin';
 
 footer {
-  & article:nth-of-type(1) {
+  & .sponsors-container {
     text-align: center;
     padding: 50px 0;
     background-color: f.get-color('primary');
     height: 50vh;
 
-    & h2 {
+    & .title {
       color: f.get-color('secundary');
     }
 
-    & div {
+    & .img-container {
       display: flex;
       justify-content: space-evenly;
       align-items: center;
@@ -30,7 +30,7 @@ footer {
     }
   }
 
-  & article:nth-of-type(2) {
+  & .rights-container {
     display: flex;
     padding: 20px;
     height: 30vh;
@@ -43,10 +43,10 @@ footer {
       max-width: 300px;
     }
 
-    & div {
+    & .info-container {
       padding: 50px;
 
-      & p:nth-of-type(1) {
+      & .text-1 {
         margin-bottom: 10px;
         font-family: v.$font-lato;
         font-size: f.get-font-size('smaller');
@@ -54,7 +54,7 @@ footer {
         max-width: 400px;
       }
 
-      & p:nth-of-type(2) {
+      & .text-2 {
         font-family: v.$font-lato;
         font-size: f.get-font-size('tiny');
         font-weight: f.get-font-weight('light');

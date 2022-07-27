@@ -8,7 +8,7 @@
   text-align: center;
   padding: 20px 0;
 
-  & h2:first-child {
+  & .title {
     color: f.get-color('natural');
     font-weight: f.get-font-weight('normal');
   }

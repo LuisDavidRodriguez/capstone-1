@@ -2,6 +2,86 @@
 @use '../1_abstracts/variables' as v;
 @use '../1_abstracts/mixin';
 
+$top-mobil: 70px;
+
+.about-welcome-section {
+  background: url('#{v.$path-images}/background/welcome_mobile.png') no-repeat;
+  background-size: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  & .about-welcome-container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    align-items: center;
+    align-self: center;
+    top: $top-mobil;
+    max-width: 1000px;
+    width: 95%;
+    text-align: center;
+
+    & .title {
+      font-size: f.get-font-size('small');
+      font-weight: f.get-font-weight('normal');
+      color: f.get-color('accent');
+      margin-bottom: 5px;
+    }
+
+    & .subtitle {
+      font-family: v.$font-lato;
+      font-size: f.get-font-size('title');
+      font-weight: f.get-font-weight('super');
+      text-transform: uppercase;
+      color: f.get-color('accent');
+    }
+
+    & .text-1 {
+      font-family: v.$font-lato;
+      font-size: f.get-font-size('smaller');
+      font-weight: f.get-font-weight('bold');
+      line-height: 30px;
+      background-color: transparentize($color: f.get-color('natural'), $amount: 0.1%);
+      border: 1px solid f.get-color('secundary');
+      box-shadow: 5px 5px 10px 5px f.get-color('secundary'), -1px -1px 5px 2px f.get-color('secundary'),;
+      margin: 30px 0;
+      padding: 20px;
+    }
+
+    & .text-2 {
+      font-family: v.$font-lato;
+      font-size: f.get-font-size('small');
+      font-weight: f.get-font-weight('normal');
+      color: f.get-color('primary');
+      margin: 20px 10px;
+    }
+
+    & a {
+      color: f.get-color('primary');
+      font-weight: f.get-font-weight('bold');
+      text-decoration: underline;
+      transition: all 0.3s linear;
+
+      &:hover {
+        color: f.get-color('accent');
+        transform: scale(1.01);
+      }
+    }
+  }
+
+  @include mixin.desktop {
+    & {
+      scroll-margin-top: v.$upper-bar-height + v.$low-bar-height;
+    }
+
+    & .about-welcome-container {
+      top: $top-mobil + v.$upper-bar-height + v.$low-bar-height;
+    }
+  }
+}
+
 .about-logo-section {
   display: flex;
   flex-direction: column;
@@ -10,7 +90,7 @@
   padding: 50px 20px;
   border-bottom: 1px solid f.get-color('secundary');
 
-  & div {
+  & .info-container {
     font-family: v.$font-lato;
     text-align: center;
     max-width: 500px;
@@ -19,7 +99,7 @@
       font-size: f.get-font-size('small');
     }
 
-    & p {
+    & .text-1 {
       font-size: f.get-font-size('smaller');
       color: lighten($color: f.get-color('primary'), $amount: 10%);
     }
@@ -44,7 +124,7 @@
     padding: 0 10px;
   }
 
-  & p {
+  & .text-1 {
     font-size: f.get-font-size('smaller');
     padding: 0 10px;
     margin-bottom: 50px;
