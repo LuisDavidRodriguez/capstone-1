@@ -22,11 +22,13 @@
 
 .btn-1 {
   @extend .btn-style-1;
-  margin: 10px 0px;
+
+  margin: 10px 0;
 }
 
 .btn-2 {
   @extend .btn-style-1;
+
   background-color: transparent;
   border: 1px solid f.get-color('secundary');
   display: block;
@@ -41,6 +43,7 @@
 
   &:hover {
     color: f.get-color('natural');
+
     & i {
       color: f.get-color('natural');
     }

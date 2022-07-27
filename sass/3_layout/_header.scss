@@ -26,6 +26,7 @@ header .menu-button {
   height: 30px;
   width: 28px;
   cursor: pointer;
+
   @include mixin.transition-ease;
 
   &:hover {
@@ -41,6 +42,7 @@ header .menu-button {
     border-radius: 2px;
     background-color: f.get-color('primary');
     border: 1px solid f.get-color('natural');
+
     @include mixin.transition-ease;
 
     //create the other little bars!
@@ -54,6 +56,7 @@ header .menu-button {
       border-radius: 2px;
       border: 1px solid f.get-color('natural');
       background-color: f.get-color('primary');
+
       @include mixin.transition-ease;
     }
 
@@ -67,6 +70,7 @@ header .menu-button {
       border-radius: 2px;
       border: 1px solid f.get-color('natural');
       background-color: f.get-color('primary');
+
       @include mixin.transition-ease;
     }
 
@@ -95,7 +99,6 @@ header .low-bar {
 }
 
 @include mixin.desktop {
-
   header {
     z-index: f.get-z-index('navigation');
   }
@@ -107,37 +110,37 @@ header .low-bar {
     align-items: center;
     height: v.$upper-bar-height;
     background-color: f.get-color('primary');
-    
+
     ul {
       display: flex;
       flex-direction: row;
       height: 100%;
-  
-      li{
+
+      li {
         display: inline-block;
-        
-        a{
+
+        a {
           display: flex;
           align-items: center;
           height: 100%;
           width: 100%;
           padding: 0 10px;
           color: white;
+
           @include mixin.transition-ease;
-  
+
           &:hover {
             background-color: f.get-color('accent');
           }
         }
       }
     }
-  
   }
 
   header .menu-button {
     display: none;
   }
-  
+
   header .low-bar {
     display: flex;
     justify-content: space-between;
@@ -145,8 +148,8 @@ header .low-bar {
     height: v.$low-bar-height;
     transition: all 0.3s linear;
     background-color: f.get-color('natural');
-    
-    & img {
+
+    & .logo {
       display: block;
       width: auto;
       height: v.$low-bar-height - 3px;
@@ -174,8 +177,8 @@ header .low-bar {
 
       & li a {
         padding: 5px 5px;
-        color: lighten($color: f.get-color('primary'), $amount: 20%);     
-        font-weight: f.get-font-weight('bold');   
+        color: lighten($color: f.get-color('primary'), $amount: 20%);
+        font-weight: f.get-font-weight('bold');
         border: 4px solid transparent;
         transition: all 0.3s linear;
       }
@@ -186,8 +189,4 @@ header .low-bar {
       }
     }
   }
-  
-
 }
-
-

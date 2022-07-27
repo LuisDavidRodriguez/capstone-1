@@ -48,26 +48,20 @@ $options-total: 6;
       &.active {
         color: f.get-color('accent');
       }
-
     }
   }
 
   &.open {
+    display: block;
+    top: 0;
 
-      &{
-          display: block;
-          top: 0;
-      }
-      
-      @for $i from 1 through $options-total {
-        & {
-          .menu-modal-list > :nth-child(#{$i}) {
-            transition-delay: ($i * 0.2s) + 0.15s;
-            transform: translateX(0);
-          }
+    @for $i from 1 through $options-total {
+      & {
+        .menu-modal-list > :nth-child(#{$i}) {
+          transition-delay: ($i * 0.2s) + 0.15s;
+          transform: translateX(0);
         }
       }
+    }
   }
-
-  
 }

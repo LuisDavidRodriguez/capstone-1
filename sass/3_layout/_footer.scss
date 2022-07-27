@@ -1,69 +1,69 @@
 @use '../1_abstracts/functions' as f;
 @use '../1_abstracts/variables' as v;
 @use '../1_abstracts/mixin';
+
 footer {
+  & article:nth-of-type(1) {
+    text-align: center;
+    padding: 50px 0;
+    background-color: f.get-color('primary');
+    height: 50vh;
 
-    & article:nth-of-type(1) {
-        text-align: center;
-        padding: 50px 0;
-        background-color: f.get-color('primary');
-        height: 50vh;
-
-      & h2 {
-        color: f.get-color('secundary');
-      }
-
-      & div {
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        flex-wrap: wrap;
-        flex-basis: 100px;
-        & img {
-            padding: 10px;
-            display: block;
-            width: 33%;
-            min-width: 150px;
-            max-width: 300px;
-          }
-      }
-      
+    & h2 {
+      color: f.get-color('secundary');
     }
 
-    & article:nth-of-type(2) {
-        display: flex;
-        padding: 20px;
-        height: 30vh;
-        justify-content: center;
-        align-items: center;
+    & div {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      flex-wrap: wrap;
+      flex-basis: 100px;
 
       & img {
+        padding: 10px;
         display: block;
-        width: 30%;
+        width: 33%;
+        min-width: 150px;
         max-width: 300px;
       }
+    }
+  }
 
-      & div {
-        padding: 50px;
-        & p:nth-of-type(1) {
-            margin-bottom: 10px;
-            font-family: v.$font-lato;
-            font-size: f.get-font-size('smaller');
-            font-weight: f.get-font-weight('bold');
-            max-width: 400px;
-        }
+  & article:nth-of-type(2) {
+    display: flex;
+    padding: 20px;
+    height: 30vh;
+    justify-content: center;
+    align-items: center;
 
-        & p:nth-of-type(2) {
-            font-family: v.$font-lato;
-            font-size: f.get-font-size('tiny');
-            font-weight: f.get-font-weight('light');
-            max-width: 400px;
-        }
+    & img {
+      display: block;
+      width: 30%;
+      max-width: 300px;
+    }
+
+    & div {
+      padding: 50px;
+
+      & p:nth-of-type(1) {
+        margin-bottom: 10px;
+        font-family: v.$font-lato;
+        font-size: f.get-font-size('smaller');
+        font-weight: f.get-font-weight('bold');
+        max-width: 400px;
       }
-      
-    }
 
-    @include mixin.desktop {
-      scroll-margin-top: v.$upper-bar-height + v.$low-bar-height;
+      & p:nth-of-type(2) {
+        font-family: v.$font-lato;
+        font-size: f.get-font-size('tiny');
+        font-weight: f.get-font-weight('light');
+        max-width: 400px;
+      }
     }
+  }
+
+  @include mixin.desktop {
+    scroll-margin-top: v.$upper-bar-height + v.$low-bar-height;
+  }
 }

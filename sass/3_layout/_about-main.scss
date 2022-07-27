@@ -18,7 +18,7 @@
     & .title {
       font-size: f.get-font-size('small');
     }
-  
+
     & p {
       font-size: f.get-font-size('smaller');
       color: lighten($color: f.get-color('primary'), $amount: 10%);
@@ -29,11 +29,9 @@
     display: block;
     width: 100%;
     margin-top: 30px;
-    max-width: fit-content;
+    max-width: 700px;
     border: 1px solid f.get-color('secundary');
   }
-
-
 }
 
 .about-events-section {
@@ -51,5 +49,4 @@
     padding: 0 10px;
     margin-bottom: 50px;
   }
-
 }

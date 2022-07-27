@@ -31,7 +31,6 @@ html {
   @include mixin.large {
     font-size: 18px;
   }
-
 }
 
 body {
@@ -40,7 +39,9 @@ body {
   font-size: f.get-font-size('normal');
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-weight: f.get-font-weight('normal');
 }
 

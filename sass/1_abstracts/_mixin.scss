@@ -7,31 +7,31 @@
   @media screen and (min-width: f.get-break-point('base')) {
     @content;
   }
-};
+}
 
 @mixin small {
   @media screen and (min-width: f.get-break-point('small')) {
     @content;
   }
-};
+}
 
 @mixin desktop {
-    @media screen and (min-width: f.get-break-point('medium')) {
-      @content;
-    }
-  };
+  @media screen and (min-width: f.get-break-point('medium')) {
+    @content;
+  }
+}
 
 @mixin large {
   @media screen and (min-width: f.get-break-point('large')) {
     @content;
   }
-};
+}
 
 @mixin xlarge {
   @media screen and (min-width: f.get-break-point('xlarge')) {
     @content;
   }
-};
+}
 
 @mixin transition-ease {
   transition: all 0.5s ease-in;

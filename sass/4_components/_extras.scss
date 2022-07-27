@@ -1,18 +1,19 @@
 @use '../1_abstracts/functions' as f;
+
 hr {
-    display: inline-block;
+  display: inline-block;
 
-    &.hr-1{
-        border-color: f.get-color('accent');
-        background-color: f.get-color('accent');
-        width: 80px;
-        margin: 10px 0;
-    }
-
-    &.hr-2{
-        border-color: f.get-color('secundary');
-        background-color: f.get-color('secundary');
-        width: 40px;
-        margin: 20px 0;
-    }
+  &.hr-1 {
+    border-color: f.get-color('accent');
+    background-color: f.get-color('accent');
+    width: 80px;
+    margin: 10px 0;
   }
+
+  &.hr-2 {
+    border-color: f.get-color('secundary');
+    background-color: f.get-color('secundary');
+    width: 40px;
+    margin: 20px 0;
+  }
+}

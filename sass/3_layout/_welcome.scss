@@ -9,7 +9,6 @@
 /// =====> https://css-tricks.com/a-new-way-to-delay-keyframes-animations/
 ///
 
-
 @use '../1_abstracts/functions' as f;
 @use '../1_abstracts/variables' as v;
 @use '../1_abstracts/mixin';
@@ -49,6 +48,7 @@ $top-mobil: 70px;
       background-image: url('#{v.$path-images}/background/firered.jpg');
       background-size: 200%;
       background-position: right top;
+      /* stylelint-disable-next-line csstree/validator */
       background-clip: text;
       -webkit-background-clip: text;
       transition: background-position 15s ease-out;
@@ -63,7 +63,7 @@ $top-mobil: 70px;
       font-size: f.get-font-size('smaller');
       font-weight: f.get-font-weight('bold');
       line-height: 30px;
-      background-color: transparentize($color: f.get-color('natural'), $amount: 0.1%) ;
+      background-color: transparentize($color: f.get-color('natural'), $amount: 0.1%);
       border: 1px solid f.get-color('secundary');
       box-shadow: 5px 5px 10px 5px f.get-color('secundary'), -1px -1px 5px 2px f.get-color('secundary'),;
       margin: 30px 0;
@@ -71,7 +71,7 @@ $top-mobil: 70px;
     }
 
     & p:nth-of-type(2) {
-      font-family: v.$font-lato; 
+      font-family: v.$font-lato;
       font-size: f.get-font-size('big');
       font-weight: f.get-font-weight('super');
       color: f.get-color('primary');
@@ -84,7 +84,6 @@ $top-mobil: 70px;
       font-weight: f.get-font-weight('bold');
       color: f.get-color('primary');
     }
-
   }
 
   @include mixin.desktop {

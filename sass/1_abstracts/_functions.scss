@@ -6,50 +6,54 @@
 /// retreive color and validate the key
 /// @param {String} $key -  the color
 @function get-color($key: 'primary') {
-    @if map-has-key(v.$brand-colors ,  $key) {
-      @return map-get(v.$brand-colors , $key );
-    }
-    @else {
-      @warn "Unfortunately, no value could be retreived with key: `#{$key}`."
-            + " Available color are: #{map-keys(v.$brand-colors)}.";
-    }
+  @if map-has-key(v.$brand-colors ,  $key) {
+    @return map-get(v.$brand-colors , $key );
   }
+
+  @else {
+    @warn "Unfortunately, no value could be retreived with key: `#{$key}`."
+      + " Available color are: #{map-keys(v.$brand-colors)}.";
+  }
+}
 
 /// retreive font-sizes and validate the key
 /// @param {String} $key -  the size
 @function get-font-size($key: 'normal') {
-    @if map-has-key(v.$font-sizes ,  $key) {
-      @return map-get(v.$font-sizes , $key );
-    }
-    @else {
-      @warn "Unfortunately, no value could be retreived with key: `#{$key}`."
-            + " Available font-sizes are: #{map-keys(v.$font-sizes)}.";
-    }
+  @if map-has-key(v.$font-sizes ,  $key) {
+    @return map-get(v.$font-sizes , $key );
   }
+
+  @else {
+    @warn "Unfortunately, no value could be retreived with key: `#{$key}`."
+      + " Available font-sizes are: #{map-keys(v.$font-sizes)}.";
+  }
+}
 
 /// retreive font-weight and validate the key
 /// @param {String} $key -  the weight
 @function get-font-weight($key: 'normal') {
-    @if map-has-key(v.$font-weights ,  $key) {
-      @return map-get(v.$font-weights , $key );
-    }
-    @else {
-      @warn "Unfortunately, no value could be retreived with key: `#{$key}`."
-            + " Available font-weights are: #{map-keys(v.$font-weights)}.";
-    }
+  @if map-has-key(v.$font-weights ,  $key) {
+    @return map-get(v.$font-weights , $key );
   }
+
+  @else {
+    @warn "Unfortunately, no value could be retreived with key: `#{$key}`."
+      + " Available font-weights are: #{map-keys(v.$font-weights)}.";
+  }
+}
 
 /// retreive the z-index and validate the key
 /// @param {String} $key -  the zindex
 @function get-z-index($key: 'navigation') {
-    @if map-has-key(v.$z-index ,  $key) {
-      @return map-get(v.$z-index , $key );
-    }
-    @else {
-      @warn "Unfortunately, no value could be retreived with key: `#{$key}`."
-            + " Available z-index are: #{map-keys(v.$z-index)}.";
-    }
+  @if map-has-key(v.$z-index ,  $key) {
+    @return map-get(v.$z-index , $key );
   }
+
+  @else {
+    @warn "Unfortunately, no value could be retreived with key: `#{$key}`."
+      + " Available z-index are: #{map-keys(v.$z-index)}.";
+  }
+}
 
 /// retreive the break-point and validate the key
 /// @param {String} $key -  the break point
@@ -57,8 +61,9 @@
   @if map-has-key(v.$break-points ,  $key) {
     @return map-get(v.$break-points , $key );
   }
+
   @else {
     @warn "Unfortunately, no value could be retreived with key: `#{$key}`."
-          + " Available break points are: #{map-keys(v.$break-points)}.";
+      + " Available break points are: #{map-keys(v.$break-points)}.";
   }
 }

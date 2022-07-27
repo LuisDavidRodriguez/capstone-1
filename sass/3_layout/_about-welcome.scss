@@ -43,7 +43,7 @@ $top-mobil: 70px;
       font-size: f.get-font-size('smaller');
       font-weight: f.get-font-weight('bold');
       line-height: 30px;
-      background-color: transparentize($color: f.get-color('natural'), $amount: 0.1%) ;
+      background-color: transparentize($color: f.get-color('natural'), $amount: 0.1%);
       border: 1px solid f.get-color('secundary');
       box-shadow: 5px 5px 10px 5px f.get-color('secundary'), -1px -1px 5px 2px f.get-color('secundary'),;
       margin: 30px 0;
@@ -51,7 +51,7 @@ $top-mobil: 70px;
     }
 
     & p:nth-of-type(2) {
-      font-family: v.$font-lato; 
+      font-family: v.$font-lato;
       font-size: f.get-font-size('small');
       font-weight: f.get-font-weight('normal');
       color: f.get-color('primary');
@@ -69,7 +69,6 @@ $top-mobil: 70px;
         transform: scale(1.01);
       }
     }
-
   }
 
   @include mixin.desktop {

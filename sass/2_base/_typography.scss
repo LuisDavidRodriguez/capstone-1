@@ -7,9 +7,9 @@
 @use '../1_abstracts/functions' as f;
 
 @font-face {
-    font-family: 'cocogosse';
-    src: url('#{v.$path-fonts}/cocogoose/CocogoosePro-trial.ttf') format('truetype');
-    font-weight: f.get-font-weight('bold');
+  font-family: 'cocogosse';
+  src: url('#{v.$path-fonts}/cocogoose/CocogoosePro-trial.ttf') format('truetype');
+  font-weight: f.get-font-weight('bold');
 }
 
 @font-face {
@@ -34,9 +34,9 @@
 
 //super bold
 @font-face {
-    font-family: 'lato';
-    src: url('#{v.$path-fonts}/Lato/Lato-Black.ttf') format('truetype');
-    font-weight: f.get-font-weight('super');
+  font-family: 'lato';
+  src: url('#{v.$path-fonts}/Lato/Lato-Black.ttf') format('truetype');
+  font-weight: f.get-font-weight('super');
 }
 
 //super italic
@@ -71,10 +71,10 @@
 
 //normal italic
 @font-face {
-font-family: 'lato';
-src: url('#{v.$path-fonts}/Lato/Lato-Italic.ttf') format('truetype');
-font-weight: f.get-font-weight('normal');
-font-style: italic;
+  font-family: 'lato';
+  src: url('#{v.$path-fonts}/Lato/Lato-Italic.ttf') format('truetype');
+  font-weight: f.get-font-weight('normal');
+  font-style: italic;
 }
 
 //light
@@ -86,8 +86,8 @@ font-style: italic;
 
 //light italic
 @font-face {
-font-family: 'lato';
-src: url('#{v.$path-fonts}/Lato/Lato-LightItalic.ttf') format('truetype');
-font-weight: f.get-font-weight('light');
-font-style: italic;
+  font-family: 'lato';
+  src: url('#{v.$path-fonts}/Lato/Lato-LightItalic.ttf') format('truetype');
+  font-weight: f.get-font-weight('light');
+  font-style: italic;
 }

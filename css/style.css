@@ -96,12 +96,14 @@ html {
 }
 
 body {
-  font-family: "cocogosse", sans-serif, Helvetica;
+  font-family: "cocogosse", sans-serif, helvetica;
   font-weight: 400;
   font-size: 1.5em;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-weight: 400;
 }
 
@@ -114,7 +116,7 @@ ul {
 
 a {
   text-decoration: none;
-  font-family: "lato", sans-serif, Helvetica;
+  font-family: "lato", sans-serif, helvetica;
 }
 
 ::before {
@@ -510,7 +512,7 @@ header .low-bar {
     transition: all 0.3s linear;
     background-color: rgb(240, 240, 240);
   }
-  header .low-bar img {
+  header .low-bar .logo {
     display: block;
     width: auto;
     height: 77px;
@@ -520,7 +522,7 @@ header .low-bar {
     border: 2px solid transparent;
     cursor: pointer;
   }
-  header .low-bar img:hover {
+  header .low-bar .logo:hover {
     border: 2px solid hsl(9deg, 82%, 59%);
   }
   header .low-bar nav ul {
@@ -569,7 +571,7 @@ header .low-bar {
   margin-bottom: 5px;
 }
 .welcome-section article h2 {
-  font-family: "lato", sans-serif, Helvetica;
+  font-family: "lato", sans-serif, helvetica;
   font-size: 2.9em;
   font-weight: 900;
   text-transform: uppercase;
@@ -577,6 +579,7 @@ header .low-bar {
   background-image: url("../images/background/firered.jpg");
   background-size: 200%;
   background-position: right top;
+  /* stylelint-disable-next-line csstree/validator */
   background-clip: text;
   -webkit-background-clip: text;
   transition: background-position 15s ease-out;
@@ -585,7 +588,7 @@ header .low-bar {
   background-position: left bottom;
 }
 .welcome-section article p:nth-of-type(1) {
-  font-family: "lato", sans-serif, Helvetica;
+  font-family: "lato", sans-serif, helvetica;
   font-size: 0.8em;
   font-weight: 600;
   line-height: 30px;
@@ -596,14 +599,14 @@ header .low-bar {
   padding: 20px;
 }
 .welcome-section article p:nth-of-type(2) {
-  font-family: "lato", sans-serif, Helvetica;
+  font-family: "lato", sans-serif, helvetica;
   font-size: 2em;
   font-weight: 900;
   color: #272a31;
   margin: 20px 10px;
 }
 .welcome-section article p:nth-of-type(3) {
-  font-family: "lato", sans-serif, Helvetica;
+  font-family: "lato", sans-serif, helvetica;
   font-size: 0.8em;
   font-weight: 600;
   color: #272a31;
@@ -620,7 +623,6 @@ header .low-bar {
 .main-program {
   background-color: #272a31;
   background-image: url("../images/background/pattern.png");
-  height: fit-content;
   text-align: center;
   padding: 20px 0;
 }
@@ -687,13 +689,13 @@ footer article:nth-of-type(2) div {
 }
 footer article:nth-of-type(2) div p:nth-of-type(1) {
   margin-bottom: 10px;
-  font-family: "lato", sans-serif, Helvetica;
+  font-family: "lato", sans-serif, helvetica;
   font-size: 0.8em;
   font-weight: 600;
   max-width: 400px;
 }
 footer article:nth-of-type(2) div p:nth-of-type(2) {
-  font-family: "lato", sans-serif, Helvetica;
+  font-family: "lato", sans-serif, helvetica;
   font-size: 0.6em;
   font-weight: 200;
   max-width: 400px;
@@ -730,14 +732,14 @@ footer article:nth-of-type(2) div p:nth-of-type(2) {
   margin-bottom: 5px;
 }
 .about-welcome-section article h2 {
-  font-family: "lato", sans-serif, Helvetica;
+  font-family: "lato", sans-serif, helvetica;
   font-size: 2.9em;
   font-weight: 900;
   text-transform: uppercase;
   color: hsl(9deg, 82%, 59%);
 }
 .about-welcome-section article p:nth-of-type(1) {
-  font-family: "lato", sans-serif, Helvetica;
+  font-family: "lato", sans-serif, helvetica;
   font-size: 0.8em;
   font-weight: 600;
   line-height: 30px;
@@ -748,7 +750,7 @@ footer article:nth-of-type(2) div p:nth-of-type(2) {
   padding: 20px;
 }
 .about-welcome-section article p:nth-of-type(2) {
-  font-family: "lato", sans-serif, Helvetica;
+  font-family: "lato", sans-serif, helvetica;
   font-size: 1.2em;
   font-weight: 400;
   color: #272a31;
@@ -782,7 +784,7 @@ footer article:nth-of-type(2) div p:nth-of-type(2) {
   border-bottom: 1px solid #d3d3d3;
 }
 .about-logo-section div {
-  font-family: "lato", sans-serif, Helvetica;
+  font-family: "lato", sans-serif, helvetica;
   text-align: center;
   max-width: 500px;
 }
@@ -797,7 +799,7 @@ footer article:nth-of-type(2) div p:nth-of-type(2) {
   display: block;
   width: 100%;
   margin-top: 30px;
-  max-width: fit-content;
+  max-width: 700px;
   border: 1px solid #d3d3d3;
 }
 
@@ -805,7 +807,7 @@ footer article:nth-of-type(2) div p:nth-of-type(2) {
   text-align: center;
   padding: 50px 0;
   height: 100%;
-  font-family: "lato", sans-serif, Helvetica;
+  font-family: "lato", sans-serif, helvetica;
 }
 .about-events-section .title {
   padding: 0 10px;
@@ -820,19 +822,19 @@ footer article:nth-of-type(2) div p:nth-of-type(2) {
   display: flex;
   flex-direction: row;
   align-items: center;
-  font-family: "lato", sans-serif, Helvetica;
-  background-color: rgba(92, 93, 97, 0.39);
   height: 150px;
   padding: 1% 1%;
   margin: 10px;
+  font-family: "lato", sans-serif, helvetica;
+  background-color: rgba(92, 93, 97, 0.39);
   transition: all 0.3s linear;
   border: 2px solid transparent;
 }
 .card-program .card-img {
-  max-width: fit-content;
-  min-width: fit-content;
-  padding: 0 1%;
   width: 20%;
+  min-width: 50px;
+  max-width: 110px;
+  padding: 0 1%;
 }
 .card-program .card-title {
   width: 30%;
@@ -857,6 +859,10 @@ footer article:nth-of-type(2) div p:nth-of-type(2) {
     flex-direction: column;
     height: 270px;
   }
+  .card-program .card-img {
+    width: auto;
+    height: 30%;
+  }
   .card-program .card-title {
     width: 100%;
     padding: 0;
@@ -872,9 +878,8 @@ footer article:nth-of-type(2) div p:nth-of-type(2) {
   display: flex;
   flex-direction: row;
   align-items: center;
-  font-family: "lato", sans-serif, Helvetica;
+  font-family: "lato", sans-serif, helvetica;
   margin: 10px;
-  height: fit-content;
   min-height: 200px;
   max-height: 300px;
   overflow: hidden;
@@ -884,9 +889,9 @@ footer article:nth-of-type(2) div p:nth-of-type(2) {
   border: 2px solid transparent;
 }
 .card-speakers .card-img {
-  padding: 0 1%;
   width: 30%;
-  max-width: fit-content;
+  min-width: 100px;
+  max-width: 200px;
 }
 .card-speakers .card-body {
   margin-left: 3%;
@@ -923,7 +928,7 @@ footer article:nth-of-type(2) div p:nth-of-type(2) {
 
 .btn-style-1, .btn-2, .btn-1 {
   background-color: hsl(9deg, 82%, 59%);
-  font-family: "lato", sans-serif, Helvetica;
+  font-family: "lato", sans-serif, helvetica;
   color: rgb(240, 240, 240);
   font-weight: 600;
   padding: 20px;
@@ -936,7 +941,7 @@ footer article:nth-of-type(2) div p:nth-of-type(2) {
 }
 
 .btn-1 {
-  margin: 10px 0px;
+  margin: 10px 0;
 }
 
 .btn-2 {
@@ -1050,7 +1055,8 @@ hr.hr-2 {
   height: 100%;
 }
 .stars-container .stars {
-  max-width: fit-content;
+  max-width: 100px;
+  min-width: 50px;
   width: 10%;
   height: auto;
   filter: grayscale(100%);
@@ -1099,5 +1105,6 @@ hr.hr-2 {
     filter: grayscale(100%);
   }
 }
+/* stylelint-disable */
 
 /*# sourceMappingURL=style.css.map */
