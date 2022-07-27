@@ -644,9 +644,6 @@ header .low-bar {
   .speakers-section {
     scroll-margin-top: 120px;
   }
-  .speakers-section a {
-    display: none;
-  }
 }
 
 footer .sponsors-container {

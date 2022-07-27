@@ -1,4 +1,4 @@
-import populateSpeakers from './projects.js';
+import loadSpeakers from './projects.js';
 import populateProgram from './program.js';
 /* eslint-disable linebreak-style */
 const burgerButton = document.querySelector('.menu-button');
@@ -16,5 +16,11 @@ burgerButton.addEventListener('click', () => {
   menuModal.classList.toggle('open');
 });
 
-populateSpeakers();
 populateProgram();
+
+const width = window.innerWidth;
+if (width <= 760) {
+  loadSpeakers(3);
+} else {
+  loadSpeakers(6);
+}

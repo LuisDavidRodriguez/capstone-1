@@ -25,10 +25,9 @@ const programData = [
     title: 'CC Ignite',
     description: 'Get opportunities to network with CC affiliates around the world, also after the summit.',
   },
-]
+];
 
-export default function populateProgram (arr = programData) {
-
+export default function populateProgram(arr = programData) {
   arr.forEach((program) => {
     const card = document.createElement('div');
     const image = document.createElement('img');
@@ -48,5 +47,4 @@ export default function populateProgram (arr = programData) {
 
     programContainer.appendChild(card);
   });
-
 }
