@@ -906,16 +906,6 @@ footer .rights-container .info-container .text-2 {
   border: 2px solid transparent;
   cursor: pointer;
 }
-@media screen and (min-width: 0) {
-  .card-speakers {
-    flex-direction: column;
-  }
-}
-@media screen and (min-width: 480px) {
-  .card-speakers {
-    flex-direction: row;
-  }
-}
 .card-speakers .card-img {
   width: 30%;
   min-width: 100px;

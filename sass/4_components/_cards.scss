@@ -85,14 +85,6 @@
   border: 2px solid transparent;
   cursor: pointer;
 
-  @include mixin.base {
-    flex-direction: column;
-  }
-
-  @include mixin.small {
-    flex-direction: row;
-  }
-
   & .card-img {
     width: 30%;
     min-width: 100px;
