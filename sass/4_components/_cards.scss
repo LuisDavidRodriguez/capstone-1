@@ -13,6 +13,7 @@
   background-color: f.get-color('trans-primary');
   transition: all 0.3s linear;
   border: 2px solid transparent;
+  cursor: pointer;
 
   & .card-img {
     width: 20%;
@@ -79,6 +80,7 @@
   text-align: start;
   transition: all 0.3s linear;
   border: 2px solid transparent;
+  cursor: pointer;
 
   & .card-img {
     width: 30%;
@@ -120,8 +122,14 @@
 .card-events {
   max-width: 600px;
   margin: 20px;
+  transition: all 0.3s linear;
+  cursor: pointer;
 
   & .card-img {
     width: 100%;
+  }
+
+  &:hover {
+    transform: scale(1.02);
   }
 }

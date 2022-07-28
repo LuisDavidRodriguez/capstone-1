@@ -10,8 +10,8 @@
 $top-mobil: 70px;
 
 .welcome-section {
-  background: url('#{v.$path-images}/background/welcome_mobile.png') no-repeat;
-  background-size: 100%;
+  background: url('#{v.$path-images}/background/welcome.jpg') no-repeat;
+  background-size: cover;
   height: 100vh;
   display: flex;
   flex-direction: column;

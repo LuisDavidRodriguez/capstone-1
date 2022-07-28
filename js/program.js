@@ -7,7 +7,7 @@ const programData = [
   },
   {
     image: 'images/icons/icon_program.png',
-    title: 'CC Exhibition',
+    title: 'YF Exhibition',
     description: 'Appreciate various creations applying CC license of artists, organized from Art Center Nabi',
   },
   {
@@ -22,8 +22,8 @@ const programData = [
   },
   {
     image: 'images/icons/icon_wheel.png',
-    title: 'CC Ignite',
-    description: 'Get opportunities to network with CC affiliates around the world, also after the summit.',
+    title: 'YF Ignite',
+    description: 'Get opportunities to network with YazFortozo affiliates around the world, also after the summit.',
   },
 ];
 

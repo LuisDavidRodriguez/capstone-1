@@ -5,8 +5,8 @@
 $top-mobil: 70px;
 
 .about-welcome-section {
-  background: url('#{v.$path-images}/background/welcome_mobile.png') no-repeat;
-  background-size: 100%;
+  background: url('#{v.$path-images}/background/about.jpg') no-repeat;
+  background-size: cover;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -53,9 +53,9 @@ $top-mobil: 70px;
     & .text-2 {
       font-family: v.$font-lato;
       font-size: f.get-font-size('small');
-      font-weight: f.get-font-weight('normal');
-      color: f.get-color('primary');
-      margin: 20px 10px;
+      font-weight: f.get-font-weight('bold');
+      color: black;
+      margin: 70px 10px 20px 10px;
     }
 
     & a {

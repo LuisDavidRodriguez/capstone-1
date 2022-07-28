@@ -548,8 +548,8 @@ header .low-bar {
   }
 }
 .welcome-section {
-  background: url("../images/background/welcome_mobile.png") no-repeat;
-  background-size: 100%;
+  background: url("../images/background/welcome.jpg") no-repeat;
+  background-size: cover;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -679,10 +679,10 @@ footer .rights-container {
 footer .rights-container img {
   display: block;
   width: 30%;
-  max-width: 300px;
+  max-width: 250px;
 }
 footer .rights-container .info-container {
-  padding: 50px;
+  padding: 2%;
 }
 footer .rights-container .info-container .text-1 {
   margin-bottom: 10px;
@@ -704,8 +704,8 @@ footer .rights-container .info-container .text-2 {
 }
 
 .about-welcome-section {
-  background: url("../images/background/welcome_mobile.png") no-repeat;
-  background-size: 100%;
+  background: url("../images/background/about.jpg") no-repeat;
+  background-size: cover;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -749,9 +749,9 @@ footer .rights-container .info-container .text-2 {
 .about-welcome-section .about-welcome-container .text-2 {
   font-family: "lato", sans-serif, helvetica;
   font-size: 1.2em;
-  font-weight: 400;
-  color: #272a31;
-  margin: 20px 10px;
+  font-weight: 600;
+  color: black;
+  margin: 70px 10px 20px 10px;
 }
 .about-welcome-section .about-welcome-container a {
   color: #272a31;
@@ -826,6 +826,7 @@ footer .rights-container .info-container .text-2 {
   background-color: rgba(92, 93, 97, 0.39);
   transition: all 0.3s linear;
   border: 2px solid transparent;
+  cursor: pointer;
 }
 .card-program .card-img {
   width: 20%;
@@ -884,6 +885,7 @@ footer .rights-container .info-container .text-2 {
   text-align: start;
   transition: all 0.3s linear;
   border: 2px solid transparent;
+  cursor: pointer;
 }
 .card-speakers .card-img {
   width: 30%;
@@ -918,9 +920,14 @@ footer .rights-container .info-container .text-2 {
 .card-events {
   max-width: 600px;
   margin: 20px;
+  transition: all 0.3s linear;
+  cursor: pointer;
 }
 .card-events .card-img {
   width: 100%;
+}
+.card-events:hover {
+  transform: scale(1.02);
 }
 
 .btn-style-1, .btn-2, .btn-1 {
