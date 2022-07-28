@@ -883,7 +883,7 @@ footer .rights-container .info-container .text-2 {
   overflow: hidden;
   padding: 2% 1%;
   text-align: start;
-  transition: all 0.3s linear;
+  transition: all 0.5s linear;
   border: 2px solid transparent;
   cursor: pointer;
 }
@@ -915,6 +915,10 @@ footer .rights-container .info-container .text-2 {
 .card-speakers:hover {
   transform: scale(1.02);
   border: 1px solid #d3d3d3;
+}
+.card-speakers.translate {
+  position: relative;
+  transform: scale(0);
 }
 
 .card-events {
