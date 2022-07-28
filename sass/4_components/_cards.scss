@@ -45,8 +45,8 @@
     font-size: f.get-font-size('smaller');
 
     @include mixin.desktop {
-        width: 100%;
-        padding: 0;
+      width: 100%;
+      padding: 0;
     }
   }
 
@@ -58,9 +58,9 @@
     overflow: hidden;
 
     @include mixin.desktop {
-       margin-top: 5px;
-       width: 100%;
-       text-align: center;
+      margin-top: 5px;
+      width: 100%;
+      text-align: center;
     }
   }
 

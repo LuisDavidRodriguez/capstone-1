@@ -13,6 +13,10 @@ $top-mobil: 70px;
   position: relative;
   overflow-x: hidden;
 
+  @include mixin.desktop {
+    scroll-margin-top: v.$upper-bar-height + v.$low-bar-height;
+  }
+
   & .about-welcome-container {
     display: flex;
     flex-direction: column;
@@ -22,6 +26,10 @@ $top-mobil: 70px;
     width: 95%;
     text-align: center;
     z-index: 1;
+
+    @include mixin.desktop {
+      margin-top: $top-mobil + v.$upper-bar-height + v.$low-bar-height;
+    }
 
     & .title {
       font-size: f.get-font-size('small');
@@ -55,7 +63,7 @@ $top-mobil: 70px;
       font-size: f.get-font-size('small');
       font-weight: f.get-font-weight('bold');
       color: black;
-      margin: 5% 10px 5% 10px;
+      margin: 5% 10px 2% 10px;
     }
 
     & a {
@@ -63,23 +71,13 @@ $top-mobil: 70px;
       font-weight: f.get-font-weight('bold');
       text-decoration: underline;
       transition: all 0.3s linear;
-      margin: 5% 5%;
+      margin: 5% 2% 8% 2%;
       width: 100%;
 
       &:hover {
         color: f.get-color('accent');
         transform: scale(1.01);
       }
-    }
-  }
-
-  @include mixin.desktop {
-    & {
-      scroll-margin-top: v.$upper-bar-height + v.$low-bar-height;
-    }
-
-    & .about-welcome-container {
-      margin-top: $top-mobil + v.$upper-bar-height + v.$low-bar-height;
     }
   }
 }

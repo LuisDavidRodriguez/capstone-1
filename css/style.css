@@ -683,23 +683,22 @@ footer .rights-container {
 footer .rights-container img {
   display: inline-block;
   min-width: 100px;
-  max-width: 400px;
+  max-width: 250px;
   min-height: 100px;
 }
 footer .rights-container .info-container {
-  padding: 1%;
+  padding: 2%;
   max-width: 600px;
-  padding: 10px;
 }
 footer .rights-container .info-container .text-1 {
   margin-bottom: 10px;
   font-family: "lato", sans-serif, helvetica;
-  font-size: 0.8em;
+  font-size: 1.2em;
   font-weight: 600;
 }
 footer .rights-container .info-container .text-2 {
   font-family: "lato", sans-serif, helvetica;
-  font-size: 0.6em;
+  font-size: 0.8em;
   font-weight: 200;
 }
 @media screen and (min-width: 768px) {
@@ -717,6 +716,11 @@ footer .rights-container .info-container .text-2 {
   position: relative;
   overflow-x: hidden;
 }
+@media screen and (min-width: 768px) {
+  .about-welcome-section {
+    scroll-margin-top: 120px;
+  }
+}
 .about-welcome-section .about-welcome-container {
   display: flex;
   flex-direction: column;
@@ -726,6 +730,11 @@ footer .rights-container .info-container .text-2 {
   width: 95%;
   text-align: center;
   z-index: 1;
+}
+@media screen and (min-width: 768px) {
+  .about-welcome-section .about-welcome-container {
+    margin-top: 190px;
+  }
 }
 .about-welcome-section .about-welcome-container .title {
   font-size: 1.2em;
@@ -756,27 +765,19 @@ footer .rights-container .info-container .text-2 {
   font-size: 1.2em;
   font-weight: 600;
   color: black;
-  margin: 5% 10px 5% 10px;
+  margin: 5% 10px 2% 10px;
 }
 .about-welcome-section .about-welcome-container a {
   color: #272a31;
   font-weight: 600;
   text-decoration: underline;
   transition: all 0.3s linear;
-  margin: 5% 5%;
+  margin: 5% 2% 8% 2%;
   width: 100%;
 }
 .about-welcome-section .about-welcome-container a:hover {
   color: hsl(9deg, 82%, 59%);
   transform: scale(1.01);
-}
-@media screen and (min-width: 768px) {
-  .about-welcome-section {
-    scroll-margin-top: 120px;
-  }
-  .about-welcome-section .about-welcome-container {
-    margin-top: 190px;
-  }
 }
 
 .about-logo-section {

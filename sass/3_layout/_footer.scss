@@ -39,25 +39,24 @@ footer {
     & img {
       display: inline-block;
       min-width: 100px;
-      max-width: 400px;
+      max-width: 250px;
       min-height: 100px;
     }
 
     & .info-container {
-      padding: 1%;
+      padding: 2%;
       max-width: 600px;
-      padding: 10px;
 
       & .text-1 {
         margin-bottom: 10px;
         font-family: v.$font-lato;
-        font-size: f.get-font-size('smaller');
+        font-size: f.get-font-size('small');
         font-weight: f.get-font-weight('bold');
       }
 
       & .text-2 {
         font-family: v.$font-lato;
-        font-size: f.get-font-size('tiny');
+        font-size: f.get-font-size('smaller');
         font-weight: f.get-font-weight('light');
       }
     }
