@@ -15,11 +15,26 @@
   border: 2px solid transparent;
   cursor: pointer;
 
+  @include mixin.desktop {
+    flex-direction: column;
+    justify-content: center;
+    height: 270px;
+  }
+
+  @include mixin.large {
+    height: 300px;
+  }
+
   & .card-img {
     width: 20%;
     min-width: 50px;
     max-width: 110px;
     padding: 0 1%;
+
+    @include mixin.desktop {
+      width: auto;
+      height: 30%;
+    }
   }
 
   & .card-title {
@@ -28,6 +43,11 @@
     color: f.get-color('accent');
     font-weight: f.get-font-weight('super');
     font-size: f.get-font-size('smaller');
+
+    @include mixin.desktop {
+        width: 100%;
+        padding: 0;
+    }
   }
 
   & .card-text-1 {
@@ -36,51 +56,42 @@
     color: f.get-color('natural');
     text-align: start;
     overflow: hidden;
+
+    @include mixin.desktop {
+       margin-top: 5px;
+       width: 100%;
+       text-align: center;
+    }
   }
 
   &:hover {
     border: 2px solid f.get-color('secundary');
     transform: scale(1.02);
   }
-
-  @include mixin.desktop {
-    & {
-      flex-direction: column;
-      height: 270px;
-
-      & .card-img {
-        width: auto;
-        height: 30%;
-      }
-
-      & .card-title {
-        width: 100%;
-        padding: 0;
-      }
-
-      & .card-text-1 {
-        margin-top: 5px;
-        width: 100%;
-        text-align: center;
-      }
-    }
-  }
 }
 
 .card-speakers {
   display: flex;
   flex-direction: row;
+  justify-content: center;
   align-items: center;
   font-family: v.$font-lato;
-  margin: 10px;
-  min-height: 200px;
   max-height: 300px;
   overflow: hidden;
-  padding: 2% 1%;
+  margin: 1% 1% 0 2%;
+  padding: 1%;
   text-align: start;
   transition: all 0.5s linear;
   border: 2px solid transparent;
   cursor: pointer;
+
+  @include mixin.base {
+    flex-direction: column;
+  }
+
+  @include mixin.small {
+    flex-direction: row;
+  }
 
   & .card-img {
     width: 30%;
@@ -121,12 +132,11 @@
     position: relative;
     transform: scale(0);
   }
-
 }
 
 .card-events {
   max-width: 600px;
-  margin: 20px;
+  margin: 5% 5% 0 5%;
   transition: all 0.3s linear;
   cursor: pointer;
 

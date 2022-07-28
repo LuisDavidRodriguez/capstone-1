@@ -1,8 +1,10 @@
 /* eslint-disable no-plusplus */
-/* eslint-disable max-len */
+import CardsManager from './cardManager.js';
+
 const speakersContainer = document.querySelector('#speakersContainer');
 const showMoreBtn = document.querySelector('#showMoreSpeakers');
 const hideMoreBtn = document.querySelector('#hideSpeakers');
+const cardManager = new CardsManager(speakersContainer);
 
 const speakersData = [
   {
@@ -15,7 +17,7 @@ const speakersData = [
     image: 'images/presenters/2.png',
     name: 'Yovanna Gutierrez 2',
     carier: 'Private company secretary,organic straightening ',
-    expirience: 'I fell in love with my hair,I cant believe it turned out so perfect, thank you'
+    expirience: 'I fell in love with my hair,I cant believe it turned out so perfect, thank you',
   },
   {
     image: 'images/presenters/3.png',
@@ -126,77 +128,6 @@ const speakersData = [
     expirience: 'With my activity I had horrible hair, these products have helped me a lot to restore it, I recommend them go to the expo',
   },
 ];
-class CardsManager {
-  constructor(parentContainer) {
-    this.cards = [];
-    this.itemsRemain = 0;
-    this.parentContainer = parentContainer;
-    this.itemsDisplayed = 0;
-    this.step = 3;
-  }
-
-  addElement(nodeElement) {
-    this.cards.push(nodeElement);
-  }
-
-  get cardLength() {
-    return this.cards.length;
-  }
-
-  set setStep(step = 3) {
-    this.step = step;
-  }
-
-  reset() {
-    this.cards = [];
-    this.removeCards();
-  }
-
-  setItemsDisplayed() {
-    this.itemsDisplayed = this.parentContainer.getElementsByClassName('card-speakers').length;
-  }
-
-  setItemsRemain() {
-    this.itemsRemain = this.cards.length - this.itemsDisplayed;
-  }
-
-  showCards() {
-    // once we got how many itemst are already displayed we want to start from there to itemDisplayed + step
-    const limit = this.step + this.itemsDisplayed;
-    for (let i = this.itemsDisplayed; i < limit; i++) {
-      // if the iteration is out of the bounds
-      if (i === this.cards.length) {
-        this.itemsRemain = 0;
-        break;
-      }
-      // when the card is added to the parent now is displayed add a transition to disappear the card
-      this.cards[i].classList.add('translate');
-      this.parentContainer.append(this.cards[i]);
-    }
-
-    // calculate again the items remain and items displayed to always have the newest values
-    this.setItemsDisplayed();
-    this.setItemsRemain();
-
-    // remove the transition you must give a little delay once the card is displayed
-    // the card is hidden once the timer goes of it remove the translate class
-    // and the cards are shown with a little and nice effect
-    setTimeout(() => {
-      const item = this.parentContainer.querySelectorAll('.card-speakers');
-      item.forEach((element) => {
-        element.classList.remove('translate');
-      });
-    }, 200);
-  }
-
-  removeCards() {
-    this.parentContainer.innerHTML = '';
-    this.setItemsDisplayed();
-    this.setItemsRemain();
-  }
-}
-
-const cardManager = new CardsManager(speakersContainer);
 
 function createCards(arr = speakersData) {
   let index = 0;

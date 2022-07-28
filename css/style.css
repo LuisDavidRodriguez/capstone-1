@@ -71,12 +71,12 @@
 }
 
 html {
-  font-size: 10px;
+  font-size: 12px;
   scroll-behavior: smooth;
 }
 @media screen and (min-width: 0) {
   html {
-    font-size: 10px;
+    font-size: 12px;
   }
 }
 @media screen and (min-width: 480px) {
@@ -117,6 +117,7 @@ ul {
 a {
   text-decoration: none;
   font-family: "lato", sans-serif, helvetica;
+  word-wrap: break-word;
 }
 
 ::before {
@@ -550,27 +551,27 @@ header .low-bar {
 .welcome-section {
   background: url("../images/background/welcome.jpg") no-repeat;
   background-size: cover;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   position: relative;
+  overflow: hidden;
 }
-.welcome-section .container {
+.welcome-section .welcome-container {
   display: flex;
   flex-direction: column;
-  position: absolute;
-  top: 70px;
-  left: 5%;
-  max-width: 1000px;
-  width: 90%;
+  margin-top: 70px;
+  max-width: 1200px;
+  z-index: 1;
+  padding: 5%;
 }
-.welcome-section .container .title {
+.welcome-section .welcome-container .title {
   font-size: 1.2em;
   font-weight: 400;
   color: hsl(9deg, 82%, 59%);
   margin-bottom: 5px;
 }
-.welcome-section .container .subtitle {
+.welcome-section .welcome-container .subtitle {
   font-family: "lato", sans-serif, helvetica;
   font-size: 2.9em;
   font-weight: 900;
@@ -582,30 +583,30 @@ header .low-bar {
   /* stylelint-disable-next-line csstree/validator */
   background-clip: text;
   -webkit-background-clip: text;
-  transition: background-position 15s ease-out;
+  transition: background-position 100s ease-out;
 }
-.welcome-section .container .subtitle:hover {
+.welcome-section .welcome-container .subtitle:hover {
   background-position: left bottom;
 }
-.welcome-section .container .text-1 {
+.welcome-section .welcome-container .text-1 {
   font-family: "lato", sans-serif, helvetica;
   font-size: 0.8em;
   font-weight: 600;
-  line-height: 30px;
+  line-height: 1.5em;
   background-color: rgba(240, 240, 240, 0.9);
   border: 1px solid #d3d3d3;
   box-shadow: 5px 5px 10px 5px #d3d3d3, -1px -1px 5px 2px #d3d3d3;
   margin: 30px 0;
   padding: 20px;
 }
-.welcome-section .container .text-2 {
+.welcome-section .welcome-container .text-2 {
   font-family: "lato", sans-serif, helvetica;
   font-size: 2em;
   font-weight: 900;
   color: #272a31;
   margin: 20px 10px;
 }
-.welcome-section .container .text-3 {
+.welcome-section .welcome-container .text-3 {
   font-family: "lato", sans-serif, helvetica;
   font-size: 0.8em;
   font-weight: 600;
@@ -615,8 +616,8 @@ header .low-bar {
   .welcome-section {
     scroll-margin-top: 120px;
   }
-  .welcome-section .container {
-    top: 190px;
+  .welcome-section .welcome-container {
+    margin-top: 190px;
   }
 }
 
@@ -650,7 +651,7 @@ footer .sponsors-container {
   text-align: center;
   padding: 50px 0;
   background-color: #272a31;
-  height: 50vh;
+  min-height: 50vh;
 }
 footer .sponsors-container .title {
   color: #d3d3d3;
@@ -666,36 +667,36 @@ footer .sponsors-container .img-container img {
   padding: 10px;
   display: block;
   width: 33%;
-  min-width: 150px;
+  min-width: 100px;
   max-width: 300px;
 }
 footer .rights-container {
   display: flex;
-  padding: 20px;
-  height: 30vh;
+  min-height: 50vh;
   justify-content: center;
   align-items: center;
 }
 footer .rights-container img {
-  display: block;
-  width: 30%;
-  max-width: 250px;
+  display: inline-block;
+  min-width: 100px;
+  max-width: 400px;
+  min-height: 100px;
 }
 footer .rights-container .info-container {
-  padding: 2%;
+  padding: 1%;
+  max-width: 600px;
+  padding: 10px;
 }
 footer .rights-container .info-container .text-1 {
   margin-bottom: 10px;
   font-family: "lato", sans-serif, helvetica;
   font-size: 0.8em;
   font-weight: 600;
-  max-width: 400px;
 }
 footer .rights-container .info-container .text-2 {
   font-family: "lato", sans-serif, helvetica;
   font-size: 0.6em;
   font-weight: 200;
-  max-width: 400px;
 }
 @media screen and (min-width: 768px) {
   footer {
@@ -706,21 +707,21 @@ footer .rights-container .info-container .text-2 {
 .about-welcome-section {
   background: url("../images/background/about.jpg") no-repeat;
   background-size: cover;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   position: relative;
+  overflow-x: hidden;
 }
 .about-welcome-section .about-welcome-container {
   display: flex;
   flex-direction: column;
-  position: absolute;
   align-items: center;
   align-self: center;
-  top: 70px;
-  max-width: 1000px;
+  margin-top: 70px;
   width: 95%;
   text-align: center;
+  z-index: 1;
 }
 .about-welcome-section .about-welcome-container .title {
   font-size: 1.2em;
@@ -739,25 +740,27 @@ footer .rights-container .info-container .text-2 {
   font-family: "lato", sans-serif, helvetica;
   font-size: 0.8em;
   font-weight: 600;
-  line-height: 30px;
+  line-height: 1.5em;
   background-color: rgba(240, 240, 240, 0.9);
   border: 1px solid #d3d3d3;
   box-shadow: 5px 5px 10px 5px #d3d3d3, -1px -1px 5px 2px #d3d3d3;
   margin: 30px 0;
-  padding: 20px;
+  padding: 5%;
 }
 .about-welcome-section .about-welcome-container .text-2 {
   font-family: "lato", sans-serif, helvetica;
   font-size: 1.2em;
   font-weight: 600;
   color: black;
-  margin: 70px 10px 20px 10px;
+  margin: 5% 10px 5% 10px;
 }
 .about-welcome-section .about-welcome-container a {
   color: #272a31;
   font-weight: 600;
   text-decoration: underline;
   transition: all 0.3s linear;
+  margin: 5% 5%;
+  width: 100%;
 }
 .about-welcome-section .about-welcome-container a:hover {
   color: hsl(9deg, 82%, 59%);
@@ -768,7 +771,7 @@ footer .rights-container .info-container .text-2 {
     scroll-margin-top: 120px;
   }
   .about-welcome-section .about-welcome-container {
-    top: 190px;
+    margin-top: 190px;
   }
 }
 
@@ -828,11 +831,29 @@ footer .rights-container .info-container .text-2 {
   border: 2px solid transparent;
   cursor: pointer;
 }
+@media screen and (min-width: 768px) {
+  .card-program {
+    flex-direction: column;
+    justify-content: center;
+    height: 270px;
+  }
+}
+@media screen and (min-width: 960px) {
+  .card-program {
+    height: 300px;
+  }
+}
 .card-program .card-img {
   width: 20%;
   min-width: 50px;
   max-width: 110px;
   padding: 0 1%;
+}
+@media screen and (min-width: 768px) {
+  .card-program .card-img {
+    width: auto;
+    height: 30%;
+  }
 }
 .card-program .card-title {
   width: 30%;
@@ -841,6 +862,12 @@ footer .rights-container .info-container .text-2 {
   font-weight: 900;
   font-size: 0.8em;
 }
+@media screen and (min-width: 768px) {
+  .card-program .card-title {
+    width: 100%;
+    padding: 0;
+  }
+}
 .card-program .card-text-1 {
   width: 50%;
   font-size: 0.8em;
@@ -848,44 +875,42 @@ footer .rights-container .info-container .text-2 {
   text-align: start;
   overflow: hidden;
 }
-.card-program:hover {
-  border: 2px solid #d3d3d3;
-  transform: scale(1.02);
-}
 @media screen and (min-width: 768px) {
-  .card-program {
-    flex-direction: column;
-    height: 270px;
-  }
-  .card-program .card-img {
-    width: auto;
-    height: 30%;
-  }
-  .card-program .card-title {
-    width: 100%;
-    padding: 0;
-  }
   .card-program .card-text-1 {
     margin-top: 5px;
     width: 100%;
     text-align: center;
   }
 }
+.card-program:hover {
+  border: 2px solid #d3d3d3;
+  transform: scale(1.02);
+}
 
 .card-speakers {
   display: flex;
   flex-direction: row;
+  justify-content: center;
   align-items: center;
   font-family: "lato", sans-serif, helvetica;
-  margin: 10px;
-  min-height: 200px;
   max-height: 300px;
   overflow: hidden;
-  padding: 2% 1%;
+  margin: 1% 1% 0 2%;
+  padding: 1%;
   text-align: start;
   transition: all 0.5s linear;
   border: 2px solid transparent;
   cursor: pointer;
+}
+@media screen and (min-width: 0) {
+  .card-speakers {
+    flex-direction: column;
+  }
+}
+@media screen and (min-width: 480px) {
+  .card-speakers {
+    flex-direction: row;
+  }
 }
 .card-speakers .card-img {
   width: 30%;
@@ -923,7 +948,7 @@ footer .rights-container .info-container .text-2 {
 
 .card-events {
   max-width: 600px;
-  margin: 20px;
+  margin: 5% 5% 0 5%;
   transition: all 0.3s linear;
   cursor: pointer;
 }
@@ -1063,11 +1088,7 @@ hr.hr-2 {
   transform: translateX(0);
 }
 
-.stars-container {
-  position: relative;
-  height: 100%;
-}
-.stars-container .stars {
+.stars {
   position: absolute;
   max-width: 150px;
   min-width: 100px;
@@ -1076,27 +1097,32 @@ hr.hr-2 {
   filter: grayscale(100%) opacity(30%);
   animation: full-color 15s ease-in-out 2s infinite normal forwards;
 }
-.stars-container .star-1 {
+
+.star-1 {
   top: 15%;
   left: 60%;
   animation-delay: 3s;
 }
-.stars-container .star-2 {
+
+.star-2 {
   top: 30%;
   left: 15%;
   animation-delay: 6s;
 }
-.stars-container .star-3 {
+
+.star-3 {
   top: 45%;
   left: 80%;
   animation-delay: 9s;
 }
-.stars-container .star-4 {
+
+.star-4 {
   top: 60%;
   left: 5%;
   animation-delay: 12s;
 }
-.stars-container .star-5 {
+
+.star-5 {
   top: 75%;
   left: 70%;
   animation-delay: 15s;

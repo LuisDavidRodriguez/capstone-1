@@ -7,7 +7,7 @@ footer {
     text-align: center;
     padding: 50px 0;
     background-color: f.get-color('primary');
-    height: 50vh;
+    min-height: 50vh;
 
     & .title {
       color: f.get-color('secundary');
@@ -24,7 +24,7 @@ footer {
         padding: 10px;
         display: block;
         width: 33%;
-        min-width: 150px;
+        min-width: 100px;
         max-width: 300px;
       }
     }
@@ -32,33 +32,33 @@ footer {
 
   & .rights-container {
     display: flex;
-    padding: 20px;
-    height: 30vh;
+    min-height: 50vh;
     justify-content: center;
     align-items: center;
 
     & img {
-      display: block;
-      width: 30%;
-      max-width: 250px;
+      display: inline-block;
+      min-width: 100px;
+      max-width: 400px;
+      min-height: 100px;
     }
 
     & .info-container {
-      padding: 2%;
+      padding: 1%;
+      max-width: 600px;
+      padding: 10px;
 
       & .text-1 {
         margin-bottom: 10px;
         font-family: v.$font-lato;
         font-size: f.get-font-size('smaller');
         font-weight: f.get-font-weight('bold');
-        max-width: 400px;
       }
 
       & .text-2 {
         font-family: v.$font-lato;
         font-size: f.get-font-size('tiny');
         font-weight: f.get-font-weight('light');
-        max-width: 400px;
       }
     }
   }

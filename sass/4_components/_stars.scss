@@ -7,16 +7,13 @@
 /// a little complicated trying to match the timer only one star should shine at the time in this link you can see the peculiar behaviour of the animatin delay
 /// =====> https://css-tricks.com/a-new-way-to-delay-keyframes-animations/
 ///
-/// the stars container is a div, we created a new reference sistem inside of them whit position: relative in that way the stars which are img with an ABSOLUTE position 
-/// inside the div will be positioned inside this div, and not into the pincipal body.
-/// The stars or img inside the div, all of them shall use the class '.stars' and then each of them individually in this case
-/// 5 img shall have the class star-1 star-2 star-3 star-4 star-5.  This is the class which applis it's unique delay and position into the div.
+/// Inside of your container where you intend to use the stars it shall have the position as relative in that way the stars img with an ABSOLUTE position 
+/// will fit and use that parent's new coordination system, therefore whether the container goes slimmer wider higher the stars will be inside if not 
+/// your stars will be attached to your body.
+/// The stars or img , all of them shall use the class '.stars' and then each of them individually in this case
+/// 5 img shall have the class star-1 star-2 star-3 star-4 star-5.  This is the class which applies it's unique delay and position into the container.
 
-.stars-container {
-  position: relative;
-  height: 100%;
-
-  & .stars {
+  .stars {
     position: absolute;
     max-width: 150px;
     min-width: 100px;
@@ -27,7 +24,7 @@
   }
 
   @for $i from 1 through 5 {
-    & .star-#{$i} {
+    .star-#{$i} {
       top: 15%*$i;
 
       @if $i==1 {
@@ -52,7 +49,8 @@
       animation-delay: $i*3s;
     }
   }
-}
+
+
 
 @keyframes full-color {
   0% {

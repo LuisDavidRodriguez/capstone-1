@@ -2,7 +2,6 @@
 /// @author Luis David Rodriguez Valades
 /// -----------------------------------------------------------------
 
-
 @use '../1_abstracts/functions' as f;
 @use '../1_abstracts/variables' as v;
 @use '../1_abstracts/mixin';
@@ -12,19 +11,20 @@ $top-mobil: 70px;
 .welcome-section {
   background: url('#{v.$path-images}/background/welcome.jpg') no-repeat;
   background-size: cover;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   position: relative;
+  overflow: hidden;
 
-  & .container {
+
+  & .welcome-container {
     display: flex;
     flex-direction: column;
-    position: absolute;
-    top: $top-mobil;
-    left: 5%;
-    max-width: 1000px;
-    width: 90%;
+    margin-top: $top-mobil;
+    max-width: 1200px;
+    z-index: 1;
+    padding: 5%;
 
     & .title {
       font-size: f.get-font-size('small');
@@ -45,7 +45,7 @@ $top-mobil: 70px;
       /* stylelint-disable-next-line csstree/validator */
       background-clip: text;
       -webkit-background-clip: text;
-      transition: background-position 15s ease-out;
+      transition: background-position 100s ease-out;
 
       &:hover {
         background-position: left bottom;
@@ -56,7 +56,7 @@ $top-mobil: 70px;
       font-family: v.$font-lato;
       font-size: f.get-font-size('smaller');
       font-weight: f.get-font-weight('bold');
-      line-height: 30px;
+      line-height: 1.5em;
       background-color: transparentize($color: f.get-color('natural'), $amount: 0.1%);
       border: 1px solid f.get-color('secundary');
       box-shadow: 5px 5px 10px 5px f.get-color('secundary'), -1px -1px 5px 2px f.get-color('secundary'),;
@@ -85,8 +85,8 @@ $top-mobil: 70px;
       scroll-margin-top: v.$upper-bar-height + v.$low-bar-height;
     }
 
-    & .container {
-      top: $top-mobil + v.$upper-bar-height + v.$low-bar-height;
+    & .welcome-container {
+      margin-top: $top-mobil + v.$upper-bar-height + v.$low-bar-height;
     }
   }
 }
