@@ -549,13 +549,20 @@ header .low-bar {
   }
 }
 .welcome-section {
-  background: url("../images/background/welcome.jpg") no-repeat;
+  background: url("../images/background/welcome-mob.jpg") left 50% no-repeat;
   background-size: cover;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   position: relative;
   overflow: hidden;
+}
+@media screen and (min-width: 768px) {
+  .welcome-section {
+    scroll-margin-top: 120px;
+    background: url("../images/background/welcome-desktop.jpg") 15% 50% no-repeat;
+    background-size: cover;
+  }
 }
 .welcome-section .welcome-container {
   display: flex;
@@ -564,6 +571,11 @@ header .low-bar {
   max-width: 1200px;
   z-index: 1;
   padding: 5%;
+}
+@media screen and (min-width: 768px) {
+  .welcome-section .welcome-container {
+    margin-top: 190px;
+  }
 }
 .welcome-section .welcome-container .title {
   font-size: 1.2em;
@@ -611,14 +623,6 @@ header .low-bar {
   font-size: 0.8em;
   font-weight: 600;
   color: #272a31;
-}
-@media screen and (min-width: 768px) {
-  .welcome-section {
-    scroll-margin-top: 120px;
-  }
-  .welcome-section .welcome-container {
-    margin-top: 190px;
-  }
 }
 
 .main-program {

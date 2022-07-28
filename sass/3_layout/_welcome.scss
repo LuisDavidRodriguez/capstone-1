@@ -9,7 +9,7 @@
 $top-mobil: 70px;
 
 .welcome-section {
-  background: url('#{v.$path-images}/background/welcome.jpg') no-repeat;
+  background: url('#{v.$path-images}/background/welcome-mob.jpg') left 50% no-repeat;
   background-size: cover;
   min-height: 100vh;
   display: flex;
@@ -17,6 +17,11 @@ $top-mobil: 70px;
   position: relative;
   overflow: hidden;
 
+  @include mixin.desktop {
+    scroll-margin-top: v.$upper-bar-height + v.$low-bar-height;
+    background: url('#{v.$path-images}/background/welcome-desktop.jpg') 15% 50% no-repeat;
+    background-size: cover;
+  }
 
   & .welcome-container {
     display: flex;
@@ -25,6 +30,10 @@ $top-mobil: 70px;
     max-width: 1200px;
     z-index: 1;
     padding: 5%;
+
+    @include mixin.desktop {
+      margin-top: $top-mobil + v.$upper-bar-height + v.$low-bar-height;
+    }
 
     & .title {
       font-size: f.get-font-size('small');
@@ -77,16 +86,6 @@ $top-mobil: 70px;
       font-size: f.get-font-size('smaller');
       font-weight: f.get-font-weight('bold');
       color: f.get-color('primary');
-    }
-  }
-
-  @include mixin.desktop {
-    & {
-      scroll-margin-top: v.$upper-bar-height + v.$low-bar-height;
-    }
-
-    & .welcome-container {
-      margin-top: $top-mobil + v.$upper-bar-height + v.$low-bar-height;
     }
   }
 }
