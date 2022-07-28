@@ -148,6 +148,11 @@ class CardsManager {
     this.step = step;
   }
 
+  reset() {
+    this.cards = [];
+    this.removeCards();
+  }
+
   setItemsDisplayed() {
     this.itemsDisplayed = this.parentContainer.getElementsByClassName('card-speakers').length;
   }
@@ -234,8 +239,11 @@ function loadItems() {
 }
 
 export default function loadSpeakers(step = 3) {
-  createCards();
+  // reset the cards to be able to reload from 0. this is not nesesarly
+  // if we dont want to use the listener of width
+  cardManager.reset();
   cardManager.setStep = step;
+  createCards();
   loadItems(step);
 }
 
