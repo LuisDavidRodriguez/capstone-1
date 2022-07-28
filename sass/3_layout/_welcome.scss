@@ -51,7 +51,6 @@ $top-mobil: 70px;
       background-image: url('#{v.$path-images}/background/firered.jpg');
       background-size: 200%;
       background-position: right top;
-      /* stylelint-disable-next-line csstree/validator */
       background-clip: text;
       -webkit-background-clip: text;
       transition: background-position 100s ease-out;

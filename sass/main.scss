@@ -37,7 +37,8 @@
 /// ===> https://www.youtube.com/watch?v=GA65QBSec-Y&list=PL4cUxeGkcC9jxJX7vojNVK-o8ubDZEcNb&index=16
 /// -----------------------------------------------------------------------
 
-/* stylelint-disable */
+/* stylelint-disable at-rule-no-unknown */
+
 @use '2_base/typography';
 @use '2_base/config';
 @use '2_base/grid-system';

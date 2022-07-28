@@ -2,6 +2,10 @@
 /// Created by Luis David Rodriguez Valades 25/07/2022
 /// General resets and configs
 /// -----------------------------------------------------------------------
+
+/* stylelint-disable no-descending-specificity */
+/* stylelint-disable csstree/validator */
+
 @use '../1_abstracts/variables' as v;
 @use '../1_abstracts/functions' as f;
 @use '../1_abstracts/mixin';

@@ -3,67 +3,80 @@
   src: url("../fonts/cocogoose/CocogoosePro-trial.ttf") format("truetype");
   font-weight: 600;
 }
+
 @font-face {
   font-family: "cocogosse";
   src: url("../fonts/cocogoose/CocogooseProItalic-trial.ttf") format("truetype");
   font-weight: 600;
   font-style: italic;
 }
+
 @font-face {
   font-family: "cocogosse";
   src: url("../fonts/cocogoose/CocogooseProLight-trial.ttf") format("truetype");
   font-weight: 200;
 }
+
 @font-face {
   font-family: "cocogosse";
   src: url("../fonts/cocogoose/CocogooseProLight-Italic-trial.ttf") format("truetype");
   font-weight: 200;
   font-style: italic;
 }
+
 @font-face {
   font-family: "lato";
   src: url("../fonts/Lato/Lato-Black.ttf") format("truetype");
   font-weight: 900;
 }
+
 @font-face {
   font-family: "lato";
   src: url("../fonts/Lato/Lato-BlackItalic.ttf") format("truetype");
   font-weight: 900;
   font-style: italic;
 }
+
 @font-face {
   font-family: "lato";
   src: url("../fonts/Lato/Lato-Bold.ttf") format("truetype");
   font-weight: 600;
 }
+
 @font-face {
   font-family: "lato";
   src: url("../fonts/Lato/Lato-BoldItalic.ttf") format("truetype");
   font-weight: 600;
   font-style: italic;
 }
+
 @font-face {
   font-family: "lato";
   src: url("../fonts/Lato/Lato-Regular.ttf") format("truetype");
   font-weight: 400;
 }
+
 @font-face {
   font-family: "lato";
   src: url("../fonts/Lato/Lato-Italic.ttf") format("truetype");
   font-weight: 400;
   font-style: italic;
 }
+
 @font-face {
   font-family: "lato";
   src: url("../fonts/Lato/Lato-Light.ttf") format("truetype");
   font-weight: 200;
 }
+
 @font-face {
   font-family: "lato";
   src: url("../fonts/Lato/Lato-LightItalic.ttf") format("truetype");
   font-weight: 200;
   font-style: italic;
 }
+/* stylelint-disable no-descending-specificity */
+/* stylelint-disable csstree/validator */
 * {
   margin: 0;
   padding: 0;
@@ -74,21 +87,25 @@ html {
   font-size: 12px;
   scroll-behavior: smooth;
 }
+
 @media screen and (min-width: 0) {
   html {
     font-size: 12px;
   }
 }
+
 @media screen and (min-width: 480px) {
   html {
     font-size: 14px;
   }
 }
+
 @media screen and (min-width: 768px) {
   html {
     font-size: 16px;
   }
 }
+
 @media screen and (min-width: 960px) {
   html {
     font-size: 18px;
@@ -146,251 +163,311 @@ a {
     flex-grow: 0;
     width: 8.3333333333%;
   }
+
   .col-2-base {
     flex-grow: 0;
     width: 16.6666666667%;
   }
+
   .col-3-base {
     flex-grow: 0;
     width: 25%;
   }
+
   .col-4-base {
     flex-grow: 0;
     width: 33.3333333333%;
   }
+
   .col-5-base {
     flex-grow: 0;
     width: 41.6666666667%;
   }
+
   .col-6-base {
     flex-grow: 0;
     width: 50%;
   }
+
   .col-7-base {
     flex-grow: 0;
     width: 58.3333333333%;
   }
+
   .col-8-base {
     flex-grow: 0;
     width: 66.6666666667%;
   }
+
   .col-9-base {
     flex-grow: 0;
     width: 75%;
   }
+
   .col-10-base {
     flex-grow: 0;
     width: 83.3333333333%;
   }
+
   .col-11-base {
     flex-grow: 0;
     width: 91.6666666667%;
   }
+
   .col-12-base {
     flex-grow: 0;
     width: 100%;
   }
 }
+
 @media screen and (min-width: 480px) {
   .col-1-small {
     flex-grow: 0;
     width: 8.3333333333%;
   }
+
   .col-2-small {
     flex-grow: 0;
     width: 16.6666666667%;
   }
+
   .col-3-small {
     flex-grow: 0;
     width: 25%;
   }
+
   .col-4-small {
     flex-grow: 0;
     width: 33.3333333333%;
   }
+
   .col-5-small {
     flex-grow: 0;
     width: 41.6666666667%;
   }
+
   .col-6-small {
     flex-grow: 0;
     width: 50%;
   }
+
   .col-7-small {
     flex-grow: 0;
     width: 58.3333333333%;
   }
+
   .col-8-small {
     flex-grow: 0;
     width: 66.6666666667%;
   }
+
   .col-9-small {
     flex-grow: 0;
     width: 75%;
   }
+
   .col-10-small {
     flex-grow: 0;
     width: 83.3333333333%;
   }
+
   .col-11-small {
     flex-grow: 0;
     width: 91.6666666667%;
   }
+
   .col-12-small {
     flex-grow: 0;
     width: 100%;
   }
 }
+
 @media screen and (min-width: 768px) {
   .col-1-desktop {
     flex-grow: 0;
     width: 8.3333333333%;
   }
+
   .col-2-desktop {
     flex-grow: 0;
     width: 16.6666666667%;
   }
+
   .col-3-desktop {
     flex-grow: 0;
     width: 25%;
   }
+
   .col-4-desktop {
     flex-grow: 0;
     width: 33.3333333333%;
   }
+
   .col-5-desktop {
     flex-grow: 0;
     width: 41.6666666667%;
   }
+
   .col-6-desktop {
     flex-grow: 0;
     width: 50%;
   }
+
   .col-7-desktop {
     flex-grow: 0;
     width: 58.3333333333%;
   }
+
   .col-8-desktop {
     flex-grow: 0;
     width: 66.6666666667%;
   }
+
   .col-9-desktop {
     flex-grow: 0;
     width: 75%;
   }
+
   .col-10-desktop {
     flex-grow: 0;
     width: 83.3333333333%;
   }
+
   .col-11-desktop {
     flex-grow: 0;
     width: 91.6666666667%;
   }
+
   .col-12-desktop {
     flex-grow: 0;
     width: 100%;
   }
 }
+
 @media screen and (min-width: 960px) {
   .col-1-large {
     flex-grow: 0;
     width: 8.3333333333%;
   }
+
   .col-2-large {
     flex-grow: 0;
     width: 16.6666666667%;
   }
+
   .col-3-large {
     flex-grow: 0;
     width: 25%;
   }
+
   .col-4-large {
     flex-grow: 0;
     width: 33.3333333333%;
   }
+
   .col-5-large {
     flex-grow: 0;
     width: 41.6666666667%;
   }
+
   .col-6-large {
     flex-grow: 0;
     width: 50%;
   }
+
   .col-7-large {
     flex-grow: 0;
     width: 58.3333333333%;
   }
+
   .col-8-large {
     flex-grow: 0;
     width: 66.6666666667%;
   }
+
   .col-9-large {
     flex-grow: 0;
     width: 75%;
   }
+
   .col-10-large {
     flex-grow: 0;
     width: 83.3333333333%;
   }
+
   .col-11-large {
     flex-grow: 0;
     width: 91.6666666667%;
   }
+
   .col-12-large {
     flex-grow: 0;
     width: 100%;
   }
 }
+
 @media screen and (min-width: 1200px) {
   .col-1-xlarge {
     flex-grow: 0;
     width: 8.3333333333%;
   }
+
   .col-2-xlarge {
     flex-grow: 0;
     width: 16.6666666667%;
   }
+
   .col-3-xlarge {
     flex-grow: 0;
     width: 25%;
   }
+
   .col-4-xlarge {
     flex-grow: 0;
     width: 33.3333333333%;
   }
+
   .col-5-xlarge {
     flex-grow: 0;
     width: 41.6666666667%;
   }
+
   .col-6-xlarge {
     flex-grow: 0;
     width: 50%;
   }
+
   .col-7-xlarge {
     flex-grow: 0;
     width: 58.3333333333%;
   }
+
   .col-8-xlarge {
     flex-grow: 0;
     width: 66.6666666667%;
   }
+
   .col-9-xlarge {
     flex-grow: 0;
     width: 75%;
   }
+
   .col-10-xlarge {
     flex-grow: 0;
     width: 83.3333333333%;
   }
+
   .col-11-xlarge {
     flex-grow: 0;
     width: 91.6666666667%;
   }
+
   .col-12-xlarge {
     flex-grow: 0;
     width: 100%;
   }
 }
+
 header {
   position: fixed;
   z-index: 300;
@@ -413,9 +490,11 @@ header .menu-button {
   cursor: pointer;
   transition: all 0.5s ease-in;
 }
+
 header .menu-button:hover {
   transform: scale(1.1);
 }
+
 header .menu-button span {
   position: absolute;
   right: 0;
@@ -427,6 +506,7 @@ header .menu-button span {
   border: 1px solid rgb(240, 240, 240);
   transition: all 0.5s ease-in;
 }
+
 header .menu-button span::before {
   content: "";
   position: absolute;
@@ -439,6 +519,7 @@ header .menu-button span::before {
   background-color: #272a31;
   transition: all 0.5s ease-in;
 }
+
 header .menu-button span::after {
   content: "";
   position: absolute;
@@ -451,15 +532,18 @@ header .menu-button span::after {
   background-color: #272a31;
   transition: all 0.5s ease-in;
 }
+
 header .menu-button span.open {
   transform: rotate(720deg);
   background: transparent;
   border: 1px solid transparent;
 }
+
 header .menu-button span.open::before {
   transform: rotate(45deg) translate(5px, 10px);
   border: 1px solid transparent;
 }
+
 header .menu-button span.open::after {
   transform: rotate(-45deg) translate(5px, -10px);
   width: 30px;
@@ -474,6 +558,7 @@ header .low-bar {
   header {
     z-index: 100;
   }
+
   header .upper-bar {
     display: flex;
     flex-direction: row;
@@ -482,14 +567,17 @@ header .low-bar {
     height: 40px;
     background-color: #272a31;
   }
+
   header .upper-bar ul {
     display: flex;
     flex-direction: row;
     height: 100%;
   }
+
   header .upper-bar ul li {
     display: inline-block;
   }
+
   header .upper-bar ul li a {
     display: flex;
     align-items: center;
@@ -499,12 +587,15 @@ header .low-bar {
     color: white;
     transition: all 0.5s ease-in;
   }
+
   header .upper-bar ul li a:hover {
     background-color: hsl(9deg, 82%, 59%);
   }
+
   header .menu-button {
     display: none;
   }
+
   header .low-bar {
     display: flex;
     justify-content: space-between;
@@ -513,6 +604,7 @@ header .low-bar {
     transition: all 0.3s linear;
     background-color: rgb(240, 240, 240);
   }
+
   header .low-bar .logo {
     display: block;
     width: auto;
@@ -523,19 +615,23 @@ header .low-bar {
     border: 2px solid transparent;
     cursor: pointer;
   }
+
   header .low-bar .logo:hover {
     border: 2px solid hsl(9deg, 82%, 59%);
   }
+
   header .low-bar nav ul {
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: space-around;
   }
+
   header .low-bar nav ul li {
     margin: 0 10px;
     align-items: center;
   }
+
   header .low-bar nav ul li a {
     padding: 5px 5px;
     color: #545b6a;
@@ -543,11 +639,13 @@ header .low-bar {
     border: 4px solid transparent;
     transition: all 0.3s linear;
   }
+
   header .low-bar nav ul li a:hover {
     color: hsl(9deg, 82%, 59%);
     border: 4px solid hsl(9deg, 82%, 59%);
   }
 }
+
 .welcome-section {
   background: url("../images/background/welcome-mob.jpg") left 50% no-repeat;
   background-size: cover;
@@ -557,6 +655,7 @@ header .low-bar {
   position: relative;
   overflow: hidden;
 }
+
 @media screen and (min-width: 768px) {
   .welcome-section {
     scroll-margin-top: 120px;
@@ -564,6 +663,7 @@ header .low-bar {
     background-size: cover;
   }
 }
+
 .welcome-section .welcome-container {
   display: flex;
   flex-direction: column;
@@ -572,17 +672,20 @@ header .low-bar {
   z-index: 1;
   padding: 5%;
 }
+
 @media screen and (min-width: 768px) {
   .welcome-section .welcome-container {
     margin-top: 190px;
   }
 }
+
 .welcome-section .welcome-container .title {
   font-size: 1.2em;
   font-weight: 400;
   color: hsl(9deg, 82%, 59%);
   margin-bottom: 5px;
 }
+
 .welcome-section .welcome-container .subtitle {
   font-family: "lato", sans-serif, helvetica;
   font-size: 2.9em;
@@ -592,14 +695,15 @@ header .low-bar {
   background-image: url("../images/background/firered.jpg");
   background-size: 200%;
   background-position: right top;
-  /* stylelint-disable-next-line csstree/validator */
   background-clip: text;
   -webkit-background-clip: text;
   transition: background-position 100s ease-out;
 }
+
 .welcome-section .welcome-container .subtitle:hover {
   background-position: left bottom;
 }
+
 .welcome-section .welcome-container .text-1 {
   font-family: "lato", sans-serif, helvetica;
   font-size: 0.8em;
@@ -611,6 +715,7 @@ header .low-bar {
   margin: 30px 0;
   padding: 20px;
 }
+
 .welcome-section .welcome-container .text-2 {
   font-family: "lato", sans-serif, helvetica;
   font-size: 2em;
@@ -618,6 +723,7 @@ header .low-bar {
   color: #272a31;
   margin: 20px 10px;
 }
+
 .welcome-section .welcome-container .text-3 {
   font-family: "lato", sans-serif, helvetica;
   font-size: 0.8em;
@@ -631,10 +737,12 @@ header .low-bar {
   text-align: center;
   padding: 20px 0;
 }
+
 .main-program .title {
   color: rgb(240, 240, 240);
   font-weight: 400;
 }
+
 @media screen and (min-width: 768px) {
   .main-program {
     scroll-margin-top: 120px;
@@ -645,6 +753,7 @@ header .low-bar {
   text-align: center;
   padding: 50px 0;
 }
+
 @media screen and (min-width: 768px) {
   .speakers-section {
     scroll-margin-top: 120px;
@@ -657,9 +766,11 @@ footer .sponsors-container {
   background-color: #272a31;
   min-height: 50vh;
 }
+
 footer .sponsors-container .title {
   color: #d3d3d3;
 }
+
 footer .sponsors-container .img-container {
   display: flex;
   justify-content: space-evenly;
@@ -667,6 +778,7 @@ footer .sponsors-container .img-container {
   flex-wrap: wrap;
   flex-basis: 100px;
 }
+
 footer .sponsors-container .img-container img {
   padding: 10px;
   display: block;
@@ -674,33 +786,39 @@ footer .sponsors-container .img-container img {
   min-width: 100px;
   max-width: 300px;
 }
+
 footer .rights-container {
   display: flex;
   min-height: 50vh;
   justify-content: center;
   align-items: center;
 }
+
 footer .rights-container img {
   display: inline-block;
   min-width: 100px;
   max-width: 250px;
   min-height: 100px;
 }
+
 footer .rights-container .info-container {
   padding: 2%;
   max-width: 600px;
 }
+
 footer .rights-container .info-container .text-1 {
   margin-bottom: 10px;
   font-family: "lato", sans-serif, helvetica;
   font-size: 1.2em;
   font-weight: 600;
 }
+
 footer .rights-container .info-container .text-2 {
   font-family: "lato", sans-serif, helvetica;
   font-size: 0.8em;
   font-weight: 200;
 }
+
 @media screen and (min-width: 768px) {
   footer {
     scroll-margin-top: 120px;
@@ -716,11 +834,13 @@ footer .rights-container .info-container .text-2 {
   position: relative;
   overflow-x: hidden;
 }
+
 @media screen and (min-width: 768px) {
   .about-welcome-section {
     scroll-margin-top: 120px;
   }
 }
+
 .about-welcome-section .about-welcome-container {
   display: flex;
   flex-direction: column;
@@ -731,17 +851,20 @@ footer .rights-container .info-container .text-2 {
   text-align: center;
   z-index: 1;
 }
+
 @media screen and (min-width: 768px) {
   .about-welcome-section .about-welcome-container {
     margin-top: 190px;
   }
 }
+
 .about-welcome-section .about-welcome-container .title {
   font-size: 1.2em;
   font-weight: 400;
   color: hsl(9deg, 82%, 59%);
   margin-bottom: 5px;
 }
+
 .about-welcome-section .about-welcome-container .subtitle {
   font-family: "lato", sans-serif, helvetica;
   font-size: 2.9em;
@@ -749,6 +872,7 @@ footer .rights-container .info-container .text-2 {
   text-transform: uppercase;
   color: hsl(9deg, 82%, 59%);
 }
+
 .about-welcome-section .about-welcome-container .text-1 {
   font-family: "lato", sans-serif, helvetica;
   font-size: 0.8em;
@@ -760,6 +884,7 @@ footer .rights-container .info-container .text-2 {
   margin: 30px 0;
   padding: 5%;
 }
+
 .about-welcome-section .about-welcome-container .text-2 {
   font-family: "lato", sans-serif, helvetica;
   font-size: 1.2em;
@@ -767,6 +892,7 @@ footer .rights-container .info-container .text-2 {
   color: black;
   margin: 5% 10px 2% 10px;
 }
+
 .about-welcome-section .about-welcome-container a {
   color: #272a31;
   font-weight: 600;
@@ -775,6 +901,7 @@ footer .rights-container .info-container .text-2 {
   margin: 5% 2% 8% 2%;
   width: 100%;
 }
+
 .about-welcome-section .about-welcome-container a:hover {
   color: hsl(9deg, 82%, 59%);
   transform: scale(1.01);
@@ -788,18 +915,22 @@ footer .rights-container .info-container .text-2 {
   padding: 50px 20px;
   border-bottom: 1px solid #d3d3d3;
 }
+
 .about-logo-section .info-container {
   font-family: "lato", sans-serif, helvetica;
   text-align: center;
   max-width: 500px;
 }
+
 .about-logo-section .info-container .title {
   font-size: 1.2em;
 }
+
 .about-logo-section .info-container .text-1 {
   font-size: 0.8em;
   color: #3e424d;
 }
+
 .about-logo-section img {
   display: block;
   width: 100%;
@@ -814,9 +945,11 @@ footer .rights-container .info-container .text-2 {
   height: 100%;
   font-family: "lato", sans-serif, helvetica;
 }
+
 .about-events-section .title {
   padding: 0 10px;
 }
+
 .about-events-section .text-1 {
   font-size: 0.8em;
   padding: 0 10px;
@@ -836,6 +969,7 @@ footer .rights-container .info-container .text-2 {
   border: 2px solid transparent;
   cursor: pointer;
 }
+
 @media screen and (min-width: 768px) {
   .card-program {
     flex-direction: column;
@@ -843,23 +977,27 @@ footer .rights-container .info-container .text-2 {
     height: 270px;
   }
 }
+
 @media screen and (min-width: 960px) {
   .card-program {
     height: 300px;
   }
 }
+
 .card-program .card-img {
   width: 20%;
   min-width: 50px;
   max-width: 110px;
   padding: 0 1%;
 }
+
 @media screen and (min-width: 768px) {
   .card-program .card-img {
     width: auto;
     height: 30%;
   }
 }
+
 .card-program .card-title {
   width: 30%;
   padding-left: 2%;
@@ -867,12 +1005,14 @@ footer .rights-container .info-container .text-2 {
   font-weight: 900;
   font-size: 0.8em;
 }
+
 @media screen and (min-width: 768px) {
   .card-program .card-title {
     width: 100%;
     padding: 0;
   }
 }
+
 .card-program .card-text-1 {
   width: 50%;
   font-size: 0.8em;
@@ -880,6 +1020,7 @@ footer .rights-container .info-container .text-2 {
   text-align: start;
   overflow: hidden;
 }
+
 @media screen and (min-width: 768px) {
   .card-program .card-text-1 {
     margin-top: 5px;
@@ -887,6 +1028,7 @@ footer .rights-container .info-container .text-2 {
     text-align: center;
   }
 }
+
 .card-program:hover {
   border: 2px solid #d3d3d3;
   transform: scale(1.02);
@@ -907,35 +1049,42 @@ footer .rights-container .info-container .text-2 {
   border: 2px solid transparent;
   cursor: pointer;
 }
+
 .card-speakers .card-img {
   width: 30%;
   min-width: 100px;
   max-width: 200px;
 }
+
 .card-speakers .card-body {
   margin-left: 3%;
   width: 70%;
 }
+
 .card-speakers .card-body .card-title {
   font-weight: 900;
   margin-bottom: 5px;
 }
+
 .card-speakers .card-body .card-text-1 {
   color: hsl(9deg, 82%, 59%);
   font-size: 0.8em;
   font-weight: 600;
   font-style: italic;
 }
+
 .card-speakers .card-body .card-text-2 {
   color: #272a31;
   font-size: 0.6em;
   font-weight: 600;
   line-height: 20px;
 }
+
 .card-speakers:hover {
   transform: scale(1.02);
   border: 1px solid #d3d3d3;
 }
+
 .card-speakers.translate {
   position: relative;
   transform: scale(0);
@@ -947,14 +1096,18 @@ footer .rights-container .info-container .text-2 {
   transition: all 0.3s linear;
   cursor: pointer;
 }
+
 .card-events .card-img {
   width: 100%;
 }
+
 .card-events:hover {
   transform: scale(1.02);
 }
 
-.btn-style-1, .btn-2, .btn-1 {
+.btn-style-1,
+.btn-2,
+.btn-1 {
   background-color: hsl(9deg, 82%, 59%);
   font-family: "lato", sans-serif, helvetica;
   color: rgb(240, 240, 240);
@@ -964,7 +1117,10 @@ footer .rights-container .info-container .text-2 {
   display: inline-block;
   transition: all 0.5s linear;
 }
-.btn-style-1:hover, .btn-2:hover, .btn-1:hover {
+
+.btn-style-1:hover,
+.btn-2:hover,
+.btn-1:hover {
   background-color: hsl(6deg, 82%, 45%);
 }
 
@@ -980,13 +1136,16 @@ footer .rights-container .info-container .text-2 {
   margin: 20px 20px;
   color: #272a31;
 }
+
 .btn-2 i {
   margin-left: 5px;
   color: hsl(9deg, 82%, 59%);
 }
+
 .btn-2:hover {
   color: rgb(240, 240, 240);
 }
+
 .btn-2:hover i {
   color: rgb(240, 240, 240);
 }
@@ -999,12 +1158,14 @@ footer .rights-container .info-container .text-2 {
 hr {
   display: inline-block;
 }
+
 hr.hr-1 {
   border-color: hsl(9deg, 82%, 59%);
   background-color: hsl(9deg, 82%, 59%);
   width: 80px;
   margin: 10px 0;
 }
+
 hr.hr-2 {
   border-color: #d3d3d3;
   background-color: #d3d3d3;
@@ -1024,6 +1185,7 @@ hr.hr-2 {
   z-index: 200;
   transition: top 0.5s linear;
 }
+
 .menu-modal .menu-modal-list {
   width: 90%;
   margin: 0 auto;
@@ -1032,11 +1194,13 @@ hr.hr-2 {
   align-items: center;
   flex-direction: column;
 }
+
 .menu-modal .menu-modal-list .item {
   width: 100%;
   transform: translateX(100vw);
   transition: all 0.5s linear;
 }
+
 .menu-modal .menu-modal-list .item > a {
   display: flex;
   align-items: center;
@@ -1048,36 +1212,45 @@ hr.hr-2 {
   font-size: 1.2em;
   transition: all 0.3s linear;
 }
+
 .menu-modal .menu-modal-list .item > a:hover {
   background-color: hsl(9deg, 82%, 59%);
 }
+
 .menu-modal .menu-modal-list .item > a.active {
   color: hsl(9deg, 82%, 59%);
 }
+
 .menu-modal.open {
   display: block;
   top: 0;
 }
+
 .menu-modal.open .menu-modal-list > :nth-child(1) {
   transition-delay: 0.35s;
   transform: translateX(0);
 }
+
 .menu-modal.open .menu-modal-list > :nth-child(2) {
   transition-delay: 0.55s;
   transform: translateX(0);
 }
+
 .menu-modal.open .menu-modal-list > :nth-child(3) {
   transition-delay: 0.75s;
   transform: translateX(0);
 }
+
 .menu-modal.open .menu-modal-list > :nth-child(4) {
   transition-delay: 0.95s;
   transform: translateX(0);
 }
+
 .menu-modal.open .menu-modal-list > :nth-child(5) {
   transition-delay: 1.15s;
   transform: translateX(0);
 }
+
 .menu-modal.open .menu-modal-list > :nth-child(6) {
   transition-delay: 1.35s;
   transform: translateX(0);
@@ -1127,14 +1300,14 @@ hr.hr-2 {
   0% {
     filter: grayscale(100%) opacity(30%);
   }
+
   /* Finish changes by here */
   10% {
     filter: grayscale(0%) opacity(100%);
   }
+
   20% {
     filter: grayscale(100%) opacity(30%);
   }
 }
-/* stylelint-disable */
-
-/*# sourceMappingURL=style.css.map */
+/* stylelint-disable at-rule-no-unknown */
