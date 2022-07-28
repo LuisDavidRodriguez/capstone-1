@@ -2,6 +2,8 @@
 /* eslint-disable max-len */
 const speakersContainer = document.querySelector('#speakersContainer');
 const showMoreBtn = document.querySelector('#showMoreSpeakers');
+const hideMoreBtn = document.querySelector('#hideSpeakers');
+
 const speakersData = [
   {
     image: 'images/presenters/1.png',
@@ -125,8 +127,62 @@ const speakersData = [
   },
 ];
 
+class CardsManager {
+  constructor(parentContainer) {
+    this.cards = [];
+    this.itemsRemain = 0;
+    this.parentContainer = parentContainer;
+    this.itemsDisplayed = 0;
+    this.step = 3;
+  }
+
+  addElement(nodeElement) {
+    this.cards.push(nodeElement);
+  }
+
+  get cardLength() {
+    return this.cards.length;
+  }
+
+  set setStep(step = 3) {
+    this.step = step;
+  }
+
+  setItemsDisplayed() {
+    this.itemsDisplayed = this.parentContainer.getElementsByClassName('card-speakers').length;
+  }
+
+  setItemsRemain() {
+    this.itemsRemain = this.cards.length - this.itemsDisplayed;
+  }
+
+  showCards() {
+    // once we got how many itemst are already displayed we want to start from there to itemDisplayed + step
+    const limit = this.step + this.itemsDisplayed;
+    for (let i = this.itemsDisplayed; i < limit; i++) {
+      // if the iteration is out of the bounds
+      if (i === this.cards.length) {
+        this.itemsRemain = 0;
+        break;
+      }
+      this.parentContainer.append(this.cards[i]);
+    }
+
+    this.setItemsDisplayed();
+    // how many items are left to be displayed
+    this.setItemsRemain();
+  }
+
+  removeCards() {
+    this.parentContainer.innerHTML = '';
+    this.setItemsDisplayed();
+    this.setItemsRemain();
+  }
+}
+
+const cardManager = new CardsManager(speakersContainer);
+
 function createCards(arr = speakersData) {
-  const arrCards = [];
   let index = 0;
   arr.forEach((speaker) => {
     const card = document.createElement('div');
@@ -154,55 +210,47 @@ function createCards(arr = speakersData) {
 
     cardBody.append(title, carier, divition, expirience);
     card.append(image, cardBody);
-    arrCards.push(card);
+    cardManager.addElement(card);
     index++;
   });
-
-  return arrCards;
 }
 
-function showCards(arrCards, step) {
-  const itemsDisplayed = speakersContainer.getElementsByClassName('card-speakers').length;
+function loadItems() {
+  cardManager.showCards();
 
-  // once we got how many itemst are already displayed we want to start from there to itemDisplayed + step
-  const limit = step + itemsDisplayed;
-
-  for (let i = itemsDisplayed; i < limit; i++) {
-    // if the iteration is out of the bounds
-    if (i === arrCards.length) return 0;
-    speakersContainer.append(arrCards[i]);
-  }
-
-  // how many items are left to be displayed
-  return arrCards.length - speakersContainer.getElementsByClassName('card-speakers').length;
-}
-
-function uptateButtons(itemsLeft) {
-  // check if there is no items to display
-  if (itemsLeft === 0) {
+  // check if the items remain are less than the step we hidde both buttons
+  if (cardManager.itemsRemain < cardManager.step) {
     showMoreBtn.style.display = 'none';
+    hideMoreBtn.style.display = 'none';
   }
-  showMoreBtn.innerHTML = `Show ${itemsLeft} MORE <i class="fa-solid fa-angle-down"></i>`;
+
+  // check if the items are more than 0 we hide the hideButton
+  if (cardManager.itemsRemain > 0) {
+    hideMoreBtn.style.display = 'none';
+  }
+
+  showMoreBtn.innerHTML = `Show ${cardManager.itemsRemain} MORE <i class="fa-solid fa-angle-down"></i>`;
+  showMoreBtn.style.display = 'block';
 }
 
 export default function loadSpeakers(step = 3) {
-  // ask for the width of the documet
-  const cards = createCards();
+  createCards();
+  cardManager.setStep = step;
+  loadItems(step);
+}
 
-  // check if there is not cards hide the buttons show and hide
-  if (cards.length === 0) {
+showMoreBtn.addEventListener('click', () => {
+  cardManager.showCards();
+
+  if (cardManager.itemsRemain === 0) {
     showMoreBtn.style.display = 'none';
+    hideMoreBtn.style.display = 'block';
     return;
   }
+  showMoreBtn.innerHTML = `Show ${cardManager.itemsRemain} MORE <i class="fa-solid fa-angle-down"></i>`;
+});
 
-  // check if there is less data to show tan the step, if there is only 2 or 3 cards and for movile the step is 3 and for desktop the step is 10 hide the buttons
-  if (cards.length <= step) {
-    showMoreBtn.style.display = 'none';
-  }
-
-  uptateButtons(showCards(cards, step));
-
-  showMoreBtn.addEventListener('click', () => {
-    uptateButtons(showCards(cards, step));
-  });
-}
+hideMoreBtn.addEventListener('click', () => {
+  cardManager.removeCards();
+  loadItems();
+});
