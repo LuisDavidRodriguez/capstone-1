@@ -1,0 +1,90 @@
+/// -----------------------------------------------------------------
+/// @author Luis David Rodriguez Valades
+/// -----------------------------------------------------------------
+
+@use '../1_abstracts/functions' as f;
+@use '../1_abstracts/variables' as v;
+@use '../1_abstracts/mixin';
+
+$top-mobil: 70px;
+
+.welcome-section {
+  background: url('#{v.$path-images}/background/welcome-mob.jpg') left 50% no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+
+  @include mixin.desktop {
+    scroll-margin-top: v.$upper-bar-height + v.$low-bar-height;
+    background: url('#{v.$path-images}/background/welcome-desktop.jpg') 15% 50% no-repeat;
+    background-size: cover;
+  }
+
+  & .welcome-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: $top-mobil;
+    max-width: 1200px;
+    z-index: 1;
+    padding: 5%;
+
+    @include mixin.desktop {
+      margin-top: $top-mobil + v.$upper-bar-height + v.$low-bar-height;
+    }
+
+    & .title {
+      font-size: f.get-font-size('small');
+      font-weight: f.get-font-weight('normal');
+      color: f.get-color('accent');
+      margin-bottom: 5px;
+    }
+
+    & .subtitle {
+      font-family: v.$font-lato;
+      font-size: f.get-font-size('title');
+      font-weight: f.get-font-weight('super');
+      text-transform: uppercase;
+      color: transparent;
+      background-image: url('#{v.$path-images}/background/firered.jpg');
+      background-size: 200%;
+      background-position: right top;
+      background-clip: text;
+      -webkit-background-clip: text;
+      transition: background-position 100s ease-out;
+
+      &:hover {
+        background-position: left bottom;
+      }
+    }
+
+    & .text-1 {
+      font-family: v.$font-lato;
+      font-size: f.get-font-size('smaller');
+      font-weight: f.get-font-weight('bold');
+      line-height: 1.5em;
+      background-color: transparentize($color: f.get-color('natural'), $amount: 0.1%);
+      border: 1px solid f.get-color('secundary');
+      box-shadow: 5px 5px 10px 5px f.get-color('secundary'), -1px -1px 5px 2px f.get-color('secundary'),;
+      margin: 30px 0;
+      padding: 20px;
+    }
+
+    & .text-2 {
+      font-family: v.$font-lato;
+      font-size: f.get-font-size('big');
+      font-weight: f.get-font-weight('super');
+      color: f.get-color('primary');
+      margin: 20px 10px;
+    }
+
+    & .text-3 {
+      font-family: v.$font-lato;
+      font-size: f.get-font-size('smaller');
+      font-weight: f.get-font-weight('bold');
+      color: f.get-color('primary');
+    }
+  }
+}

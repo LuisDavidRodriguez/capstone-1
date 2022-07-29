@@ -1,0 +1,142 @@
+@use '../1_abstracts/mixin';
+@use '../1_abstracts/variables' as v;
+@use '../1_abstracts/functions' as f;
+
+.card-program {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 150px;
+  padding: 1% 1%;
+  margin: 10px;
+  font-family: v.$font-lato;
+  background-color: f.get-color('trans-primary');
+  transition: all 0.3s linear;
+  border: 2px solid transparent;
+  cursor: pointer;
+
+  @include mixin.desktop {
+    flex-direction: column;
+    justify-content: center;
+    height: 270px;
+  }
+
+  @include mixin.large {
+    height: 300px;
+  }
+
+  & .card-img {
+    width: 20%;
+    min-width: 50px;
+    max-width: 110px;
+    padding: 0 1%;
+
+    @include mixin.desktop {
+      width: auto;
+      height: 30%;
+    }
+  }
+
+  & .card-title {
+    width: 30%;
+    padding-left: 2%;
+    color: f.get-color('accent');
+    font-weight: f.get-font-weight('super');
+    font-size: f.get-font-size('smaller');
+
+    @include mixin.desktop {
+      width: 100%;
+      padding: 0;
+    }
+  }
+
+  & .card-text-1 {
+    width: 50%;
+    font-size: f.get-font-size('smaller');
+    color: f.get-color('natural');
+    text-align: start;
+    overflow: hidden;
+
+    @include mixin.desktop {
+      margin-top: 5px;
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  &:hover {
+    border: 2px solid f.get-color('secundary');
+    transform: scale(1.02);
+  }
+}
+
+.card-speakers {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-family: v.$font-lato;
+  max-height: 300px;
+  overflow: hidden;
+  margin: 1% 1% 0 2%;
+  padding: 1%;
+  text-align: start;
+  transition: all 0.5s linear;
+  border: 2px solid transparent;
+  cursor: pointer;
+
+  & .card-img {
+    width: 30%;
+    min-width: 100px;
+    max-width: 200px;
+  }
+
+  & .card-body {
+    margin-left: 3%;
+    width: 70%;
+
+    & .card-title {
+      font-weight: f.get-font-weight('super');
+      margin-bottom: 5px;
+    }
+
+    & .card-text-1 {
+      color: f.get-color('accent');
+      font-size: f.get-font-size('smaller');
+      font-weight: f.get-font-weight('bold');
+      font-style: italic;
+    }
+
+    & .card-text-2 {
+      color: f.get-color('primary');
+      font-size: f.get-font-size('tiny');
+      font-weight: f.get-font-weight('bold');
+      line-height: 20px;
+    }
+  }
+
+  &:hover {
+    transform: scale(1.02);
+    border: 1px solid f.get-color('secundary');
+  }
+
+  &.translate {
+    position: relative;
+    transform: scale(0);
+  }
+}
+
+.card-events {
+  max-width: 600px;
+  margin: 5% 1% 0 1%;
+  transition: all 0.3s linear;
+  cursor: pointer;
+
+  & .card-img {
+    width: 100%;
+  }
+
+  &:hover {
+    transform: scale(1.02);
+  }
+}

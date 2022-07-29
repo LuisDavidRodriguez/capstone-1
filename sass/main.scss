@@ -1,0 +1,55 @@
+/// -----------------------------------------------------------------------
+/// Created by Luis David Rodriguez Valades 25/07/2022
+///
+/// Author note: since I was working in my portfolio project I realized the difficulties I
+/// was getting as soon as the css file pass 1000 lines. It was an awful chore add classes
+/// or perform a new change, so I decided to go out in a limb and implement SASS in this
+/// project from the very beginning, I been watching videos since 2 weeks ago so I feel enough
+/// confidence to create this project whith SASS.
+/// I hope that you can fall in love with my work ;)
+///
+/// (SASS is not easy you need to master first the basic css and then implement SASS
+/// in that way you know what exactly are you doing and the way SASS will be transcribed into your
+/// normal css)
+///
+/// I got a lot of inspiration and help from these sources:
+/// 7:1 structure SASS boilerplate
+/// ===> https://github.com/KittyGiraudel/sass-boilerplate/tree/master/stylesheets
+///
+/// Import typography
+/// ===> https://www.youtube.com/watch?v=AAU25Fo4bFY&t=378s
+///
+/// STOP from using @import which is deprecated and implement @use and @forward
+/// ===> https://www.youtube.com/watch?v=CR-a8upNjJ0
+/// ===> https://sass-lang.com/documentation/at-rules/use
+///
+/// How to create breackpoint mixin
+/// in this same source you can see the way they create a function with a fantastic @if @else which
+/// validate if the map has a key if not create a warn! it is amazing.
+/// therefore I implement that way into my _functions parcial
+/// ===> https://css-tricks.com/snippets/sass/mixin-manage-breakpoints/
+///
+/// Fabolous creation of a portfolio with SASS and using a beautiful animation
+/// to convert the burger icon into a cross
+/// https://www.youtube.com/watch?v=_a5j7KoflTs&t=3615s
+///
+/// Create a grid sistem
+/// ===> https://www.youtube.com/watch?v=GA65QBSec-Y&list=PL4cUxeGkcC9jxJX7vojNVK-o8ubDZEcNb&index=16
+/// -----------------------------------------------------------------------
+
+/* stylelint-disable at-rule-no-unknown */
+
+@use '2_base/typography';
+@use '2_base/config';
+@use '2_base/grid-system';
+@use '3_layout/header';
+@use '3_layout/welcome';
+@use '3_layout/program';
+@use '3_layout/speakers';
+@use '3_layout/footer';
+@use '3_layout/about-main';
+@use '4_components/cards.scss';
+@use '4_components/buttons';
+@use '4_components/extras';
+@use '4_components/menu-modal.scss';
+@use '4_components/stars';

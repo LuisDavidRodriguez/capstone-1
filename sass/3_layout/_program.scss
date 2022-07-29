@@ -1,0 +1,19 @@
+@use '../1_abstracts/functions' as f;
+@use '../1_abstracts/variables' as v;
+@use '../1_abstracts/mixin';
+
+.main-program {
+  background-color: f.get-color('primary');
+  background-image: url('#{v.$path-images}/background/pattern.png');
+  text-align: center;
+  padding: 20px 0;
+
+  & .title {
+    color: f.get-color('natural');
+    font-weight: f.get-font-weight('normal');
+  }
+
+  @include mixin.desktop {
+    scroll-margin-top: v.$upper-bar-height + v.$low-bar-height;
+  }
+}

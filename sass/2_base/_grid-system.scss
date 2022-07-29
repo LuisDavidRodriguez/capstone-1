@@ -1,0 +1,75 @@
+/// -----------------------------------------------------------------------
+/// @author Luis David Rodriguez Valades 25/07/2022
+/// -----------------------------------------------------------------------
+
+@use '../1_abstracts/mixin';
+@use 'sass:math';
+
+$grid-columns: 12;
+$grid-gaps: (
+  '0': 0,
+  '1': 5px,
+  '2': 10px,
+  '3': 15px,
+  '4': 20px,
+);
+
+$layout-values: flex-start, flex-end, center, space-between, space-around;
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.row {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+@include mixin.base {
+  @for $i from 1 through $grid-columns {
+    .col-#{$i}-base {
+      flex-grow: 0;
+      width: math.div($i * 100%, $grid-columns);
+    }
+  }
+}
+
+@include mixin.small {
+  @for $i from 1 through $grid-columns {
+    .col-#{$i}-small {
+      flex-grow: 0;
+      width: math.div($i * 100%, $grid-columns);
+    }
+  }
+}
+
+@include mixin.desktop {
+  @for $i from 1 through $grid-columns {
+    .col-#{$i}-desktop {
+      flex-grow: 0;
+      width: math.div($i * 100%, $grid-columns);
+    }
+  }
+}
+
+@include mixin.large {
+  @for $i from 1 through $grid-columns {
+    .col-#{$i}-large {
+      flex-grow: 0;
+      width: math.div($i * 100%, $grid-columns);
+    }
+  }
+}
+
+@include mixin.xlarge {
+  @for $i from 1 through $grid-columns {
+    .col-#{$i}-xlarge {
+      flex-grow: 0;
+      width: math.div($i * 100%, $grid-columns);
+    }
+  }
+}

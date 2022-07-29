@@ -1,0 +1,132 @@
+@use '../1_abstracts/functions' as f;
+@use '../1_abstracts/variables' as v;
+@use '../1_abstracts/mixin';
+
+$top-mobil: 70px;
+
+.about-welcome-section {
+  background: url('#{v.$path-images}/background/about.jpg') no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow-x: hidden;
+
+  @include mixin.desktop {
+    scroll-margin-top: v.$upper-bar-height + v.$low-bar-height;
+  }
+
+  & .about-welcome-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+    margin-top: $top-mobil;
+    width: 95%;
+    text-align: center;
+    z-index: 1;
+
+    @include mixin.desktop {
+      margin-top: $top-mobil + v.$upper-bar-height + v.$low-bar-height;
+    }
+
+    & .title {
+      font-size: f.get-font-size('small');
+      font-weight: f.get-font-weight('normal');
+      color: f.get-color('accent');
+      margin-bottom: 5px;
+    }
+
+    & .subtitle {
+      font-family: v.$font-lato;
+      font-size: f.get-font-size('title');
+      font-weight: f.get-font-weight('super');
+      text-transform: uppercase;
+      color: f.get-color('accent');
+    }
+
+    & .text-1 {
+      font-family: v.$font-lato;
+      font-size: f.get-font-size('smaller');
+      font-weight: f.get-font-weight('bold');
+      line-height: 1.5em;
+      background-color: transparentize($color: f.get-color('natural'), $amount: 0.1%);
+      border: 1px solid f.get-color('secundary');
+      box-shadow: 5px 5px 10px 5px f.get-color('secundary'), -1px -1px 5px 2px f.get-color('secundary'),;
+      margin: 30px 0;
+      padding: 5%;
+    }
+
+    & .text-2 {
+      font-family: v.$font-lato;
+      font-size: f.get-font-size('small');
+      font-weight: f.get-font-weight('bold');
+      color: black;
+      margin: 5% 10px 2% 10px;
+    }
+
+    & a {
+      color: f.get-color('primary');
+      font-weight: f.get-font-weight('bold');
+      text-decoration: underline;
+      transition: all 0.3s linear;
+      margin: 5% 2% 8% 2%;
+      width: 100%;
+
+      &:hover {
+        color: f.get-color('accent');
+        transform: scale(1.01);
+      }
+    }
+  }
+}
+
+.about-logo-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 20px;
+  border-bottom: 1px solid f.get-color('secundary');
+
+  & .info-container {
+    font-family: v.$font-lato;
+    text-align: center;
+    max-width: 500px;
+
+    & .title {
+      font-size: f.get-font-size('small');
+    }
+
+    & .text-1 {
+      font-size: f.get-font-size('smaller');
+      color: lighten($color: f.get-color('primary'), $amount: 10%);
+    }
+  }
+
+  & img {
+    display: block;
+    width: 100%;
+    margin-top: 30px;
+    max-width: 700px;
+    border: 1px solid f.get-color('secundary');
+  }
+}
+
+.about-events-section {
+  text-align: center;
+  padding: 50px 0;
+  height: 100%;
+  font-family: v.$font-lato;
+
+  & .title {
+    padding: 0 10px;
+  }
+
+  & .text-1 {
+    font-size: f.get-font-size('smaller');
+    padding: 0 10px;
+    margin-bottom: 50px;
+  }
+}

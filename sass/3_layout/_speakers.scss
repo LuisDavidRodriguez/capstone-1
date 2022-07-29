@@ -1,0 +1,14 @@
+@use '../1_abstracts/functions' as f;
+@use '../1_abstracts/variables' as v;
+@use '../1_abstracts/mixin';
+
+.speakers-section {
+  text-align: center;
+  padding: 50px 0;
+
+  @include mixin.desktop {
+    & {
+      scroll-margin-top: v.$upper-bar-height + v.$low-bar-height;
+    }
+  }
+}

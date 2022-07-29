@@ -1,0 +1,192 @@
+/// -----------------------------------------------------------------------
+/// @author Luis David Rodriguez Valades 25/07/2022
+/// -----------------------------------------------------------------------
+
+@use '../1_abstracts/variables' as v;
+@use '../1_abstracts/functions' as f;
+@use '../1_abstracts/mixin';
+
+header {
+  position: fixed;
+  z-index: f.get-z-index('over');
+  top: 0;
+  left: 0;
+  width: 100%;
+  font-size: f.get-font-size('tiny');
+}
+
+header .upper-bar {
+  display: none;
+}
+
+header .menu-button {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  height: 30px;
+  width: 28px;
+  cursor: pointer;
+
+  @include mixin.transition-ease;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  span {
+    position: absolute;
+    right: 0;
+    top: 12px;
+    width: 30px;
+    height: 6px;
+    border-radius: 2px;
+    background-color: f.get-color('primary');
+    border: 1px solid f.get-color('natural');
+
+    @include mixin.transition-ease;
+
+    //create the other little bars!
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: -12px;
+      width: 30px;
+      height: 6px;
+      border-radius: 2px;
+      border: 1px solid f.get-color('natural');
+      background-color: f.get-color('primary');
+
+      @include mixin.transition-ease;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 10px;
+      width: 80%;
+      height: 6px;
+      border-radius: 2px;
+      border: 1px solid f.get-color('natural');
+      background-color: f.get-color('primary');
+
+      @include mixin.transition-ease;
+    }
+
+    //in java script when the open class is assigned i want to hidde the middle bar and rotate the other two to form a cross
+    &.open {
+      transform: rotate(720deg);
+      background: transparent;
+      border: 1px solid transparent;
+
+      &::before {
+        transform: rotate(45deg) translate(5px, 10px);
+        border: 1px solid transparent;
+      }
+
+      &::after {
+        transform: rotate(-45deg) translate(5px, -10px);
+        width: 30px;
+        border: 1px solid transparent;
+      }
+    }
+  }
+}
+
+header .low-bar {
+  display: none;
+}
+
+@include mixin.desktop {
+  header {
+    z-index: f.get-z-index('navigation');
+  }
+
+  header .upper-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    height: v.$upper-bar-height;
+    background-color: f.get-color('primary');
+
+    ul {
+      display: flex;
+      flex-direction: row;
+      height: 100%;
+
+      li {
+        display: inline-block;
+
+        a {
+          display: flex;
+          align-items: center;
+          height: 100%;
+          width: 100%;
+          padding: 0 10px;
+          color: white;
+
+          @include mixin.transition-ease;
+
+          &:hover {
+            background-color: f.get-color('accent');
+          }
+        }
+      }
+    }
+  }
+
+  header .menu-button {
+    display: none;
+  }
+
+  header .low-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: v.$low-bar-height;
+    transition: all 0.3s linear;
+    background-color: f.get-color('natural');
+
+    & .logo {
+      display: block;
+      width: auto;
+      height: v.$low-bar-height - 3px;
+      margin-left: 20px;
+      border-radius: 2px;
+      transition: all 0.5s linear;
+      border: 2px solid transparent;
+      cursor: pointer;
+
+      &:hover {
+        border: 2px solid f.get-color('accent');
+      }
+    }
+
+    & nav ul {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+
+      & li {
+        margin: 0 10px;
+        align-items: center;
+      }
+
+      & li a {
+        padding: 5px 5px;
+        color: lighten($color: f.get-color('primary'), $amount: 20%);
+        font-weight: f.get-font-weight('bold');
+        border: 4px solid transparent;
+        transition: all 0.3s linear;
+      }
+
+      & li a:hover {
+        color: f.get-color('accent');
+        border: 4px solid f.get-color('accent');
+      }
+    }
+  }
+}

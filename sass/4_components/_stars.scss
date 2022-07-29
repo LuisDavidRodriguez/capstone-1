@@ -1,0 +1,67 @@
+/// -----------------------------------------------------------------
+/// @author Luis David Rodriguez Valades
+/// -----------------------------------------------------------------
+/// documentation for understand the animation and the place of the stars please check this documentation if you want to change the time of the animation
+/// =====> https://ibritech.atlassian.net/wiki/external/231374901/ZDQxY2E1YzY3MjAzNDRjN2FiOWYzZTkyYmEwNDc0OTM?atlOrigin=eyJpIjoiZmUxNTVjY2NkMDM3NDBjZWFjNjViZTgxMDI5NGRhYWMiLCJwIjoiYyJ9
+///
+/// a little complicated trying to match the timer only one star should shine at the time in this link you can see the peculiar behaviour of the animatin delay
+/// =====> https://css-tricks.com/a-new-way-to-delay-keyframes-animations/
+///
+/// Inside of your container where you intend to use the stars it shall have the position as relative in that way the stars img with an ABSOLUTE position
+/// will fit and use that parent's new coordination system, therefore whether the container goes slimmer wider higher the stars will be inside if not
+/// your stars will be attached to your body.
+/// The stars or img , all of them shall use the class '.stars' and then each of them individually in this case
+/// 5 img shall have the class star-1 star-2 star-3 star-4 star-5.  This is the class which applies it's unique delay and position into the container.
+
+.stars {
+  position: absolute;
+  max-width: 150px;
+  min-width: 100px;
+  width: 10%;
+  height: auto;
+  filter: grayscale(100%) opacity(30%);
+  animation: full-color 15s ease-in-out 2s infinite normal forwards;
+}
+
+@for $i from 1 through 5 {
+  .star-#{$i} {
+    top: 15%*$i;
+
+    @if $i==1 {
+      left: 60%;
+    }
+
+    @if $i==2 {
+      left: 15%;
+    }
+
+    @if $i==3 {
+      left: 80%;
+    }
+
+    @if $i==4 {
+      left: 5%;
+    }
+
+    @if $i==5 {
+      left: 70%;
+    }
+
+    animation-delay: $i*3s;
+  }
+}
+
+@keyframes full-color {
+  0% {
+    filter: grayscale(100%) opacity(30%);
+  }
+
+  /* Finish changes by here */
+  10% {
+    filter: grayscale(0%) opacity(100%);
+  }
+
+  20% {
+    filter: grayscale(100%) opacity(30%);
+  }
+}

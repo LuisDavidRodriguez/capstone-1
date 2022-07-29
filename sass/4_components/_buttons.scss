@@ -1,0 +1,56 @@
+/// -----------------------------------------------------------------------
+/// @author Luis David Rodriguez Valades 25/07/2022
+/// -----------------------------------------------------------------------
+
+@use '../1_abstracts/functions' as f;
+@use '../1_abstracts/variables' as v;
+
+.btn-style-1 {
+  background-color: f.get-color('accent');
+  font-family: v.$font-lato;
+  color: f.get-color('natural');
+  font-weight: f.get-font-weight('bold');
+  padding: 20px;
+  width: fit-content;
+  display: inline-block;
+  transition: all 0.5s linear;
+
+  &:hover {
+    background-color: f.get-color('accent-secundary');
+  }
+}
+
+.btn-1 {
+  @extend .btn-style-1;
+
+  margin: 10px 0;
+}
+
+.btn-2 {
+  @extend .btn-style-1;
+
+  background-color: transparent;
+  border: 1px solid f.get-color('secundary');
+  display: block;
+  width: auto;
+  margin: 20px 20px;
+  color: f.get-color('primary');
+
+  & i {
+    margin-left: 5px;
+    color: f.get-color('accent');
+  }
+
+  &:hover {
+    color: f.get-color('natural');
+
+    & i {
+      color: f.get-color('natural');
+    }
+  }
+}
+
+.btn-1.invisible,
+.btn-2.invisible {
+  display: none;
+}
