@@ -106,7 +106,7 @@ git clone https://github.com/LuisDavidRodriguez/capstone-1.git
 - With the files open in Visual Studio Code, press the **Go Live** button at the bottom of the window to launch the files with [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer).
 
 ## Live Demo Deployment
-[Click here to see the my Capstone!](https://luisdavidrodriguez.github.io/capstone-1/)
+[Click here to see the my Capstone!](https://luisdavidrodriguez.github.io/capstone-1/index.html)
 
 
 
