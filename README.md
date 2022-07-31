@@ -30,14 +30,14 @@ Yaz Fortozo page event!
 - JavaScript
 
 ## Features
-### Developed entirely using SASS using the 7:1 structure you can see my files here [SASS](https://github.com/LuisDavidRodriguez/capstone-1/tree/Feature-capstone/sass)
+### Developed entirely using SASS using the 7:1 structure you can see my files here [SASS](https://github.com/LuisDavidRodriguez/capstone-1/tree/main/sass)
 
-- I create my own grid system very similar to Bootstrap (**I am not using Bootstrap**), that allows me to understand all the ways in which the libraries works inside libraries [grid-system](https://github.com/LuisDavidRodriguez/capstone-1/blob/Feature-capstone/sass/2_base/_grid-system.scss)
+- I create my own grid system very similar to Bootstrap (**I am not using Bootstrap**), that allows me to understand all the ways in which the libraries works inside libraries [grid-system](https://github.com/LuisDavidRodriguez/capstone-1/blob/main/sass/2_base/_grid-system.scss)
 
 - This project gave me the opportunity to learn a lot of SASS functions, maps, mixins, partials so i took advantaje of them!
 
 **Dear reviewer take a time to see the subtle animation in the patterns into the welcome section of the home and about page there are 5 patterns each one change to color one each time**
-[Here is my partial](https://github.com/LuisDavidRodriguez/capstone-1/blob/Feature-capstone/sass/4_components/_stars.scss)
+[Here is my partial](https://github.com/LuisDavidRodriguez/capstone-1/blob/main/sass/4_components/_stars.scss)
 and [my documentation to sincronyze the animations](https://ibritech.atlassian.net/wiki/spaces/~864961965/pages/231374901/Capstone-1)
 
 ![image](https://user-images.githubusercontent.com/105079888/181646607-2fc68219-fe45-45cd-8f05-5117271d92d8.png)
@@ -59,7 +59,7 @@ and [my documentation to sincronyze the animations](https://ibritech.atlassian.n
 
 
 # Show more and hide buttons working
-To achieve this I create the object CardsManager yo can find it in [my JavaScript folder](https://github.com/LuisDavidRodriguez/capstone-1/tree/Feature-capstone/js) or [directly here](https://github.com/LuisDavidRodriguez/capstone-1/blob/Feature-capstone/js/cardManager.js)
+To achieve this I create the object CardsManager yo can find it in [my JavaScript folder](https://github.com/LuisDavidRodriguez/capstone-1/tree/main/js) or [directly here](https://github.com/LuisDavidRodriguez/capstone-1/blob/main/js/cardManager.js)
 
 
 #### In movile it displays only 3 cards and when you click the button it shows 3 cards at the time
