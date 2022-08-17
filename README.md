@@ -6,6 +6,9 @@ Yaz Fortozo page event!
 - Description the project.
 **This Capstone show my experience as a software developer displaying an event page.**
 
+## Live Demo Deployment
+[Click here to see the my Capstone!](https://luisdavidrodriguez.github.io/capstone-1/index.html)
+
 > ## Objectives
 - Use SASS 100%
 - Use semantic HTML tags.
@@ -33,6 +36,13 @@ Yaz Fortozo page event!
 ### Developed entirely using SASS using the 7:1 structure you can see my files here [SASS](https://github.com/LuisDavidRodriguez/capstone-1/tree/main/sass)
 
 - I create my own grid system very similar to Bootstrap (**I am not using Bootstrap**), that allows me to understand all the ways in which the libraries works inside libraries [grid-system](https://github.com/LuisDavidRodriguez/capstone-1/blob/main/sass/2_base/_grid-system.scss)
+
+# Please i would really appreciate if you whatch all my video, just put it in 2x speed if it seems too long
+
+[![video](https://user-images.githubusercontent.com/105079888/181673252-0a403caa-0bae-4e94-a223-54046cbec4b3.png)](https://www.youtube.com/watch?v=zFlXvvXqUVE)
+
+
+
 
 - This project gave me the opportunity to learn a lot of SASS functions, maps, mixins, partials so i took advantaje of them!
 
@@ -84,12 +94,6 @@ To achieve this I create the object CardsManager yo can find it in [my JavaScrip
 ![image](https://user-images.githubusercontent.com/105079888/181651459-3b8ace8a-fd44-4fe3-8df3-a995d7920856.png)
 
 
-# Please i would really appreciate if you whatch all my video, just put it in 2x speed if it seems too long
-
-[![video](https://user-images.githubusercontent.com/105079888/181673252-0a403caa-0bae-4e94-a223-54046cbec4b3.png)](https://www.youtube.com/watch?v=zFlXvvXqUVE)
-
-
-
 
 
 ## Setup
@@ -104,9 +108,6 @@ git clone https://github.com/LuisDavidRodriguez/capstone-1.git
 - Once the files are on your machine, open the _Portfolio_ folder in [Visual Studio Code](https://code.visualstudio.com/)
 
 - With the files open in Visual Studio Code, press the **Go Live** button at the bottom of the window to launch the files with [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer).
-
-## Live Demo Deployment
-[Click here to see the my Capstone!](https://luisdavidrodriguez.github.io/capstone-1/index.html)
 
 
 
